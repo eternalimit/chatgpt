@@ -1,0 +1,27 @@
+{
+  "N": 100256,
+  "clean_control": {
+    "first_mismatch": null,
+    "last_admitted_position": 100256,
+    "status": "COMPLETE"
+  },
+  "experiment": "379999-R2-DYNAMIC",
+  "frozen_state": "000",
+  "governance": {
+    "external_provenance_echo": false,
+    "implementation_echo": "two distinct implementations in the same runtime environment",
+    "note": "Agreement supports the bounded computational comparison only; it does not establish external provenance or physical validation.",
+    "physical_validation": false
+  },
+  "implementation_A": "mpmath pi",
+  "implementation_B": "custom binary-splitting Chudnovsky with Decimal",
+  "injected_error_control": {
+    "A_q": "4",
+    "first_mismatch": 50128,
+    "last_admitted_position": 50127,
+    "mutated_Bprime_q": "5",
+    "original_B_q": "4",
+    "status": "HOLD"
+  },
+  "trap_q": 50128
+}
