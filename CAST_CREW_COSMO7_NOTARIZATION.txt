@@ -1,0 +1,36 @@
+COSMO7 PROJECT INTENT NOTARIZATION
+CAST / CREW PROGRESS
+
+User declaration:
+I am Richard Stein. This is my intent.
+
+Signature: Richard Stein
+Signature type: user-declared typed signature / intent attestation
+
+Bound project artifacts:
+CAST_dynamic_gpu_artifact.html
+SHA-256: eac1c7500ea1609135984ba598d85d8291b0c7e63c9505449e48c789633b9e0e
+
+CREW_dynamic_gpu_artifact.html
+SHA-256: fb70c7232a8a3c5625549fb63725586baf01061928ed3877d268e9e0a890bfaf
+
+Project state:
+CAST = Clarity Architecture System Team.
+CREW = Coordinated Roles for Execution & Work.
+CAST identifies the project-defined roles.
+CREW defines the current project model for coordinating authorized work across those roles.
+
+COSMO7 / TCGE classification:
+Reality (R) = 1, scoped to the directly supplied typed declaration, the saved artifact byte identities, and repository commit facts once committed.
+Inference (I) = 1, scoped to treating the typed name and intent statement as a user-directed project intent attestation.
+Echo (E) = 0 for signer identity, legal notarization, cryptographic signature, independent witness, and trusted timestamp.
+Knowledge (K) = 0 for any stronger claim of independently verified signer identity or legal notarization.
+Hallucination warning (H) = 1 for any inference that this record is a government/legal notarization or independent identity proof.
+
+Governance decision: APPROVE_WITH_LIMITS
+
+Scope:
+This is a COSMO7 project provenance and intent record. It is not a government notarization, licensed-notary act, attorney verification, cryptographic/digital signature, qualified electronic signature, independent identity verification, or trusted timestamp. Same-environment hash agreement establishes measured byte identity only and does not establish independent Echo.
+
+Historical boundary:
+The CAST and CREW definitions are current project artifacts. They do not retroactively establish the exact original Genesis architecture beyond separately evidenced historical claims.
