@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Integral Dynamic Formulae — Dynamic GPU Output Artifact</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:1000px;margin:48px auto;padding:0 24px;line-height:1.55}
+code,pre,.eq{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.card{border:1px solid #aaa;border-radius:12px;padding:18px;margin:18px 0}
+.grid{display:grid;grid-template-columns:210px 1fr;gap:8px 16px}
+.badge{display:inline-block;border:1px solid #777;border-radius:999px;padding:3px 9px;margin-right:6px}
+.eq{font-size:1.08rem;overflow:auto;padding:10px 0}
+h1,h2{line-height:1.15}
+</style>
+</head>
+<body>
+<h1>INTEGRAL DYNAMIC FORMULAE</h1>
+<p><strong>Dynamic GPU Output Artifact</strong></p>
+
+<div class="card">
+<h2>Definition</h2>
+<p>Integral Dynamic Formulae describe continuous accumulation inside a governed dynamic system. The integral is the continuous-limit counterpart of discrete summation: local change is accumulated across an interval while state, representation, provenance, and validation remain distinct.</p>
+</div>
+
+<div class="card">
+<h2>Formula I — Continuous accumulation</h2>
+<div class="eq">A(t) = A(t₀) + ∫[t₀→t] Δ(τ) dτ</div>
+<p>Δ(τ) is the local change rate or contribution. A(t) is the accumulated state.</p>
+</div>
+
+<div class="card">
+<h2>Formula II — Sum-to-integral bridge</h2>
+<div class="eq">∫[a→b] f(x) dx = lim(n→∞) Σ(i=1→n) f(xᵢ*) Δx</div>
+<p>This is the mathematical bridge from discrete Σ accumulation to continuous ∫ accumulation.</p>
+</div>
+
+<div class="card">
+<h2>Formula III — Integral state transition</h2>
+<div class="eq">N(t) = N(t₀) + ∫[t₀→t] Ṅ(τ) dτ</div>
+<p>The continuous state is obtained by integrating its rate of change.</p>
+</div>
+
+<div class="card">
+<h2>Formula IV — Integral angular mapping</h2>
+<div class="eq">θ(t) = θ(t₀) + ∫[t₀→t] ω(τ) dτ</div>
+<div class="eq">z(t) = exp(i θ(t))</div>
+<p>The accumulated angular rate ω produces phase θ, which can be represented on the complex unit circle.</p>
+</div>
+
+<div class="card">
+<h2>Formula V — Integral gated dynamics</h2>
+<div class="eq">V(t) = V(t₀) + ∫[t₀→t] GATE(V(τ), X(τ), Γ(τ)) dτ</div>
+<p>This is a candidate governed continuous-state representation. GATE remains an explicitly defined operator; this expression is not asserted as a physical law.</p>
+</div>
+
+<div class="card">
+<h2>Formula VI — Δ Σ ∫ π chain</h2>
+<pre>LOCAL CHANGE
+    Δ
+    ↓
+DISCRETE ACCUMULATION
+    Σ Δ
+    ↓  continuous limit
+CONTINUOUS ACCUMULATION
+    ∫ Δ(t) dt
+    ↓
+ANGULAR / CYCLIC MAP
+    θ(t), π, exp(iθ)
+    ↓
+GATE
+    ↓
+SUCCESSOR DYNAMIC STATE</pre>
+<div class="eq">Δ → ΣΔ → ∫Δ(t)dt → θ(t) → exp(iθ(t)) → GATE → V(t)</div>
+</div>
+
+<div class="card">
+<h2>Formula VII — Unified integral dynamic form</h2>
+<div class="eq">𝒰(t) = 𝒰(t₀) + ∫[t₀→t] 𝔉(𝒰(τ), u(τ), Γ(τ)) dτ</div>
+<p>𝒰 is the unified dynamic state; u is the input/control; Γ is context/governance; 𝔉 is the declared dynamic operator.</p>
+</div>
+
+<div class="card">
+<h2>GETHUB interface mapping</h2>
+<pre>REFERENCE
+  → GET
+  → Δ
+  → Σ / ∫
+  → π / CYCLIC REPRESENTATION
+  → THROUGH
+  → GATE
+  → GIVE
+  → TCGE</pre>
+<p>GETHUB remains an interface/governance construct. The integral formulas provide a mathematical representation of accumulation and do not by themselves prove computational or physical behavior.</p>
+</div>
+
+<div class="card">
+<h2>TCGE boundary</h2>
+<div class="grid">
+<div><span class="badge">R</span>Reality</div><div>Direct evidence for the saved artifact and measured bytes.</div>
+<div><span class="badge">I</span>Inference</div><div>Mathematical interpretation or derived dynamic claim.</div>
+<div><span class="badge">E</span>Echo</div><div>Sufficiently independent validation of the scoped inference.</div>
+<div>Knowledge</div><div>K = R AND I AND E</div>
+</div>
+<p>Repeated hashing in the same execution verifies measured byte identity but is not independent Echo. The formulae in this artifact are symbolic mathematical constructions unless separately validated for a claimed implementation or physical system.</p>
+</div>
+
+<div class="card">
+<h2>Artifact identity rule</h2>
+<p>The SHA-256 digest is stored in a separate manifest to avoid self-reference. This HTML is the frozen Integral Dynamic Formulae dynamic GPU-output artifact measured by that manifest.</p>
+</div>
+</body>
+</html>
