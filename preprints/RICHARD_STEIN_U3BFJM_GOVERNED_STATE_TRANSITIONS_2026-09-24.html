@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Governed State Transitions in a 3-Bit Fluid Junction Machine — Preprint</title>
+<style>
+body{font-family:Georgia,serif;max-width:980px;margin:48px auto;padding:0 28px;line-height:1.62;color:#161616}h1,h2,h3{font-family:Arial,sans-serif;line-height:1.18}h1{font-size:2.25rem}h2{margin-top:2.2rem;border-bottom:1px solid #bbb;padding-bottom:.25rem}.meta,.abstract,.boundary{background:#f4f6f8;border-left:5px solid #334;padding:16px 20px;margin:20px 0}.eq{font-family:ui-monospace,monospace;background:#f7f7f7;padding:12px 16px;overflow:auto}.small{font-size:.9rem;color:#444}table{border-collapse:collapse;width:100%;margin:18px 0}th,td{border:1px solid #aaa;padding:8px;vertical-align:top}th{background:#eee;text-align:left}code{font-family:ui-monospace,monospace}.status{font-family:Arial,sans-serif;font-weight:700}.refs li{margin-bottom:10px}</style>
+</head>
+<body>
+<h1>Governed State Transitions in a 3-Bit Fluid Junction Machine: Connectivity, Physical Validation, and Evidence-Bound Correlation</h1>
+<div class="meta"><strong>Preprint</strong><br>Author: Richard Stein<br>Date: 24 September 2026<br>Repository: <code>eternalimit/chatgpt</code><br>Research frontier: <code>PROJECT_LOGS_BLOCK_061</code></div>
+
+<div class="abstract"><strong>Abstract.</strong> This preprint describes a candidate engineering and evidence-governance framework for a three-bit fluid-junction machine. A binary state <em>(b2,b1,b0)</em> maps to an integer <em>N</em> and candidate connected-path count <em>P=N+1</em>. The work separates commanded state, connectivity, physical geometry, measured flow response, validation, and committed state. It correlates that separation with residential water-distribution topology, California Title 24 code-family structure, and Bitcoin Core's separation of block receipt from validation and accepted state processing. These correlations are architectural. They do not establish that the proposed mapping is a universal physical law, that a depicted machine has been physically validated, or that any design complies with California building codes. The paper formalizes the evidence boundary using the TCGE relation <em>K=R∧I∧E</em> and the invariant <em>THROUGH(HOLD)≠PASS</em>.</div>
+
+<h2>1. Research question</h2>
+<p>Can a fixed three-bit control representation be used as a disciplined indexing layer for candidate fluid-junction connectivity while preserving a strict boundary between command, physical implementation, measurement, validation, and state commitment?</p>
+<p>The scoped claim investigated here is narrower than a universal-law claim. The present paper asks whether the representation is internally coherent and whether its governance structure has meaningful analogues in independently developed systems.</p>
+
+<h2>2. Candidate state representation</h2>
+<div class="eq">N = 4b2 + 2b1 + b0<br>b2,b1,b0 ∈ {0,1}<br>N ∈ {0,1,2,3,4,5,6,7}<br>P = N + 1</div>
+<table><thead><tr><th>Bits</th><th>N</th><th>Candidate P</th><th>Connectivity interpretation</th></tr></thead><tbody>
+<tr><td>000</td><td>0</td><td>1</td><td>one connected path</td></tr><tr><td>001</td><td>1</td><td>2</td><td>two connected paths</td></tr><tr><td>010</td><td>2</td><td>3</td><td>three connected paths</td></tr><tr><td>011</td><td>3</td><td>4</td><td>four connected paths</td></tr><tr><td>100</td><td>4</td><td>5</td><td>five connected paths</td></tr><tr><td>101</td><td>5</td><td>6</td><td>six connected paths</td></tr><tr><td>110</td><td>6</td><td>7</td><td>seven connected paths</td></tr><tr><td>111</td><td>7</td><td>8</td><td>eight connected paths</td></tr>
+</tbody></table>
+<p><strong>Boundary:</strong> <code>P=N+1</code> is a candidate machine encoding. It is not asserted as a general law of plumbing or fluid networks. A tee and a wye can have the same port count while differing in geometry and hydraulic response.</p>
+
+<h2>3. Geometry and fluid response</h2>
+<p>Let Γ denote the physical geometry and <em>U</em> the fluid state. A candidate state-transition representation is:</p>
+<div class="eq">U = (ρ, v, p, ...)<br>U(t+Δt) = F(U(t), u(t), Γ, N)</div>
+<p>For a bounded junction control volume, familiar conservation relations provide testable observables:</p>
+<div class="eq">Q = A v<br>Σ Q_in = Σ Q_out &nbsp;&nbsp;[incompressible bounded case]<br>Σ ρ_i A_i v_i = 0 &nbsp;&nbsp;[mass balance with signed convention]</div>
+<p>The binary command therefore cannot substitute for measurement. A requested <code>111</code> configuration defines a candidate eight-path configuration under this encoding; it does not prove that eight paths are physically open, hydraulically functional, or compliant with any performance criterion.</p>
+
+<h2>4. Governed transition chain</h2>
+<div class="eq">TRANSFER / RECEIPT → VALIDATION → STATE COMMIT<br><br>GET → THROUGH → GATE → LATCH<br><br>THROUGH(HOLD) ≠ PASS<br>LATCH ⇔ GATE:PASS</div>
+<p>The GETHUB artifact in the project repository defines a Governed Evidence Transfer Hub that preserves source/object identity and separates transfer from admission. TCGE classifies material claims using:</p>
+<div class="eq">R = sufficient direct evidence<br>I = interpretation or inference<br>E = sufficiently independent validation<br>K = R ∧ I ∧ E<br>H = I ∧ ¬K</div>
+<p>These definitions make validation claim-specific. A byte-identical artifact can be known as byte-identical without thereby establishing semantic correctness, physical validity, or code compliance.</p>
+
+<h2>5. Residential water-distribution correlation</h2>
+<p>A residential potable-water network provides a useful topology comparison: source/service → main → junctions → branches → fixtures. Fixture demand, pipe diameter, pressure loss, material, length, elevation, backflow protection, and local requirements are separate engineering variables. The comparison supports the distinction between connectivity and physical performance, but does not imply that a household piping network follows the proposed three-bit encoding.</p>
+
+<h2>6. California Title 24 correlation and correction</h2>
+<p>The 2025 California Building Standards Code, California Code of Regulations Title 24, became generally effective on 1 January 2026. The California Building Standards Commission identifies Part 4 as the California Mechanical Code, Part 5 as the California Plumbing Code, Part 6 as the California Energy Code, Part 11 as CALGreen, and Part 12 as the California Referenced Standards Code.</p>
+<p>For the residential potable-water diagram used in this research, <strong>Part 5, California Plumbing Code, is the primary candidate Title 24 branch</strong>, subject to project scope, jurisdiction, California amendments, errata, and local amendments. Refrigeration/mechanical components of a separate fluid-junction implementation may instead implicate Part 4, while controls and energy performance may implicate Parts 3 and 6 as applicable. This corrects any over-broad treatment of all fluid piping as a single Title 24 branch.</p>
+<div class="boundary"><strong>Compliance boundary.</strong> Correlation is not compliance. A repository record, hash, diagram, simulation, or architectural analogy does not establish code applicability, listing, approval, inspection acceptance, or compliance. Section-level authoritative source text and project-specific applicability remain required.</div>
+
+<h2>7. Bitcoin Core architectural correlation</h2>
+<p>Bitcoin Core independently separates receipt or submission of a candidate block from validation and accepted chain-state processing. Current Bitcoin Core source calls <code>ProcessNewBlock</code>, captures validation state, and distinguishes accepted, invalid, duplicate, and inconclusive outcomes. The bounded architectural correlation is therefore:</p>
+<div class="eq">candidate object → receipt → validation → accepted/rejected state processing<br><br>correlated with<br><br>candidate state → THROUGH → GATE → LATCH/HOLD</div>
+<p>This is a conceptual/architectural Echo for the separation principle only. Bitcoin Core does not implement, endorse, or validate GETHUB, TCGE, the three-bit fluid-junction mapping, or a universal physical formula.</p>
+
+<h2>8. Physical validation protocol</h2>
+<p>A prospective physical test of state <code>111</code> should preserve the following order:</p>
+<div class="eq">COMMAND 111<br>→ record actuator positions<br>→ observe candidate configuration<br>→ measure all relevant paths<br>→ preserve untouched raw measurements and provenance<br>→ apply frozen pass/fail criteria<br>→ independent validation<br>→ GATE<br>→ PASS only if criteria are satisfied<br>→ LATCH physical-111</div>
+<p>Useful observables may include path-open status, flow, differential pressure, leakage, repeatability, actuator position, temperature, and boundary conditions. The exact criteria must be frozen before execution if the result is intended to discriminate a hypothesis.</p>
+
+<h2>9. Current evidence state</h2>
+<table><thead><tr><th>Claim</th><th>Current classification</th></tr></thead><tbody>
+<tr><td>The repository contains GETHUB/TCGE and Block 061 correlation artifacts.</td><td>Direct repository evidence.</td></tr>
+<tr><td>The 2025 Title 24 code family is effective generally from 1 Jan 2026 and includes California Plumbing Code Part 5.</td><td>Supported by current California Building Standards Commission sources.</td></tr>
+<tr><td>Bitcoin Core separates candidate receipt/submission from validation and acceptance processing.</td><td>Supported by current Bitcoin Core source.</td></tr>
+<tr><td>The three-bit mapping is a coherent candidate indexing scheme.</td><td>Mathematical/model claim; physical performance not implied.</td></tr>
+<tr><td>A physical U3BFJM reaches validated state 111.</td><td>Not established in this preprint.</td></tr>
+<tr><td>The mapping is a universal physical law.</td><td>Not established in this preprint.</td></tr>
+<tr><td>The depicted system complies with California Title 24.</td><td>Not established in this preprint.</td></tr>
+</tbody></table>
+
+<h2>10. Falsifiers and next experiment</h2>
+<p>The physical implementation would fail a frozen state-specific claim if commanded connectivity does not match measured connectivity, if conservation residuals exceed predeclared tolerances after accounting for measurement uncertainty, if actuator state is ambiguous, if provenance is broken, or if an independent validation path contradicts the primary measurement. A future revision should define instrument accuracy, sampling rate, calibration, geometry, fluid, temperature, pressure range, exact acceptance tolerances, and an independent replication path before execution.</p>
+
+<h2>11. Conclusion</h2>
+<p>The current work supports a disciplined separation between symbolic state, physical connectivity, geometry, measured fluid response, validation, and committed state. Residential plumbing and Bitcoin Core provide independently developed architectural analogues for portions of that separation. California Title 24 provides a regulatory framework against which project-specific implementations can be mapped, with Part 5 being the primary candidate branch for residential potable-water systems. None of these correlations, alone or together, establish universal physical validity or code compliance. The next scientifically material step is a frozen, instrumented physical test with preserved raw evidence and a meaningfully independent validation path.</p>
+
+<h2>References</h2>
+<ol class="refs">
+<li>California Building Standards Commission. “Codes: 2025 Triennial Edition of Title 24.” https://www.dgs.ca.gov/bsc/codes</li>
+<li>California Building Standards Commission. “2025 Title 24 California Code Changes.” https://www.dgs.ca.gov/BSC/Resources/2025-Title-24-California-Code-Changes</li>
+<li>California Building Standards Commission. “Information Bulletin 26-01: Errata.” Published 3 March 2026.</li>
+<li>Bitcoin Core. <code>src/node/miner.cpp</code> and validation machinery, <code>bitcoin/bitcoin</code> repository.</li>
+<li>Stein, Richard. <code>GETHUB_dynamic_gpu_artifact.html</code>, <code>eternalimit/chatgpt</code>.</li>
+<li>Stein, Richard. <code>project-logs/PROJECT_LOGS_BLOCK_061-bitcoin-core-correlation.md</code>, <code>eternalimit/chatgpt</code>.</li>
+<li>Stein, Richard. <code>project-logs/PROJECT_LOGS_BLOCK_061-ca-title-24-correlation.md</code>, <code>eternalimit/chatgpt</code>.</li>
+<li>Stein, Richard. <code>project-logs/PROJECT_LOGS_BLOCK_061-physical-validation-commit.md</code>, <code>eternalimit/chatgpt</code>.</li>
+</ol>
+
+<h2>Integrity and authorship statement</h2>
+<p>Authorship name supplied in the current session: <strong>Richard Stein</strong>. This statement records the author's asserted name; it is not a cryptographic identity verification. The separately published SHA-256 manifest binds the exact HTML bytes measured before repository upload. The GitHub commit SHA and Git blob SHA identify Git objects and repository history; neither should be represented as a personal digital signature unless a separately verifiable signing mechanism is used.</p>
+<p class="small">Preprint status: research communication, not peer review, code approval, engineering certification, or regulatory determination.</p>
+</body>
+</html>
