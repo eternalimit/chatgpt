@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>COSMO7 — Governed Decision and Audit Artifact</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:1040px;margin:48px auto;padding:0 24px;line-height:1.55}
+h1,h2{line-height:1.15}.box{border:1px solid #888;border-radius:12px;padding:18px;margin:18px 0}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+.small{font-size:.92rem}
+</style>
+</head>
+<body>
+<h1>COSMO7 — Governed Decision and Audit Artifact</h1>
+
+<p><strong>Canonical role:</strong> COSMO7 is the governance, audit, trust, and decision-synthesis layer in the research architecture. It receives structured context and governance signals, preserves explicit state and audit boundaries, and controls whether downstream normal execution is admitted.</p>
+
+<div class="box">
+<h2>Canonical pipeline</h2>
+<pre>Questor
+→ Fauna
+→ Flora
+→ Stratum
+→ IdentityManager
+→ OverrideInterpreter
+→ CooldownController
+→ Gatekeeper
+→ StateRegistry
+→ COSMO7
+→ Richard
+→ Bubba
+→ TrustScoringEngine
+→ ClarityLoop
+→ ConflictLogger
+→ Docutech</pre>
+</div>
+
+<h2>Governance functions</h2>
+<ul>
+<li><strong>Questor / Fauna / Flora / Stratum:</strong> upstream context and analysis stages.</li>
+<li><strong>IdentityManager:</strong> evaluates identity, authorization, and identity-related risk.</li>
+<li><strong>OverrideInterpreter:</strong> detects control, override, or governance-bypass instructions.</li>
+<li><strong>CooldownController:</strong> handles repeated or sensitive request timing/control conditions.</li>
+<li><strong>Gatekeeper:</strong> applies the governance decision boundary. Canonical decision classes are APPROVE, MODIFY, ESCALATE, and REJECT.</li>
+<li><strong>StateRegistry:</strong> validates and records explicit governed state changes.</li>
+<li><strong>COSMO7:</strong> synthesizes governance and strategy from the admitted state.</li>
+<li><strong>Richard / Bubba / TrustScoringEngine / ClarityLoop / ConflictLogger:</strong> downstream refinement, trust, clarity, and conflict/audit processing.</li>
+<li><strong>Docutech:</strong> renders the governed result into a durable, audit-ready artifact.</li>
+</ul>
+
+<h2>Control boundary</h2>
+<p>Normal downstream execution is admitted only through the governance boundary. A non-APPROVE decision must not be silently treated as APPROVE. Restricted documentation may preserve a blocked, modified, escalated, or rejected result without converting it into successful execution.</p>
+
+<h2>Ledger model</h2>
+<ul>
+<li><strong>Live:</strong> raw/current inputs, events, and state.</li>
+<li><strong>Mirror:</strong> interpretations, contradictions, audits, and governance reasoning.</li>
+<li><strong>Echo:</strong> durable summaries, recurrence, and trust-pattern records.</li>
+</ul>
+<p>The ledgers are treated as append-oriented historical records. A later interpretation must not silently rewrite the earlier evidence state.</p>
+
+<h2>TCGE / evidence boundary</h2>
+<p>COSMO7 governance output is not automatically Reality evidence or independent Echo. A governance decision, audit record, rendered artifact, or matching hash establishes only the scoped claim supported by the underlying evidence. Independent validation must remain independently established.</p>
+
+<h2>Artifact contract</h2>
+<ol>
+<li>Receive the frozen COSMO7 definition and governance state.</li>
+<li>Preserve pipeline order, decision classes, provenance, and unresolved conditions.</li>
+<li>Render the definition as an auditable HTML artifact.</li>
+<li>Compute SHA-256 over the exact rendered bytes.</li>
+<li>Re-read the preserved bytes and recompute SHA-256.</li>
+<li>Return the artifact identity, measured digest, verification result, and epistemic limits.</li>
+</ol>
+
+<h2>Historical implementation boundary</h2>
+<p>This artifact defines the research architecture. Historical implementations varied: earlier repositories did not always implement IdentityManager, OverrideInterpreter, CooldownController, and StateRegistry as binding runtime modules, while later reported control-plane builds added those governance modules. This definition must not retroactively claim that every historical COSMO7 build implemented the full pipeline.</p>
+
+<h2>Artifact status</h2>
+<p>This file is the COSMO7 definition artifact for this build. Its byte identity is established externally by the accompanying SHA-256 manifest and dynamic verification record.</p>
+</body>
+</html>
