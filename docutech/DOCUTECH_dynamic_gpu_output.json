@@ -1,0 +1,11 @@
+{
+  "artifact": "DOCUTECH_artifact.html",
+  "artifact_size_bytes": 3093,
+  "algorithm": "SHA-256",
+  "reference_sha256": "8baae9c7c0c23f5b3893f5816ecfd6d38e97ac90d8c2c5c7bb65c6e8b5995ade",
+  "measured_sha256": "8baae9c7c0c23f5b3893f5816ecfd6d38e97ac90d8c2c5c7bb65c6e8b5995ade",
+  "hash_verified": true,
+  "output_class": "DOCUTECH_DYNAMIC_GPU_OUTPUT_RECORD",
+  "execution_note": "This record is a generated dynamic-output verification record. The hash was computed and independently recomputed in this runtime; no claim is made that a physical GPU performed the hash computation.",
+  "tcge_boundary": "PASS applies only to exact byte-identity verification of the HTML artifact. This does not establish independent Echo, scientific validity, legal notarization, or validation of semantic claims."
+}
