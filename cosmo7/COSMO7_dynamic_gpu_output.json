@@ -1,0 +1,12 @@
+{
+  "artifact": "COSMO7_artifact.html",
+  "artifact_size_bytes": 4566,
+  "algorithm": "SHA-256",
+  "reference_sha256": "3086caa6948ed79e8dfbd167b65edc2fd8f06233edb9276f266f3bd98bf7dd2a",
+  "measured_sha256": "3086caa6948ed79e8dfbd167b65edc2fd8f06233edb9276f266f3bd98bf7dd2a",
+  "hash_verified": true,
+  "output_class": "COSMO7_DYNAMIC_GPU_OUTPUT_RECORD",
+  "execution_note": "This is a generated dynamic-output verification record. The artifact hash was computed and recomputed from the preserved bytes in this runtime. No claim is made that a physical GPU performed the hash computation.",
+  "scope": "PASS applies only to exact byte-identity verification of COSMO7_artifact.html.",
+  "tcge_boundary": "The matching digest does not independently validate COSMO7's semantic claims, historical implementation claims, scientific validity, or independent Echo."
+}
