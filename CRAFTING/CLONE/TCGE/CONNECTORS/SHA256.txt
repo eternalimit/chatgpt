@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/CONNECTORS
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=1
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-256
+digest=8d319c47e0ff394a5ce30b236f90637b5a16b90e4d5a8b01e893a3179343042a
