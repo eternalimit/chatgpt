@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/LANGUAGE
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=1
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-256
+digest=59dfeda0aade61bbc65b8a915d4550227d66983813ae7412a9586b949a2e9859
