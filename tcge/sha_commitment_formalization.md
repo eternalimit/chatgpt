@@ -116,6 +116,91 @@ HASHED RESULT != PROVEN RESULT
 
 The hash commits to the exact serialized representation of the result; it does not establish the semantic truth of that result.
 
+## COMMUNICATE operator
+
+Define:
+
+```text
+COMMUNICATE(X, A) = M
+```
+
+where:
+
+- **X** is the resolved information or state.
+- **A** is the intended audience or receiving system.
+- **M** is the transmitted representation.
+
+TCGE reduction:
+
+```text
+SOURCE -> RESOLVE -> RECORD -> COMMUNICATE
+```
+
+Communication does not independently verify its payload:
+
+```text
+COMMUNICATE(X) != VERIFY(X)
+```
+
+The communication boundary is:
+
+```text
+Meaning(M) <= Supported(X)
+```
+
+That is: communicating a result must not increase the certainty, scope, or evidentiary force of the underlying supported claim.
+
+Extended canon chain:
+
+```text
+DETECT -> OBSERVE -> MEMORY -> EVIDENCE -> TCGE -> RECORD -> COMMIT -> COMMUNICATE
+```
+
+Invariant:
+
+```text
+COMMUNICATION PRESERVES BOUNDARIES
+```
+
+## SHA commitment plus communication
+
+The committed TCGE state may be represented as:
+
+```text
+Y = TCGE(X)
+B = UTF8(Canonical(Y))
+C = H256(B)
+M = COMMUNICATE(C, A)
+```
+
+Full pipeline:
+
+```text
+X -> TCGE -> Y -> Canonicalize -> UTF-8 -> SHA-256 -> C -> COMMUNICATE -> M
+```
+
+Reduced:
+
+```text
+INPUT -> EVALUATE -> RECORD -> COMMIT -> COMMUNICATE
+RESULT -> COMMITMENT -> TRANSMISSION
+```
+
+Boundaries:
+
+```text
+COMMIT != VERIFY
+COMMUNICATE != VERIFY
+HASH MATCH != TRUTH
+HASHED RESULT != PROVEN RESULT
+```
+
+Final preservation statement:
+
+```text
+COMMITMENT PRESERVES STATE; IT DOES NOT CREATE TRUTH
+```
+
 ## Final TCGE reduction
 
 ```text
@@ -128,4 +213,4 @@ More precisely:
 H256(UTF8(Canonical(TCGE(X))))
 ```
 
-This record formalizes the SHA-1 / TCGE / SHA-256 discussion, subsequent reductions, operator definitions, and the commitment-versus-proof boundary.
+This record formalizes the SHA-1 / TCGE / SHA-256 discussion, subsequent reductions, operator definitions, COMMUNICATE extension, and the commitment-versus-proof boundary.
