@@ -1,0 +1,9 @@
+scenario,drive,reality,rule,inaction,result_sector,result_status
+"Immediate reward, low risk, no rule conflict",3,1,0,0,ID,DETERMINATE
+"Strong impulse, high real-world constraint",3,3,1,0,REVIEW,AMBIGUOUS
+"Moderate impulse, strong internal rule conflict",2,1,3,0,SUPEREGO,DETERMINATE
+No meaningful impulse or requirement to act,0,0,0,3,NOTHING,DETERMINATE
+Impulse and rule both strong; reality mediates,3,3,3,0,REVIEW,AMBIGUOUS
+"Low impulse, moderate constraint, no rule conflict",1,2,0,1,EGO,DETERMINATE
+Rule dominates despite low external constraint,2,0,3,0,SUPEREGO,DETERMINATE
+No clear dominant signal,1,1,1,1,REVIEW,AMBIGUOUS
