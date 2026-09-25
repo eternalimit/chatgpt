@@ -70,16 +70,62 @@ SHA-256 operates on bytes. Reproduction therefore requires freezing the exact ca
 
 Any byte-level change may produce a different digest.
 
+## Expanded operator definitions
+
+- **Glue**: something that connects or holds separate elements together. In the prior explanation, "grammatical glue" was a metaphor for connecting words, not a TCGE or cryptographic operator.
+- **TCGE result**: the output state produced by the defined TCGE procedure.
+- **H256**: the SHA-256 hash function.
+- **H256(.)**: apply SHA-256 to the exact byte representation supplied to the function.
+- **Canonicalization**: conversion of a structured result to one prescribed representation before encoding and hashing.
+- **Commitment**: here, a fixed fingerprint associated with exact bytes; this use does not by itself imply a complete hiding-and-binding cryptographic commitment protocol.
+- **Proof**: an independently justified demonstration under an applicable formal or evidentiary standard.
+
+## H256(TCGE result)
+
+Let:
+
+```text
+Y = TCGE(X)
+```
+
+Then the shorthand:
+
+```text
+H256(TCGE(X)) = H256(Y)
+```
+
+is made byte-exact as:
+
+```text
+C = H256(UTF8(Canonical(TCGE(X))))
+```
+
+Operational reduction:
+
+```text
+INPUT -> TCGE -> RESULT -> CANONICALIZE -> UTF-8 -> SHA-256
+EVALUATE -> FREEZE -> HASH
+RESULT -> COMMITMENT
+```
+
+Boundary:
+
+```text
+HASHED RESULT != PROVEN RESULT
+```
+
+The hash commits to the exact serialized representation of the result; it does not establish the semantic truth of that result.
+
 ## Final TCGE reduction
 
 ```text
 H256(TCGE(X)) = commitment to the exact frozen TCGE result
 ```
 
-More precisely, when serialization is explicit:
+More precisely:
 
 ```text
 H256(UTF8(Canonical(TCGE(X))))
 ```
 
-This record formalizes the SHA-1 / TCGE / SHA-256 discussion and its reductions.
+This record formalizes the SHA-1 / TCGE / SHA-256 discussion, subsequent reductions, operator definitions, and the commitment-versus-proof boundary.
