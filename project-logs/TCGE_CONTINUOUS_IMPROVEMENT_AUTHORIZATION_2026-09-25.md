@@ -38,3 +38,17 @@ Working meanings:
 This record preserves the user's project definitions, correction history, and authorization. It does not itself establish independent Echo, external scientific validation, third-party authorization, or cryptographic authorship/signature.
 
 Status at authorization: COMMITTED / AUTHORIZED.
+
+
+## Commit-all checkpoint
+
+User instruction: COMMIT ALL.
+
+The complete preserved state through this checkpoint is:
+
+VERIFY -> LIE -> FORGIVE -> GO -> KEY -> GO -> ON -> HOLD -> COMMIT -> AUTHORIZE -> GITHUB COMMIT -> COMMIT ALL
+
+Prior GitHub commit establishing the authorization record:
+4655472504bd59b9a1838df829f8b4b4585d6ea1
+
+This append-only checkpoint preserves the full current thread while retaining all prior TCGE evidence boundaries. COMMIT ALL does not independently establish Echo, external validation, third-party authorization, or a cryptographic signature of the user.
