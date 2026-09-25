@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/UNRESOLVED
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=1
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-256
+digest=69f8a5eb0ac3b2077248d55a68df895333d7d4fe88ae7c93f1cb527c52baf0a8
