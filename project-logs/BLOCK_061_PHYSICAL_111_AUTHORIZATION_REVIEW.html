@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Block 061 Physical 111 Authorization Review</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  @page { size: letter; margin: 0.65in; }
+  body { font-family: Arial, sans-serif; color: #172333; max-width: 8.3in; margin: auto; font-size: 10.5pt; line-height: 1.42; }
+  h1 { font-size: 21pt; color: #173a54; border-bottom: 2px solid #1d5a79; padding-bottom: 8px; }
+  h2 { font-size: 13pt; color: #173a54; margin-top: 1.4em; }
+  table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 0.8em 0; }
+  th, td { border: 1px solid #a8b5bf; padding: 5px 6px; vertical-align: top; }
+  th { background: #eaf1f5; text-align: left; }
+  strong { color: #163b55; }
+  code { background: #eff3f5; padding: 1px 3px; }
+  hr { border: 0; border-top: 2px solid #90a6b5; margin: 2em 0; }
+  @media print { h1, h2 { page-break-after: avoid; } tr { page-break-inside: avoid; } a { color: #172333; text-decoration: none; } }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Block 061 Physical 111 Authorization Review</h1>
+</header>
+<h1 id="physical-111-test-authorization-review">Physical 111 test |
+Authorization review</h1>
+<p><strong>Status: PREPARED FOR REVIEW — EXECUTION NOT
+AUTHORIZED</strong><br />
+<strong>Block 061 physical gate: HOLD</strong> · <strong>Physical 111:
+NOT ESTABLISHED</strong> · <strong>Latch: NOT AUTHORIZED</strong></p>
+<h2 id="decision-requested">Decision requested</h2>
+<p>Review the attached formula-filled field worksheet as the proposed
+record for a <strong>single physical test commanding <code>111</code> on
+the identified rig</strong>. This prepared export alone does
+<strong>not</strong> authorize actuation. Execution approval requires
+every pre-execution item below to be completed and a specific
+<strong>APPROVE</strong> decision signed before the test.</p>
+<h2 id="execution-authorization-complete-before-the-test">Execution
+authorization — complete before the test</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Required item</th>
+<th>Specific pre-execution entry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rig/site and run ID</td>
+<td>______________________________</td>
+</tr>
+<tr class="even">
+<td>Protocol version, location and SHA-256</td>
+<td>______________________________</td>
+</tr>
+<tr class="odd">
+<td>Eight path IDs and endpoints</td>
+<td>______________________________</td>
+</tr>
+<tr class="even">
+<td>Required observables, units and channel map</td>
+<td>______________________________</td>
+</tr>
+<tr class="odd">
+<td>Numeric pass/fail limits, uncertainty, sampling/window</td>
+<td>______________________________</td>
+</tr>
+<tr class="even">
+<td>Calibration, medium and boundary conditions</td>
+<td>______________________________</td>
+</tr>
+<tr class="odd">
+<td>Stop conditions and accountable test operator</td>
+<td>______________________________</td>
+</tr>
+<tr class="even">
+<td>Independent validator and method/independence basis</td>
+<td>______________________________</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authorization to execute this specified run:</strong> ☐
+APPROVE ☐ HOLD ☐ REJECT<br />
+Authorized person, role, signature, date/time and time zone:
+______________________________<br />
+Approval record/reference: ______________________________</p>
+<p>An <strong>APPROVE</strong> entry applies only to the exact
+pre-execution protocol and run identified above. Any blank required item
+means <strong>HOLD</strong>. Changes after approval require a new
+recorded version and authorization before execution. Recording an
+approval does not record execution, observation, independent validation,
+GATE PASS, or physical latch.</p>
+<h2 id="post-run-gate-record">Post-run gate record</h2>
+<p>Raw acquisition manifest/hash reference:
+______________________________<br />
+Independent validation record: ______________________________<br />
+Gate evaluator, timestamp, frozen-criteria comparison record:
+______________________________<br />
+<strong>GATE:</strong> ☐ PASS ☐ HOLD ☐ other result defined in frozen
+protocol: __________<br />
+<strong>Physical-111 latch:</strong> ☐ Authorized by recorded GATE PASS
+☐ Not authorized</p>
+<p>Preserve this review and later results append-only. A cryptographic
+hash establishes byte identity within its method; it does not prove that
+a physical observation occurred. A calculated target of eight paths does
+not prove connectivity or performance. Missing evidence is UNVERIFIED,
+not FALSIFIED.</p>
+<hr />
+<h1 id="block-061-physical-111-field-worksheet">Block 061 | Physical 111
+field worksheet</h1>
+<p><strong>Formula-filled prospective record.</strong> Sources: <a
+href="https://github.com/eternalimit/chatgpt/commit/46cd3cb76c3ea156e8fb1bf5731f359761c0d1b4">Block
+061 physical boundary</a> and <a
+href="https://github.com/eternalimit/chatgpt/commit/57ad5d9f781200aed48a1dc0fc8f3d84133f1a23">FIDELITY
+formula set</a>. Repository evidence establishes committed definitions
+only. At worksheet issue: <strong>GATE = HOLD; physical 111 = NOT
+ESTABLISHED; physical latch = NOT AUTHORIZED.</strong> Formula-derived
+values below are targets, not observations. Blank fields are unobserved,
+never PASS.</p>
+<p><strong>Applied formulas:</strong> <code>N = 4b2 + 2b1 + b0</code>;
+<code>P = N + 1</code>. For commanded <code>111</code>:
+<code>N = 4(1) + 2(1) + 1 = 7</code>, hence <strong>target P =
+8</strong>. FIDELITY <code>F_A</code>: a provenance-preserving copy plus
+hashes actually measured on both byte streams; <code>F_B</code>:
+matching outputs do not establish independence; <code>F_C</code>: hash
+identity does not prove physical truth; <code>F_D</code>: append later
+evidence without backdating it; <code>F_E</code>: one failed method does
+not disprove the requirement; <code>F_F</code>: UNVERIFIED differs from
+FALSIFIED; <code>F_G</code>: conclusions cannot exceed evidence. The
+committed formula-set check concerns internal conformance, not execution
+of this physical test.</p>
+<h2 id="frozen-test-and-run-identity-complete-before-actuation">1.
+Frozen test and run identity — complete before actuation</h2>
+<p>Run ID: __________ Date/time and zone: __________ Site/rig ID:
+__________ Operator: __________</p>
+<p>Frozen protocol and pass/fail criteria reference (version, location,
+hash): __________</p>
+<p>Required observables and units, sampling/window, uncertainty,
+tolerances and stop conditions <strong>as frozen before
+execution</strong>: __________</p>
+<p>Instrument/channel map and calibration references: __________
+Fluid/medium and boundary conditions: __________</p>
+<p>If these criteria are absent or changed after measurement, record the
+gap or new test version. Do not use post-run thresholds to pass this
+run.</p>
+<h2 id="command-actuation-and-direct-observation">2. Command, actuation
+and direct observation</h2>
+<p>Planned command: <code>b2 b1 b0 = 111</code>. <strong>Issued?
+UNVERIFIED.</strong> Actual command entry/raw record: __________
+Timestamp: __________</p>
+<p>Frozen mapping: <code>N = 4b2 + 2b1 + b0 = 7</code>; target
+<code>P = N + 1 = 8</code> connected paths. This is a target, not a
+measured result.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Actuator/gate</th>
+<th>Commanded position</th>
+<th><strong>Actual measured/observed</strong> position</th>
+<th>Timestamp, method and raw record</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>b2</td>
+<td>1 (planned)</td>
+<td>UNOBSERVED</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td>b1</td>
+<td>1 (planned)</td>
+<td>UNOBSERVED</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td>b0</td>
+<td>1 (planned)</td>
+<td>UNOBSERVED</td>
+<td>__________</td>
+</tr>
+</tbody>
+</table>
+<p>Observed physical configuration (diagram/photo/raw record reference,
+discrepancies): __________</p>
+<h2 id="eight-physical-paths-record-each-separately">3. Eight physical
+paths — record each separately</h2>
+<p>Use the frozen path IDs and criteria. Record <strong>connectivity
+evidence and functioning measurements separately</strong>; a count of
+connected paths alone does not prove hydraulic performance.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Path</th>
+<th>Frozen endpoint/path ID</th>
+<th>Observed open/connected?</th>
+<th>Required pressure/flow or other measured values, units, time
+window</th>
+<th>Raw channel/record</th>
+<th>Meets frozen criterion?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>__________</td>
+<td>UNOBSERVED</td>
+<td>UNMEASURED</td>
+<td>__________</td>
+<td>UNVERIFIED</td>
+</tr>
+</tbody>
+</table>
+<p>Additional frozen observables (for example leakage, repeatability,
+temperature, inlet/outlet pressure, conservation residual, boundary
+conditions), measured values and raw references: __________</p>
+<h2 id="untouched-raw-data-and-acquisition-provenance">4. Untouched raw
+data and acquisition provenance</h2>
+<p>Native acquisition files and paths: __________ Device/DAQ IDs,
+firmware, channel map: __________</p>
+<p>Start/end timestamps and clock basis: __________ Sampling rate:
+__________ Calibration records: __________</p>
+<p>Original file sizes and SHA-256 hashes: NOT AVAILABLE Acquisition
+operator and transfer/custody log: NOT AVAILABLE</p>
+<p>Untouched originals preserved at: NOT AVAILABLE Separate
+analysis/derived files and code/version: __________</p>
+<p>If copying original data, record <code>COPY(S,D)</code> operation and
+independently computed <code>SHA256(S)</code> and
+<code>SHA256(D)</code>; evaluate <code>F_A</code> only on actual bytes.
+Hash agreement verifies byte identity within the method’s assumptions,
+not that the data depict a physical 111 event (<code>F_C</code>). Retain
+time-stamped originals and append later findings (<code>F_D</code>).</p>
+<p>Missing data, interruptions, edits to copies, deviations and incident
+log: __________</p>
+<h2 id="independent-validation-and-gate">5. Independent validation and
+GATE</h2>
+<p>Independent reviewer/team: NOT YET RECORDED Independence from
+acquisition and primary analysis (people, instruments, method, data
+path): NOT ESTABLISHED (<code>F_B</code>)</p>
+<p>Evidence accessed and independently checked (raw hashes,
+channel/actuator/path mapping, calculations, frozen criteria,
+discrepancies): __________</p>
+<p>Independent result and signed/datable record: __________
+Contradictions or unresolved gaps: __________</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gate check</th>
+<th>Result and evidence reference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Command and actual positions established</td>
+<td>UNVERIFIED: no command log or observed positions</td>
+</tr>
+<tr class="even">
+<td>All eight paths directly observed and functioning under frozen
+criteria</td>
+<td>UNVERIFIED: eight are a calculated target only</td>
+</tr>
+<tr class="odd">
+<td>Every required observable meets frozen criteria</td>
+<td>UNVERIFIED: criteria reference and measurements absent</td>
+</tr>
+<tr class="even">
+<td>Untouched raw data and provenance intact</td>
+<td>UNVERIFIED: no physical acquisition files supplied</td>
+</tr>
+<tr class="odd">
+<td>Sufficiently independent validation supports the physical
+inference</td>
+<td>UNVERIFIED: independent path not established</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Current GATE = HOLD.</strong> Upon acquiring physical
+evidence, re-run GATE against the referenced pre-execution criteria:
+<code>PASS / HOLD / other outcome defined by frozen gate: ______</code>
+Gate record/time/reviewer: __________ Reasons/evidence: __________.
+<code>F_F</code>: missing deciding evidence is UNVERIFIED, not
+FALSIFIED; record actual contradictory evidence separately.
+<code>F_G</code>: do not infer PASS from the formula, a hash, or
+repository verification.</p>
+<p><strong>Physical-111 latch: NOT AUTHORIZED.</strong> Change only
+after recorded GATE = PASS; latch record/time: __________</p>
+<p>Keep prior HOLD and any failed runs append-only. Command, simulation,
+repository verification, data receipt, or agreement alone cannot
+establish physical 111, independent Echo, hydraulic performance, Title
+24 compliance, or GATE PASS.</p>
+</body>
+</html>
