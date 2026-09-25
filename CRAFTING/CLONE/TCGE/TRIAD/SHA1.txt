@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/TRIAD
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=2
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-1
+digest=a0ac9e3995f9ae3299bd1718d41c65ce0eaf2cb8
