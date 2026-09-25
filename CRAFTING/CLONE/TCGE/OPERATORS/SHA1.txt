@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/OPERATORS
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=2
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-1
+digest=44c9d1bc85b0fd71fe14e128cfc1b0c9f9b44daf
