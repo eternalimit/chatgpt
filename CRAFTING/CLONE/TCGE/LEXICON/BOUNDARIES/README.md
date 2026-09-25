@@ -1,0 +1,12 @@
+# BOUNDARIES
+
+Preserves distinctions required by the lexicon.
+
+```text
+WORD != DEFINITION
+DEFINITION != USE
+MODEL != PHYSICAL OBJECT
+DEFINED != VERIFIED
+PARTIAL != COMPLETE
+HASH MATCH != PROOF OF TRUTH
+```
