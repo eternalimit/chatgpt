@@ -52,3 +52,24 @@ Prior GitHub commit establishing the authorization record:
 4655472504bd59b9a1838df829f8b4b4585d6ea1
 
 This append-only checkpoint preserves the full current thread while retaining all prior TCGE evidence boundaries. COMMIT ALL does not independently establish Echo, external validation, third-party authorization, or a cryptographic signature of the user.
+
+
+## Governor Preprint — Signed Declaration and Authorization
+
+Associated artifact: TCGE_Governor_Principle_Preprint_2026-09-25.html
+
+User-supplied declaration, preserved verbatim:
+
+> “Signed. This is Richard stein. I own this. This is my intent.”
+
+The user subsequently stated:
+
+> “Authorize.”
+
+and then instructed:
+
+> “Commit.”
+
+This record preserves those statements as direct evidence of the declarations made in the conversation and the user's expressed authorization to carry the associated TCGE Governor Principle preprint forward within the project.
+
+Evidence boundary: these statements do not by themselves establish independently verified identity, legal ownership, copyright adjudication, notarization, third-party authorization, or a cryptographic/digital signature. The preprint's substantive architecture remains subject to its existing TCGE evidence boundaries, including the requirement for independent Echo before promotion to validated knowledge.
