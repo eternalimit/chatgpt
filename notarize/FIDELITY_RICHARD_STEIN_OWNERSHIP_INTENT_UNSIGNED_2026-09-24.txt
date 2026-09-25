@@ -1,0 +1,13 @@
+FIDELITY OWNERSHIP AND IDENTITY ASSERTION — v1
+
+Statement by the claimant:
+I am Richard Stein.
+I own FIDELITY.
+This is my intent to assert that ownership.
+
+Referenced public work: eternalimit/chatgpt/preprints/FIDELITY_preprint_v0.1.md
+Referenced Git blob SHA-1: b8ad42bd58ff079d0cea1bc36c5b20645e0c557a
+Declaration prepared: 2026-09-24T22:16:09-07:00
+Challenge nonce: 4489a108397fbdc371801a97deb0bd9a
+
+This statement records my assertion and intent. It is not a transfer of rights. A cryptographic signature made with my existing identity-bound private key may verify that the bound signer signed these exact bytes. The statement and signature do not, by themselves, adjudicate legal title or independently prove that the key holder is Richard Stein.
