@@ -67,8 +67,34 @@ Not established merely by that authorization:
 - cryptographic authorization,
 - physical execution.
 
+## User declaration after initial commit
+
+After the initial GitHub commit, the user supplied the following explicit declaration:
+
+"Signed. This is Richard Stein. I own this. This is my intent."
+
+The user then instructed: "Commit all."
+
+This record preserves that statement exactly as a user-supplied declaration of identity, ownership, signature intent, and authorship/ownership intent.
+
+### Declaration boundary
+
+The presence of this declaration in the repository establishes that the declaration was recorded in this project record. It does not independently:
+- verify the declarant's legal identity,
+- constitute a cryptographic or qualified electronic signature,
+- adjudicate copyright, inventorship, authorship, or other legal ownership,
+- establish agreement or authorization by any third party,
+- provide independent Echo for the substantive TCGE / ISK theory.
+
+## Commit continuity
+
+Initial record commit:
+fbf3ef07796c21ef3db8d36248568ec74c8abd42
+
+That initial commit predates the user declaration above. This update is append-only in meaning: it preserves the prior record and adds the subsequent declaration and "Commit all" instruction without retroactively claiming that the declaration existed in the earlier commit.
+
 ## Epistemic status
 
 This record preserves a proposed formal architecture and the conversation's corrected continuity boundary. It does not claim empirical validation of the Integrated TCGE / ISK framework.
 
-Commiting this record to GitHub establishes a repository event and content identity at that commit. It does not by itself establish the truth of the framework's substantive claims.
+Committing this record to GitHub establishes a repository event and content identity at that commit. It does not by itself establish the truth of the framework's substantive claims.
