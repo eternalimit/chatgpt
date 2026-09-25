@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/PREPRINTS
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=2
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-256
+digest=38a2966687eaae7dc0568bf41eecd62569c9e85e09dd02aa169cc71cf115a69e
