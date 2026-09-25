@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/AXIOMS
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=3
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-1
+digest=ecba2621f6359f03a94838365566a87e8471266c
