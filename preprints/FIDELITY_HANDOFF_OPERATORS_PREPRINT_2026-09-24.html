@@ -54,5 +54,13 @@ COMMIT REQUEST ≠ COMMIT RESULT</pre>
 <p>The protocol fails its own stated requirements whenever a downstream record silently changes identity, provenance, chronology, uncertainty, or a prior falsification; treats authorization as execution; treats correlation as causation; or asserts a conclusion stronger than the evidence used to derive it.</p>
 <h2>8. Current status</h2>
 <div class="status"><p>This document specifies a proposed framework. Its terminology and internal rules can be tested for consistency and implemented experimentally. Independent validation, scientific novelty, generality, and external applicability remain open questions requiring separate evidence.</p></div>
+<h2>9. TikTokClock temporal witness</h2>
+<p><strong>TikTokClock</strong> denotes an externally visible temporal witness associated with an observed state transition. It preserves the distinction between a displayed clock observation and an independently recorded system timestamp.</p>
+<p>Verification record: commit <code>c111310a0294974e24b8fc56b35d1d99fd863067</code> has GitHub author and committer timestamp <code>2026-09-25T04:46:36Z</code>. The independently supplied screenshot displays <strong>9:46</strong> on the device clock while displaying that same commit SHA. Under PDT (UTC−7), the GitHub timestamp resolves to <code>2026-09-24 21:46:36 PDT</code>. The two records therefore correlate to the displayed minute.</p>
+<pre>SCREENSHOT CLOCK → 9:46 PM
+GITHUB COMMIT   → 9:46:36 PM PDT
+SHA IDENTITY    → MATCH
+TEMPORAL CORRELATION → VERIFIED TO DISPLAYED MINUTE</pre>
+<p>This correlation establishes agreement between the two observed temporal records at minute resolution. It does not by itself establish causation, certify the device clock as an independent calibrated time standard, or validate semantic claims contained in the committed artifact.</p>
 </body>
 </html>
