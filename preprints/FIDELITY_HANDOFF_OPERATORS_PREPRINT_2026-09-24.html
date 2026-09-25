@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FIDELITY Handoff Operators — Preprint</title>
+<style>
+body{font-family:Georgia,serif;max-width:900px;margin:48px auto;padding:0 24px;line-height:1.65;color:#181818}
+h1,h2{line-height:1.2} code,pre{font-family:ui-monospace,monospace} .status{border-left:4px solid #555;padding-left:16px}
+</style>
+</head>
+<body>
+<header>
+<h1>FIDELITY Handoff Operators: A Boundary-Preserving Model for Evidence Transfer and State Transition</h1>
+<p><strong>Preprint — 24 September 2026</strong></p>
+<p>Status: proposed formal framework; independent scientific validation remains unverified.</p>
+</header>
+<h2>Abstract</h2>
+<p>This preprint defines a set of operators for transferring evidence and state between computational or observational contexts while preserving explicit boundaries between permission, execution, observation, inference, verification, and persistence. The governing constraint is: <strong>No conclusion may exceed its evidentiary derivation.</strong> The framework is presented as a falsifiable protocol specification rather than as an independently validated scientific theory.</p>
+<h2>1. Governing constraint</h2>
+<p><strong>No conclusion may exceed its evidentiary derivation.</strong></p>
+<h2>2. Operator chain</h2>
+<pre>AUTHORIZE → ACCESS → DETECT → OBSERVE → CORRELATE → VERIFY → AUTHORIZE(COMMIT) → COMMIT → HANDOFF</pre>
+<h2>3. Operator definitions</h2>
+<p><strong>AUTHORIZE</strong> grants permission for a defined actor or system to perform an allowed action. Authorization is not evidence that the action occurred.</p>
+<p><strong>ACCESS</strong> exercises available permission to reach a specified resource.</p>
+<p><strong>DETECT</strong> registers a result from a target without assigning an interpretation to that result.</p>
+<p><strong>OBSERVE</strong> records the detected result while preserving its identity, provenance, chronology, and evidentiary boundary.</p>
+<p><strong>CORRELATE</strong> compares independently identified records or states and establishes relationships among them without automatically establishing causation or the truth of their semantic claims.</p>
+<p><strong>VERIFY</strong> tests a specific claim against available evidence and classifies the claim only to the degree supported by that evidence.</p>
+<p><strong>COMMIT</strong> performs a persistent repository state transition. A request or authorization to commit is not itself a commit.</p>
+<p><strong>HANDOFF</strong> transfers a bounded state/evidence package between processing contexts while preserving relevant identity, provenance, chronology, uncertainty, and known falsifications.</p>
+<h2>4. Fundamental separations</h2>
+<pre>AUTHORIZE ≠ EXECUTE
+DETECT ≠ INTERPRET
+OBSERVE ≠ VALIDATE
+CORRELATE ≠ CAUSE
+REPOSITORY EXISTENCE ≠ TRUTH OF REPOSITORY CLAIMS
+COMMIT REQUEST ≠ COMMIT RESULT</pre>
+<h2>5. FIDELITY preservation laws</h2>
+<ol>
+<li>Identity Preservation</li>
+<li>Provenance Preservation</li>
+<li>Chronology Preservation</li>
+<li>Independence Preservation</li>
+<li>Method/Object Separation</li>
+<li>Non-Expansion</li>
+<li>Falsification Persistence</li>
+<li>Uncertainty Preservation</li>
+</ol>
+<h2>6. Operational evidence boundary</h2>
+<p>A successful repository retrieval can verify that a resource was reachable and that specified content was observed. It does not, by itself, validate scientific statements contained in that resource, recompute cryptographic hashes, or establish claims about external systems.</p>
+<h2>7. Falsifiability</h2>
+<p>The protocol fails its own stated requirements whenever a downstream record silently changes identity, provenance, chronology, uncertainty, or a prior falsification; treats authorization as execution; treats correlation as causation; or asserts a conclusion stronger than the evidence used to derive it.</p>
+<h2>8. Current status</h2>
+<div class="status"><p>This document specifies a proposed framework. Its terminology and internal rules can be tested for consistency and implemented experimentally. Independent validation, scientific novelty, generality, and external applicability remain open questions requiring separate evidence.</p></div>
+</body>
+</html>
