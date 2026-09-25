@@ -1,0 +1,8 @@
+TCGE_FOLDER_HASH_V1
+folder=CRAFTING/CLONE/TCGE/EGO
+canonicalization=TCGE_FOLDER_MANIFEST_V1
+manifest_format=relative_path<TAB>git_blob_sha1<TAB>size
+files_hashed=10
+excludes=SHA1.txt,SHA256.txt
+algorithm=SHA-256
+digest=f88084f462a0b40b71b9c631bb02032cc71e8b7d27b9ad4ac667a7de70d99d77
