@@ -1,46 +1,55 @@
 # Tier 1 — Results Package
 
-## Status
+## 1. Source Input
 
-OPEN / PACKAGE DEFINITION
-
-## 1. Source
-
-Primary input recorded for the Tier 1 meeting:
+Primary numeric input:
 
 `013883379999566983`
 
-Numeric value:
+Interpreted as the integer:
 
 `13,883,379,999,566,983`
 
-The associated multilingual naming record was supplied as meeting input.
+The leading `0` is preserved as source formatting and is not part of the integer's magnitude.
 
-## 2. Interface
+## 2. Supplied Multilingual Record
 
-TXGE interface workflow:
+The meeting input supplied numerical naming representations for:
+
+- English — short scale
+- Spanish — long scale
+- French — long scale
+- German — long scale
+- Sanskrit — traditional/Vedic terminology
+- Farsi/Persian — modern terminology using borrowed large-number terms
+
+The supplied source also included external reference labels `[1]` through `[4]`. Those references are preserved as source annotations rather than independently verified claims in this package.
+
+## 3. Interface
+
+TXGE workflow:
 
 INPUT → TRANSFORM → EXECUTE → GATE → EVALUATE → EXPORT
 
-## 3. TCU Handoff
+## 4. TCU Handoff
 
-Each prompt is treated as a state-bearing handoff containing:
+Each prompt produces a state-bearing handoff containing:
 
-- source input
+- source
 - operation
 - output
 - verification status
 - next-state reference
 
-## 4. TCGE / TXGE Formalization
+## 5. TCGE / TXGE
 
-TCGE: Transform → Couple → Gate → Evaluate (conversation-defined specification).
+TCGE and TXGE are conversation-defined specifications, not established external standards.
 
-TXGE: Transform → Execute → Gate → Evaluate (conversation-defined specification).
+TCGE: Transform → Couple → Gate → Evaluate.
 
-These are proposed definitions for this project, not established external standards.
+TXGE: Transform → Execute → Gate → Evaluate.
 
-## 5. Verification States
+## 6. Verification States
 
 `1` = defined condition satisfied.
 
@@ -50,20 +59,14 @@ These are proposed definitions for this project, not established external standa
 
 `UNDEFINED` = required definition has not been supplied.
 
-## 6. Export Rule
+## 7. Packaging Rule
 
-Working records remain associated with their originating prompt. The consolidated results package is produced at the end of the Tier 1 meeting.
+Working records are accumulated during the Tier 1 meeting. Results are consolidated at the end of the package.
 
-## 7. Boundary
+## 8. Result
 
-A formal record of an operation does not itself establish that an external action occurred. External execution, transmission, ownership, or real-world outcomes require independent evidence.
+The supplied numeric record is preserved as the primary Tier 1 input. The multilingual representations are preserved as supplied source material. No independent linguistic or historical verification is asserted here.
 
-## 8. Results
-
-Final results belong at the end of this package after the Tier 1 workflow is closed.
-
----
-
-### Package sequence
+## 9. Export
 
 PROMPTS → TXGE → TCU HANDOFFS → VERIFICATION → RESULTS → EXPORT
