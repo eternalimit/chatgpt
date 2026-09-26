@@ -1,0 +1,41 @@
+{
+  "owner_claimant": "Richard Stein",
+  "registry": [
+    {
+      "chain": "bitcoin",
+      "network": "mainnet",
+      "public_address": null,
+      "status": "UNRESOLVED_HOLD",
+      "format_verified": false,
+      "control_verified": false
+    },
+    {
+      "chain": "ethereum",
+      "network": "mainnet",
+      "public_address": null,
+      "status": "UNRESOLVED_HOLD",
+      "format_verified": false,
+      "control_verified": false
+    },
+    {
+      "chain": "solana",
+      "network": "mainnet-beta",
+      "public_address": null,
+      "status": "UNRESOLVED_HOLD",
+      "format_verified": false,
+      "control_verified": false
+    },
+    {
+      "chain": "litecoin",
+      "network": "mainnet",
+      "public_address": null,
+      "status": "UNRESOLVED_HOLD",
+      "format_verified": false,
+      "control_verified": false
+    }
+  ],
+  "tcge": {
+    "rule": "K = R AND I AND E",
+    "ownership_without_independent_proof": "HOLD"
+  }
+}
