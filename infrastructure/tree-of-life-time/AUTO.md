@@ -1,0 +1,22 @@
+# AUTO Route
+
+INPUT
+-> IDENTIFY ROOT
+-> IDENTIFY LIFE BRANCH
+-> IDENTIFY TIME POSITION
+-> GET EVIDENCE
+-> BIND TIMESTAMP
+-> TCGE
+-> RECORD
+-> HANDOFF
+
+## Output states
+
+ROOTED
+BRANCHED
+TIMESTAMPED
+GROUNDED
+HOLD
+HANDOFF_READY
+
+AUTO does not invent ancestry, dates, events, or relationships.
