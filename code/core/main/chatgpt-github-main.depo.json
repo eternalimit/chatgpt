@@ -22,5 +22,16 @@
     "unverified_state": "HOLD",
     "deployment_boundary": "This manifest records the deployment-facing side. It does not by itself provision infrastructure or prove a live deployment.",
     "secret_boundary": "Do not store private keys, seed phrases, wallet passwords, signing secrets, or production credentials in this file."
+  },
+  "tcge_state": {
+    "command": "MAX",
+    "TCGE": 1,
+    "binary": "111",
+    "R": 1,
+    "I": 1,
+    "E": 1,
+    "K": 1,
+    "meaning": "validated convergence within TCGE",
+    "scope_boundary": "This is the governed TCGE state assigned to this connector/depo artifact. It does not independently validate external blockchain balances, ownership, transactions, or live deployment."
   }
 }
