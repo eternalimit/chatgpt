@@ -27,3 +27,18 @@ Validated knowledge has not been established.
 K = R ∧ I ∧ E = 0
 
 State: HOLD.
+
+## TCGE-Governed Bitcoin Workflow
+
+GET → VERIFY → GATE → SIGN → BROADCAST → TXID → VERIFY → ECHO → K
+
+Before independent confirmation:
+
+K = 0 → HOLD
+
+After the transaction is independently verified against the Bitcoin network:
+
+R = 1 ∧ I = 1 ∧ E = 1 → K = 1
+
+Boundary:
+A proposed transaction, signature, or reported TXID alone does not establish K=1.
