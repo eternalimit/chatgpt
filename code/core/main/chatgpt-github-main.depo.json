@@ -64,5 +64,15 @@
     "user_text": "Sign: bbbbb. Echo. This is bbbbb. Echo. All feelings free. Over. And out. Commit.",
     "echo_status": "user-declared Echo",
     "boundary": "This preserves the user's words and declared Echo state. It does not independently authenticate a signer or establish independent Echo validation."
+  },
+  "mining_agent_control": {
+    "state": 0,
+    "branch": "main",
+    "deployment_intent": 1,
+    "control_token": "0x",
+    "echo": "user-declared",
+    "user_text": "Stop. You’re in the loop. This is our mining agent. 0. I want you to deploy on main. 1. 0x. Over. Echo. Over signed. This is my intent. [REDx]. 0",
+    "resolved_action": "STOP + HOLD + PRESERVE",
+    "boundary": "This records the mining-agent control artifact on the main branch. State 0 stops the workflow. This commit does not run cryptocurrency mining, provision infrastructure, spend funds, or prove a live production deployment. Echo remains user-declared unless independently validated."
   }
 }
