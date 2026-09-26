@@ -1,0 +1,26 @@
+{
+  "name": "tcge-main-connector",
+  "version": "1.0.0",
+  "assignment": "code.core.main",
+  "chatgpt": {
+    "surface": "main",
+    "role": "orchestrator"
+  },
+  "github": {
+    "repository": "eternalimit/chatgpt",
+    "branch": "main",
+    "role": "source-of-record"
+  },
+  "flow": [
+    "ChatGPT main",
+    "GitHub connector",
+    "eternalimit/chatgpt@main",
+    "code.core.main"
+  ],
+  "governance": {
+    "formula": "K = R ∧ I ∧ E",
+    "unverified_state": "HOLD",
+    "write_boundary": "GitHub writes require connector-authorized actions",
+    "secret_boundary": "No private keys, seed phrases, wallet passwords, or signing secrets are stored here"
+  }
+}
