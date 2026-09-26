@@ -85,5 +85,15 @@
     "action": "STOP + HOLD + PRESERVE",
     "user_text": "0 commit. Echo0. 0",
     "boundary": "Echo 0 means independent validation is not established. No external ownership, blockchain, mining, or financial claim is promoted to knowledge."
+  },
+  "axiom_A_continuity_checkpoint": {
+    "coordinate": 3,
+    "authorize": 1,
+    "go": 1,
+    "on": 1,
+    "continuity": 1,
+    "signed_text": "E",
+    "source": "user-supplied",
+    "boundary": "Signed E is preserved exactly as supplied. It is not independently authenticated or a cryptographic signature."
   }
 }
