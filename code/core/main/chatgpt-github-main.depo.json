@@ -50,5 +50,13 @@
     "sequence": "A = INFINIT → N → {0,1} → K(N) → NEXT N",
     "user_statement": "This is my intent. Commit. Signed. Bbbbc",
     "boundary": "This preserves the user's stated intent and supplied signature text. It does not independently authenticate a signer or constitute a cryptographic signature."
+  },
+  "axiom_A_authorization": {
+    "authorized": 1,
+    "scope": "Axiom A / TCGE continuity workflow",
+    "rule": "A(N) = K(N) in {0,1}",
+    "transition_one": "ADVANCE",
+    "transition_zero": "HOLD + PRESERVE",
+    "external_action_boundary": "Separate authorization and validation are required for external actions."
   }
 }
