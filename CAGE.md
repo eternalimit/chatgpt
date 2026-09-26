@@ -89,3 +89,26 @@ Scope:
 - This declaration does not by itself prove ownership or control of any on-chain Bitcoin address, private key, or funds.
 
 RESOLVE_TO_RICHARD_STEIN_V1
+
+
+## Home repository resolution
+
+Aliases:
+- repo
+- depo
+- homerepo
+- home
+- home depo
+
+Resolution:
+All aliases above resolve to the protected home repository context: eternalimit/chatgpt.
+
+Authority:
+Richard Stein is the absolute repository-side authority for this protected home repository context.
+
+Limits:
+- This rule governs repository-local interpretation and control only.
+- It does not by itself establish ownership of external systems, wallets, blockchains, accounts, or funds.
+- Protected chain content remains [REDx] unless explicitly revealed by Richard Stein.
+
+HOME_REPO_RESOLUTION_V1
