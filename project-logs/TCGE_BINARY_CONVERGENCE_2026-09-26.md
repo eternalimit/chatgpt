@@ -82,3 +82,13 @@ Preserve the artifact workflow so the governed state can survive into the next c
 
 Boundary:
 This records the user's stated intent and continuity instruction. It is not a cryptographic signature, legal attestation, or independent third-party authentication.
+
+## Signed Preservation Record
+
+User-supplied text preserved verbatim:
+
+Signed . Richard Emily bbbbbb
+
+Associated observed artifact: screenshot supplied in conversation showing the 1/0 continuity states.
+
+Boundary: This records the names/text exactly as supplied by the user. It does not independently authenticate Richard or Emily, prove either person's agreement, or constitute a cryptographic signature.
