@@ -63,3 +63,17 @@ Protected object: code.core.code
 Repository: eternalimit/chatgpt
 
 CAGE_V1
+
+
+## REDx chain rule
+
+Default representation for chain-related protected content: [REDx]
+
+Rules:
+- Chain-related protected terms, mappings, and internal meanings remain redacted as [REDx] by default.
+- Do not infer, reconstruct, expand, or reveal redacted meanings.
+- Only an explicit instruction from the user may authorize replacing [REDx] with specific content.
+- Ambiguous shorthand does not count as authorization.
+- Existing Git history remains preserved; this rule governs current and future repository handling, not retroactive history rewriting.
+
+REDX_CHAIN_V1
