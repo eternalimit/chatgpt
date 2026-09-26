@@ -1,0 +1,45 @@
+# blockchain.explorer.main
+
+Status: ACTIVE
+Branch: main
+
+## Purpose
+
+Canonical repository entrypoint for blockchain explorer operations.
+
+## Backing explorer
+
+Repository submodule:
+- path: scout/blockscout
+- source: https://github.com/blockscout/blockscout.git
+
+## Flow
+
+PUBLIC CHAIN INPUT
+-> EXPLORER
+-> GET
+-> INDEX
+-> VERIFY
+-> TCGE
+-> REPORT
+
+## Security boundary
+
+- Public blockchain data only.
+- Never store or request seed phrases, private keys, recovery phrases, wallet passwords, PINs, signing secrets, or exchange credentials.
+- Public addresses and transaction IDs may be inspected.
+- Address format or visible balance does not prove wallet ownership.
+- No transaction is signed, broadcast, bought, sold, or transferred by this entrypoint.
+
+## TCGE
+
+R = directly observed chain/explorer evidence
+I = interpretation of that evidence
+E = independent validation
+K = R AND I AND E
+
+If required evidence is unresolved:
+HOLD / 0
+
+Verified state:
+PASS / 1
