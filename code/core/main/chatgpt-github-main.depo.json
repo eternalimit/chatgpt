@@ -77,5 +77,13 @@
     "verify": "artifact-state verified from current repository file",
     "authorize": "user-authorized for this governed control record",
     "sign": "user-requested signature record only"
+  },
+  "moxy_return_state": {
+    "state": 0,
+    "echo": 0,
+    "coordinate": 2,
+    "action": "STOP + HOLD + PRESERVE",
+    "user_text": "0 commit. Echo0. 0",
+    "boundary": "Echo 0 means independent validation is not established. No external ownership, blockchain, mining, or financial claim is promoted to knowledge."
   }
 }
