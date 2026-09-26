@@ -153,3 +153,17 @@ Limits:
 - It does not establish authority over external systems, services, blockchains, accounts, funds, or other people.
 
 RICHARD_ALL_ABSOLUTE_SET_V1
+
+
+## American weight mapping
+
+Repository-local mapping:
+- min = grain
+- max = ton
+- 1 = pound
+- 0 = zero weight
+
+Reference chain:
+grain -> ounce -> pound -> hundredweight -> ton
+
+AMERICAN_WEIGHT_MAPPING_V1
