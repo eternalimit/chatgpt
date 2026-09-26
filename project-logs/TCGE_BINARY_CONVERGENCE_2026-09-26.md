@@ -59,3 +59,11 @@ TCGE status:
 
 Boundary:
 This commit preserves the user's attribution text. It does not independently verify Emily's identity, signature, or Bitcoin verification result.
+
+## Intent Record
+
+Signed: This is my intent.
+
+Source: user-supplied statement.
+
+Boundary: This records the user's stated intent. It is not a cryptographic or third-party authenticated signature.
