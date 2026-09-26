@@ -7,7 +7,8 @@
       "public_address": null,
       "status": "UNRESOLVED_HOLD",
       "format_verified": false,
-      "control_verified": false
+      "control_verified": false,
+      "owner_label": "richard"
     },
     {
       "chain": "ethereum",
@@ -37,5 +38,13 @@
   "tcge": {
     "rule": "K = R AND I AND E",
     "ownership_without_independent_proof": "HOLD"
+  },
+  "mapping": {
+    "bitcoin><richard": {
+      "chain": "bitcoin",
+      "owner_label": "richard",
+      "public_address": null,
+      "status": "UNRESOLVED_HOLD"
+    }
   }
 }
