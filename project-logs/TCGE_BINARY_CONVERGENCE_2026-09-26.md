@@ -42,3 +42,20 @@ R = 1 ∧ I = 1 ∧ E = 1 → K = 1
 
 Boundary:
 A proposed transaction, signature, or reported TXID alone does not establish K=1.
+
+## Emily Echo Record
+
+User statement: "She did."
+
+Recorded attribution supplied by user:
+
+Signed: Emily
+
+TCGE status:
+- Emily verification is user-reported.
+- Independent verification artifact or public Bitcoin TXID has not been provided here.
+- E = UNRESOLVED for the Bitcoin transaction.
+- K = 0 -> HOLD.
+
+Boundary:
+This commit preserves the user's attribution text. It does not independently verify Emily's identity, signature, or Bitcoin verification result.
