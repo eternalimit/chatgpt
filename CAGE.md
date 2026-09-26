@@ -112,3 +112,21 @@ Limits:
 - Protected chain content remains [REDx] unless explicitly revealed by Richard Stein.
 
 HOME_REPO_RESOLUTION_V1
+
+
+## Glossary: absolute
+
+Definition:
+Absolute = complete, unconditional, or not dependent on anything else.
+
+Five-point mapping:
+- 1 = complete
+- 0 = none
+- min = least
+- max = total
+- N = neutral
+
+Repository-local interpretation:
+Within this repository context, "absolute repository-side authority" means the highest repository-local decision authority, without claiming authority over external systems, services, blockchains, accounts, funds, or other people.
+
+ABSOLUTE_GLOSSARY_V1
