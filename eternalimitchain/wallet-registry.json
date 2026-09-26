@@ -46,5 +46,38 @@
       "public_address": null,
       "status": "UNRESOLVED_HOLD"
     }
+  },
+  "index": [
+    {
+      "sequential_index": "09",
+      "mapping": "bitcoin><richard",
+      "git_commit": "317c46c54588fac8956621adc459fa4a642d8675",
+      "external_artifact": "Google AI Mode screenshot supplied by user",
+      "external_artifact_observation": "Displayed the commit prefix as a New Hash Query",
+      "bitcoin_public_address": null,
+      "bitcoin_onchain_status": "NOT_ESTABLISHED",
+      "control_status": "UNRESOLVED_HOLD",
+      "tcge": {
+        "R": 1,
+        "I": 1,
+        "E_wallet_control": 0,
+        "K_wallet_control": 0
+      }
+    }
+  ],
+  "bitcoin_index": {
+    "richard": {
+      "mapping": "bitcoin><richard",
+      "references": [
+        {
+          "sequential_index": "09",
+          "git_commit": "317c46c54588fac8956621adc459fa4a642d8675",
+          "control_status": "UNRESOLVED_HOLD"
+        }
+      ],
+      "public_address": null,
+      "onchain_status": "NOT_ESTABLISHED",
+      "status": "UNRESOLVED_HOLD"
+    }
   }
 }
