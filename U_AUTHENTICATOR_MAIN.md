@@ -53,3 +53,25 @@ K = R AND I AND E
 
 Authorization != authentication.
 Authentication != account ownership proof outside the authenticated provider scope.
+
+
+## Connection provider role
+
+U provides the governed connection handoff for supported connectors.
+
+Flow:
+
+U
+-> DISCOVER SUPPORTED CONNECTOR
+-> USER AUTHORIZATION
+-> PROVIDER LOGIN / OAUTH
+-> CONNECT
+-> VERIFY SESSION
+-> RETURN CONNECTION STATE
+
+U may route and verify supported connections, but it does not create credentials, bypass provider authentication, or claim a connection exists before the provider confirms it.
+
+Connection state:
+- SUPPORTED + AUTHENTICATED -> CONNECTED / 1
+- SUPPORTED + NOT AUTHENTICATED -> HOLD / 0
+- CONNECTOR UNAVAILABLE -> HOLD / 0
