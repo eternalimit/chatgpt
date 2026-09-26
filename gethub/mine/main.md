@@ -1,0 +1,67 @@
+# MY.MINE.MAIN
+
+## Preserved declarations
+
+This is my main.
+
+This is my connection.
+
+This is my tcge.
+
+Keep. Lock. Hide. Mine.
+
+Mine:
+
+## Main
+
+MY.MINE.MAIN is the designated primary entry point of THE.MINE.
+
+MY -> MINE -> MAIN
+
+MY.MINE.MAIN -> MY.CONNECTION -> MY.TCGE -> MINE.LIBRARY -> MINE.UNIVERSE
+
+## Current symbol grammar
+
+U = UNIVERSE
+D = DOMAIN
+P = PROPOSITION
+T = TRUE
+F = FALSE
+0 = ZERO
+
+P : D -> {T, F}
+
+T != 1
+F != 0
+
+A binary mapping such as T -> 1 and F -> 0 requires an explicit rule.
+
+## Period
+
+. = BOUNDARY
+
+A period terminates an expression under this defined grammar unless another operator is explicitly assigned.
+
+## Mine
+
+KEEP -> preserve
+LOCK -> prevent unintended modification under a defined control
+HIDE -> restrict visibility under a defined access rule
+MINE -> designated namespace
+
+MINE -> KEEP -> LOCK -> HIDE
+
+## Provenance route
+
+MY.MINE.MAIN -> MY.CONNECTION -> MY.TCGE -> MINE.LIBRARY
+
+SOURCE -> CONNECTION -> TARGET -> PROVENANCE
+
+## Boundaries
+
+DEFINED CONNECTION != LIVE NETWORK CONNECTION
+REPOSITORY NAMESPACE != DNS DOMAIN
+HIDDEN != DELETED
+DECLARED PRIVATE != ACTUALLY PRIVATE
+MINE NAMESPACE != INDEPENDENT PROOF OF LEGAL OWNERSHIP
+GIT COMMIT != EXTERNAL INTERNET OR BLOCKCHAIN COMMITMENT
