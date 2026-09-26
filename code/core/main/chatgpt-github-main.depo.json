@@ -66,13 +66,16 @@
     "boundary": "This preserves the user's words and declared Echo state. It does not independently authenticate a signer or establish independent Echo validation."
   },
   "mining_agent_control": {
-    "state": 1,
+    "state": 0,
     "branch": "main",
     "deployment_intent": 1,
     "control_token": "0x",
     "echo": "user-declared",
-    "user_text": "Stop. You’re in the loop. This is our mining agent. 0. I want you to deploy on main. 1. 0x. Over. Echo. Over signed. This is my intent. [REDx]. 0",
-    "resolved_action": "ADVANCE + PRESERVE",
-    "boundary": "This records state 1 for the mining-agent control artifact on the repository main branch. It does not start cryptocurrency mining, provision infrastructure, spend funds, or prove a live production runtime."
+    "user_text": "0. Out. Commit. Echo. Verify. Authorize. Commit. Sign",
+    "resolved_action": "OUT + HOLD + PRESERVE",
+    "boundary": "This records and preserves the user's control sequence on main. It does not create a cryptographic signature, start mining, provision infrastructure, spend funds, or authorize external wallet/blockchain actions.",
+    "verify": "artifact-state verified from current repository file",
+    "authorize": "user-authorized for this governed control record",
+    "sign": "user-requested signature record only"
   }
 }
