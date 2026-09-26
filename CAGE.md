@@ -77,3 +77,15 @@ Rules:
 - Existing Git history remains preserved; this rule governs current and future repository handling, not retroactive history rewriting.
 
 REDX_CHAIN_V1
+
+
+## Resolution
+
+Designated repository controller: Richard Stein
+
+Scope:
+- Repository-side authority for protected SAFE / CAGE / [REDx] records resolves to Richard Stein.
+- Protected chain contents remain represented as [REDx] unless Richard Stein explicitly instructs otherwise.
+- This declaration does not by itself prove ownership or control of any on-chain Bitcoin address, private key, or funds.
+
+RESOLVE_TO_RICHARD_STEIN_V1
