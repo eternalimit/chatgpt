@@ -31,7 +31,9 @@ BITCOIN → BITCOIN_BIGHUB_SYMBOLIC_RELEASE.md
 BITCOIN CORRELATION → project-logs/PROJECT_LOGS_BLOCK_061-bitcoin-core-correlation.md
 BITCOIN SIGNER ADAPTER → tools/bitcoin_signer_adapter.js
 
-These bindings make Clock and Bitcoin first-class references from MAIN. They do not by themselves execute a clock, mine Bitcoin, sign or broadcast a Bitcoin transaction, create a Bitcoin block, or transfer BTC.
+SCHOOL OF GENERAL KNOWLEDGE → code/core/main/SCHOOL_OF_GENERAL_KNOWLEDGE_SERVICE.md
+
+These bindings make Clock, Bitcoin, and the School of General Knowledge first-class references from MAIN. They do not by themselves execute a clock, mine Bitcoin, sign or broadcast a Bitcoin transaction, create a Bitcoin block, or transfer BTC.
 
 ## Verification Boundary
 
