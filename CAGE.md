@@ -130,3 +130,26 @@ Repository-local interpretation:
 Within this repository context, "absolute repository-side authority" means the highest repository-local decision authority, without claiming authority over external systems, services, blockchains, accounts, funds, or other people.
 
 ABSOLUTE_GLOSSARY_V1
+
+
+## Root designation and absolute set
+
+Root designation:
+Richard Stein = All
+
+Absolute set:
+The only repository-local absolute mappings are:
+- 1 = complete
+- 0 = none
+- min = least
+- max = total
+- N = neutral
+
+Order:
+Richard Stein = All precedes the absolute set as the root repository-side designation.
+
+Limits:
+- This is a repository-local semantic rule.
+- It does not establish authority over external systems, services, blockchains, accounts, funds, or other people.
+
+RICHARD_ALL_ABSOLUTE_SET_V1
