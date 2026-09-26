@@ -1,0 +1,64 @@
+# The GetHub Book
+
+## 1. Primitive states
+
+0 <-> 1
+
+0 = zero units.
+1 = one unit.
+
+## 2. Domain
+
+UNIT -> UNIVERSE -> UNIVERSAL
+
+ONE -> DOMAIN -> ALL-IN-DOMAIN
+
+## 3. TCGE frame
+
+THE -> OPEN -> TCGE -> CLOSE
+
+IDENTIFY -> OPEN -> PROCESS -> CLOSE
+
+## 4. Time reference
+
+UNIVERSAL CLOCK -> SYNC -> CLOCK -> TIMESTAMP -> RECORD
+
+SYNCHRONIZED != IDENTICAL
+
+## 5. Representation
+
+CODE -> BITCODE -> RESULT
+
+RESULT != VERIFIED RESULT
+
+## 6. Library
+
+OBJECT -> LIBRARY -> INDEX -> LIB -> RETRIEVE
+
+LIBRARY.LIB = COLLECTION.ADDRESS
+
+## 7. Evidence path
+
+ANCHOR -> BOUNDARY -> CLAIM -> PREDICT -> TEST -> PRODUCE -> OBSERVE -> EVIDENCE -> VERIFY/FALSIFY -> PROOF
+
+## 8. Universal scope
+
+UNIVERSAL_U(P) iff P holds for every x in explicitly defined domain U.
+
+ONE TRUE UNIT != UNIVERSAL TRUTH
+
+## 9. Governing invariant
+
+NO CONCLUSION MAY EXCEED ITS EVIDENTIARY DERIVATION.
+
+## 10. Preservation boundary
+
+SPECIFICATION != IMPLEMENTATION
+
+COMMIT != PROOF
+
+LINK != NETWORK CONNECTION
+
+REFERENCE != RETRIEVAL
+
+RETRIEVED != VERIFIED
