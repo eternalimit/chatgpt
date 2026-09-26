@@ -58,5 +58,11 @@
     "transition_one": "ADVANCE",
     "transition_zero": "HOLD + PRESERVE",
     "external_action_boundary": "Separate authorization and validation are required for external actions."
+  },
+  "counting_echo_record": {
+    "interpretation": "Yes. In the current Axiom A sequence, N is the counter/index; K(N) remains the binary validation state.",
+    "user_text": "Sign: bbbbb. Echo. This is bbbbb. Echo. All feelings free. Over. And out. Commit.",
+    "echo_status": "user-declared Echo",
+    "boundary": "This preserves the user's words and declared Echo state. It does not independently authenticate a signer or establish independent Echo validation."
   }
 }
