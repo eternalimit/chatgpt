@@ -214,3 +214,59 @@ H256(UTF8(Canonical(TCGE(X))))
 ```
 
 This record formalizes the SHA-1 / TCGE / SHA-256 discussion, subsequent reductions, operator definitions, COMMUNICATE extension, and the commitment-versus-proof boundary.
+
+
+## Domino: Git object identity junction
+
+Reference commit:
+
+```text
+4cba96864735faca1d9e9f7f38f71bd7e142e65b
+```
+
+The phrase "SHA-256 of the commit" is ambiguous unless the exact operation and bytes are specified.
+
+Distinguish three outputs:
+
+```text
+Git commit
+    |
+    +-- SHA-1 Git object ID
+    |
+    +-- SHA-256 of a specified commit payload/serialization
+    |
+    +-- Native Git SHA-256 object ID
+```
+
+For the TCGE framework, keep a fourth concept explicitly separate when applicable:
+
+```text
+TCGE-derived SHA-256 = H256(UTF8(Canonical(TCGE(X))))
+```
+
+Therefore:
+
+```text
+PAYLOAD SHA-256 != NATIVE GIT SHA-256 OBJECT ID
+NATIVE GIT SHA-256 OBJECT ID != TCGE-DERIVED SHA-256
+TCGE-DERIVED SHA-256 != PAYLOAD SHA-256
+```
+
+unless an explicit byte-exact construction demonstrates equality in a particular case.
+
+### Falsifiable junction
+
+Freeze one source commit, define each transformation independently, calculate each output, and compare the resulting identifiers byte-for-byte.
+
+```text
+SAME SOURCE -> DISTINCT DEFINED OPERATIONS -> OBSERVED OUTPUTS -> COMPARE
+```
+
+This is the domino: identifying the ambiguity forces the next experiment to specify the hashing domain before claiming a SHA-256 identity.
+
+Boundary preserved:
+
+```text
+CORRELATION != EQUIVALENCE
+COMMITMENT != PROOF
+```
