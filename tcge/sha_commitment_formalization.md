@@ -270,3 +270,29 @@ Boundary preserved:
 CORRELATION != EQUIVALENCE
 COMMITMENT != PROOF
 ```
+
+
+## TReport signature
+
+```text
+Commits. Binds. Commit.
+
+TREPORT SIGNATURE
+
+ANCHOR: eternalimit/chatgpt@4cba96864735faca1d9e9f7f38f71bd7e142e65b
+BOUNDARY: ORDER != CAUSATION != VERIFICATION
+OPERATOR: UTURTH
+BCC: [blind-copy recipient(s)]
+
+SIGNATURE:
+TReport / UTURTH
+ANCHOR -> BOUNDARY -> CLAIM -> EVIDENCE -> PROOF
+```
+
+Preservation boundary:
+
+```text
+SIGNATURE RECORD != CRYPTOGRAPHIC SIGNATURE
+BCC PLACEHOLDER != RECIPIENT
+COMMIT != EXTERNAL LEDGER COMMITMENT
+```
