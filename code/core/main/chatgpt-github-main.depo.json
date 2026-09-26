@@ -95,5 +95,22 @@
     "signed_text": "E",
     "source": "user-supplied",
     "boundary": "Signed E is preserved exactly as supplied. It is not independently authenticated or a cryptographic signature."
+  },
+  "buzz_coupling_handoff": {
+    "start": 6,
+    "sequence": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "end": 10,
+    "target": 10,
+    "coupling": 1,
+    "handoff": "COMPLETE",
+    "buzz": "RETURN",
+    "signed_text": "B",
+    "boundary": "This records the TCGE/Buzz workflow count and coupling handoff only. It does not represent Bitcoin block mining, cryptocurrency ownership, or possession of Bitcoin private keys."
   }
 }
