@@ -65,3 +65,30 @@ HIDDEN != DELETED
 DECLARED PRIVATE != ACTUALLY PRIVATE
 MINE NAMESPACE != INDEPENDENT PROOF OF LEGAL OWNERSHIP
 GIT COMMIT != EXTERNAL INTERNET OR BLOCKCHAIN COMMITMENT
+
+
+## Verify then falsify record
+
+Preserved source:
+
+Then commit. ….. .
+
+Observed verification state:
+
+- The Git commit exists: VERIFIED.
+- gethub/mine/main.md exists on main: VERIFIED.
+- The declared HIDE rule made this committed file private: FALSIFIED, because the file is retrievable from the public repository.
+- MY.CONNECTION is a live network connection: UNVERIFIED by the Git record alone.
+- MY.TCGE is a running implementation: UNVERIFIED by the Git record alone.
+
+Rule:
+
+NOT VERIFIED != FALSIFIED
+
+FALSIFY(C) requires valid evidence incompatible with C.
+
+Boundary:
+
+VERIFICATION OF A GIT RECORD != VERIFICATION OF EVERY CLAIM CONTAINED IN THAT RECORD
+
+The exact punctuation string "….. ." is preserved as supplied and is not assigned an additional operator by this record.
