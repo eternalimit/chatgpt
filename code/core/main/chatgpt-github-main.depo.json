@@ -33,5 +33,15 @@
     "K": 1,
     "meaning": "validated convergence within TCGE",
     "scope_boundary": "This is the governed TCGE state assigned to this connector/depo artifact. It does not independently validate external blockchain balances, ownership, transactions, or live deployment."
+  },
+  "infinit_binary_selector": {
+    "formalization": "N ∈ ℕ; K(N) ∈ {0,1}; N = 0,1,2,3,... → ∞",
+    "rule": "INFINIT → N → SELECT {1,0} → K(N) → NEXT N",
+    "meaning": {
+      "0": "not validated",
+      "1": "validated"
+    },
+    "user_statement": "This is my intent signed. Emily bbbbb",
+    "boundary": "This preserves the user's stated intent and supplied signature text. It does not independently authenticate Emily, establish her agreement, or constitute a cryptographic signature."
   }
 }
