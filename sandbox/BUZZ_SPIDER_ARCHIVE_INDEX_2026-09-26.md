@@ -5,6 +5,30 @@ Mode: path/string-link spider index
 Scope: all currently listed branch tips returned by GitHub at crawl time.
 Important boundary: this is a branch-tip snapshot index, not a proof that every historical commit or deleted historical file was inspected.
 
+
+## Spider agents
+
+Add the Buzz/Richard communication gate to the spider workflow:
+
+```text
+SPIDER AGENTS
+-> BUZZ ORCHESTRATOR
+-> GET
+-> INDEX
+-> SEARCH
+-> VERIFY
+-> TCGE GATE
+-> COMMUNICATE
+```
+
+Communication rule:
+
+```text
+BUZZ 0 -> <RICHARD> 1
+```
+
+Buzz handles orchestration and communication by default. Richard is queried only when the governed workflow reaches a genuine unresolved state that requires Richard's authority or input. This rule does not convert unresolved evidence into verified evidence.
+
 ## Branch-tip crawl
 
 | Branch | Tip | Entries | Blobs | Candidate link/string paths |
