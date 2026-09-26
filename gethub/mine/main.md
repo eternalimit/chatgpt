@@ -92,3 +92,24 @@ Boundary:
 VERIFICATION OF A GIT RECORD != VERIFICATION OF EVERY CLAIM CONTAINED IN THAT RECORD
 
 The exact punctuation string "….. ." is preserved as supplied and is not assigned an additional operator by this record.
+
+
+## LOCK — current block
+
+LOCK TARGET: the current MY.MINE.MAIN record through the immediately preceding "Verify then falsify record" block.
+
+LOCK STATE: FROZEN BY DECLARATION
+
+LOCKED BLOB SHA: d1c46fef32ebd36ede4d607a9f1c9e43f82ef47a
+
+Rule:
+
+LOCKED CONTENT -> PRESERVE EXACTLY
+
+Any later change must be represented by a subsequent Git commit rather than silently rewriting the identity of this locked state.
+
+Boundary:
+
+LOCK DECLARATION != GITHUB BRANCH PROTECTION
+LOCK DECLARATION != CRYPTOGRAPHIC SIGNATURE
+LOCKED HISTORICAL COMMIT != IMMUTABLE WORKING BRANCH
