@@ -67,3 +67,18 @@ Signed: This is my intent.
 Source: user-supplied statement.
 
 Boundary: This records the user's stated intent. It is not a cryptographic or third-party authenticated signature.
+
+## Artifact Workflow Survival Record
+
+User-supplied statement preserved verbatim:
+
+Commit . as artifact workflow survive. Signed. Intent
+
+Continuity key:
+CLARITY → OBSERVE → PRESERVE → INVESTIGATE → REASON → DESIGN → VALIDATE → REINTEGRATE → TRUTH → CONTEXT → BOUNDARIES → EVIDENCE → INDEPENDENCE → INTEGRITY → RECOVERY → CONTINUITY
+
+Purpose:
+Preserve the artifact workflow so the governed state can survive into the next continuity cycle.
+
+Boundary:
+This records the user's stated intent and continuity instruction. It is not a cryptographic signature, legal attestation, or independent third-party authentication.
