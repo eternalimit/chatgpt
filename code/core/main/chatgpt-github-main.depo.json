@@ -43,5 +43,12 @@
     },
     "user_statement": "This is my intent signed. Emily bbbbb",
     "boundary": "This preserves the user's stated intent and supplied signature text. It does not independently authenticate Emily, establish her agreement, or constitute a cryptographic signature."
+  },
+  "axiom_A_record": {
+    "axiom": "A(N) = K(N) ∈ {0,1}",
+    "tcge_form": "A(N) = K(N) = R_N ∧ I_N ∧ E_N",
+    "sequence": "A = INFINIT → N → {0,1} → K(N) → NEXT N",
+    "user_statement": "This is my intent. Commit. Signed. Bbbbc",
+    "boundary": "This preserves the user's stated intent and supplied signature text. It does not independently authenticate a signer or constitute a cryptographic signature."
   }
 }
