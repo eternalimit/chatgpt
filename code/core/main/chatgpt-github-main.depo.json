@@ -1,0 +1,26 @@
+{
+  "name": "tcge-main-depo-side",
+  "version": "1.0.0",
+  "assignment": "code.core.main",
+  "side": "depo",
+  "purpose": "deployment-facing handoff",
+  "source": {
+    "chatgpt": "main",
+    "github_repository": "eternalimit/chatgpt",
+    "github_branch": "main",
+    "connector_manifest": "code/core/main/chatgpt-github-main.connector.json"
+  },
+  "handoff": [
+    "ChatGPT main",
+    "GitHub connector",
+    "eternalimit/chatgpt@main",
+    "code.core.main",
+    "depo side"
+  ],
+  "governance": {
+    "formula": "K = R ∧ I ∧ E",
+    "unverified_state": "HOLD",
+    "deployment_boundary": "This manifest records the deployment-facing side. It does not by itself provision infrastructure or prove a live deployment.",
+    "secret_boundary": "Do not store private keys, seed phrases, wallet passwords, signing secrets, or production credentials in this file."
+  }
+}
