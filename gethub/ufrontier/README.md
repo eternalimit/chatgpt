@@ -30,3 +30,16 @@ The previously locked MY.MINE.MAIN Git state remains a historical record. This U
 UFRONTIER DEFINITION != PHYSICAL FRONTIER
 OPEN BLOCK != LIVE NETWORK CONNECTION
 GIT RECORD != EMPIRICAL VERIFICATION
+
+
+## LOCK
+
+UFrontier: LOCKED
+Locked predecessor blob: bb6cef0db5e57e88e15199d8554e1635af823eaa
+
+LOCKED CONTENT -> PRESERVE EXACTLY
+
+Any later development must be represented by a subsequent Git record rather than silently changing the identity of this locked state.
+
+LOCK DECLARATION != GITHUB BRANCH PROTECTION
+LOCK DECLARATION != CRYPTOGRAPHIC SIGNATURE
