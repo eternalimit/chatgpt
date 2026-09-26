@@ -112,5 +112,15 @@
     "buzz": "RETURN",
     "signed_text": "B",
     "boundary": "This records the TCGE/Buzz workflow count and coupling handoff only. It does not represent Bitcoin block mining, cryptocurrency ownership, or possession of Bitcoin private keys."
+  },
+  "buzz_game_100_checkpoint": {
+    "mode": "GAME",
+    "rule": "Each simulated mined game block increments sequentially by +1.",
+    "range": "001 -> 100",
+    "game_blocks_counted": 100,
+    "mission": "SUCCESS",
+    "simulated_reward_btc": 100,
+    "signed_text": "B",
+    "boundary": "The 100 BTC value is a simulated game reward only. This record does not claim that real Bitcoin was mined, created, owned, transferred, or credited to a wallet."
   }
 }
