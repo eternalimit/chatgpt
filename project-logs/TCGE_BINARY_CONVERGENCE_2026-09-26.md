@@ -17,3 +17,13 @@ Any missing required compute → K=0.
 
 Boundary:
 This is the binary TCGE model statement. It does not by itself prove an external real-world claim; independent Echo validation remains required for knowledge status.
+
+## Governed State Update
+
+K = 0
+
+Validated knowledge has not been established.
+
+K = R ∧ I ∧ E = 0
+
+State: HOLD.
