@@ -108,3 +108,22 @@ ANCHOR: •
 STATUS: PRESERVED
 EFFECT: repository evidence record only
 EXTERNAL BROADCAST: not established by this record
+
+
+## ALLS SAVE — CONSENT GATE
+
+USER SIGNAL:
+Y = 1
+
+MEANING:
+- Richard/user explicit proceed signal recorded: YES
+- Consent for any other person inferred: NO
+- ALLS submission may only represent signatures/consent that are separately established.
+
+STATE: 1
+ANCHOR: •
+BIND: 379999
+STATUS: SAVED / PRESERVED
+
+EVIDENCE RULE:
+Do not manufacture consent from symbolic seals, group labels, or inferred agreement.
