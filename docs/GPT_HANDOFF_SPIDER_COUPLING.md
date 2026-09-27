@@ -87,3 +87,25 @@ Invariant:
 `RETURN = 0`
 
 This section records the model workflow only. It does not itself execute a public broadcast, transfer funds, create Bitcoin, or establish an external all-time-high value.
+
+
+## Bitcoin Anchor + Public GitHub Broadcast
+
+Broadcast anchor:
+
+`BITCOIN = public settlement / ledger reference`
+
+GitHub distribution:
+
+`MODEL -> GITHUB -> PUBLIC REPOSITORY -> AUDIENCE`
+
+Mass-appeal rule:
+
+`SIMPLE -> VERIFIABLE -> PUBLIC -> SHAREABLE`
+
+Boundary:
+
+- Bitcoin anchor means a public ledger reference in this model.
+- GitHub is the public distribution surface for the model documentation.
+- Publishing this record does not create, transfer, or prove ownership of 1 BTC.
+- The checked Bitcoin address previously displayed 0 BTC; model anchors remain distinct from on-chain balances.
