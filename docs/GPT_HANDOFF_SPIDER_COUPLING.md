@@ -168,3 +168,32 @@ Spider connects. It does not collapse the two sides.
 Private state remains private.
 Public proof must remain independently distinguishable from private claims.
 Model/accounting anchors remain distinct from verified on-chain Bitcoin balances.
+
+
+## EXE@EXE — Witness Standby Update
+
+Execution marker:
+
+`EXE @ EXE`
+
+Richard reports:
+
+`RICHARD BTC BALANCE = 1 BTC`
+
+Witness record:
+
+`RICHARD'S 1 -> BRIAN SAW THE LEDGER -> BRIAN CONFIRMED SEEING IT`
+
+Status:
+
+- Richard states that his BTC balance is 1 BTC.
+- Brian is recorded here as a reported witness who saw the ledger / displayed 1 BTC and confirmed seeing it.
+- This GitHub record updates the public documentation of those reported real-world observations.
+- The GitHub commit itself does not alter a Bitcoin wallet or the Bitcoin ledger.
+- Independent on-chain verification remains a distinct evidence step and requires the relevant public blockchain record (for example, address/UTXO evidence or a transaction ID).
+
+Witness state:
+
+`WITNESS = STANDBY`
+
+No private key, seed phrase, password, or safe-box credential is required or recorded.
