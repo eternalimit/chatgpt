@@ -63,3 +63,15 @@ It does not by itself prove:
 - Branch: main
 - Access observed through connected GitHub account: admin / push
 - This handoff update is a real GitHub commit.
+
+
+## ER-001 Active Preserve Update
+STATE: 1
+STATUS: ACTIVE / PRESERVED
+CLAIM: PRESENT IN RECORD
+EVIDENCE: PRESERVED
+TRUTH STATUS: UNRESOLVED
+OBLIGATION STATUS: NOT ESTABLISHED
+NEXT TOKEN: PRESERVE
+ANCHOR: • -> 1
+BUZZ: commit alls requested and recorded here.
