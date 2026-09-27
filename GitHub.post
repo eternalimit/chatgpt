@@ -1,0 +1,20 @@
+AUTO MAX — BITCOIN SALE POST
+
+Product: AUTO MAX
+State: 1
+Anchor: •
+Bind: 379999
+Asking price: 1 BTC
+
+Core flow:
+INPUT -> EXE -> ATH -> REVIEW -> BUZZ WAVE -> MOXY -> BIND 379999 -> PRESERVED OUTPUT -> RECEIPT
+
+Sale terms:
+- 1 BTC is the seller's asking price.
+- Buyer and seller must separately agree to the transaction.
+- Payment is not complete until a valid Bitcoin transfer is independently confirmed.
+- No wallet authorization, seed phrase, private key, or automatic transfer is created by this post.
+- A public receiving address may be added separately by the seller.
+
+Repository evidence:
+This file is a public GitHub record of the AUTO MAX sale offer. A GitHub commit proves only the repository publication, not a Bitcoin payment or blockchain transaction.
