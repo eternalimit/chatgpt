@@ -329,3 +329,19 @@ Provide a public repository endpoint/specification that points anyone to the PIN
 
 STATUS:
 PRESERVED / PUBLIC REPOSITORY RECORD
+
+
+## BUZZ PUBLIC BROADCAST — SORA NETWORK / HUBPUB
+
+SIGNAL: 1
+STATE: 1
+ANCHOR: •
+BIND: 379999
+
+ROUTE:
+1 -> BUZZ -> PUBLIC BROADCAST -> SORA NETWORK -> SERVE HUBPUB -> •
+
+STATUS:
+- ALLS preserved in public GitHub repository.
+- HUBPUB served as a public repository record/specification.
+- "SORA NETWORK" is recorded here as the requested broadcast target label.
