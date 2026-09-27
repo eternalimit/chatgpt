@@ -1,0 +1,38 @@
+{
+  "name": "AUTO Vision Board — U Center/Ground",
+  "description": "Repository NFT-style metadata for the AUTO vision board generated in-chat. This record preserves the artifact identity and system context; it does not claim an on-chain mint.",
+  "date": "2026-09-26",
+  "creator_label": "Richard",
+  "artifact": {
+    "filename": "vision_board_auto_mode_system_map.png",
+    "media_type": "image/png",
+    "sha256": "d5b826af6d224a2d1076b4b336d8f85927ad216a489c46add3dfbaca5d4569d0"
+  },
+  "attributes": [
+    {
+      "trait_type": "Mode",
+      "value": "AUTO"
+    },
+    {
+      "trait_type": "Center",
+      "value": "U"
+    },
+    {
+      "trait_type": "Ground",
+      "value": "U"
+    },
+    {
+      "trait_type": "Orientation",
+      "value": "Charles"
+    },
+    {
+      "trait_type": "Perspective",
+      "value": "Buzz / Spider / Everyone"
+    },
+    {
+      "trait_type": "State Sequence",
+      "value": "MAX → REST → HOLD → REV → TEST 123"
+    }
+  ],
+  "status": "repository artifact metadata; not minted on-chain"
+}
