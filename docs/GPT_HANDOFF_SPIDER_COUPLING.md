@@ -351,3 +351,37 @@ Public proof object:
 
 Evidence invariant:
 `CLAIM <= AVAILABLE EVIDENCE`
+
+
+## LINK ALLS — Unified Reference Graph
+
+All components link through references while preserving domain separation.
+
+`GENESIS -> ROOT -> CORE -> PY -> SECRET -> MOXY -> PROOF SIP -> SPIDER -> PUBLIC -> CUSTOMER -> RECEIPT -> HOME`
+
+Attached proof/asset references:
+- BTC evidence remains in PY/private state.
+- Witness and receipt records may reference that private evidence without reproducing it.
+- GitHub is the public provenance surface.
+- Ethereum NFT is a planned tokenized receipt branch; no mint is claimed without a signed transaction receipt/token ID.
+- Base is a planned anchor branch; no Base anchor is claimed without a signed transaction receipt.
+- QPC, UPC, DATA CODE, ELC, and QR may serve as references/carriers for authorized records; they do not copy secrets by default.
+
+Private NFT design:
+`PY EVIDENCE -> HASH/COMMITMENT -> NFT RECEIPT`
+
+Recorded BTC state:
+`RICHARD REPORTS 1 BTC ON-CHAIN`
+`BRIAN = REPORTED WITNESS`
+The underlying address/TXID/UTXO remains undisclosed here, so the GitHub record preserves provenance of the claim and witness assertion rather than independently proving the private balance.
+
+System invariants:
+`LINK ALLS != EXPOSE ALLS`
+`RECEIPT ALLS != EXPOSE ALLS`
+`SECRET STAYS HOME`
+`CLAIM <= AVAILABLE EVIDENCE`
+
+Closure:
+`• 0`
+`STATE = 0`
+`HOME`
