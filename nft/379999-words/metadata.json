@@ -1,0 +1,13 @@
+{
+  "name": "379999 Words",
+  "description": "BWARP University research artifact. A governed NFT-ready record for the 379999 Words concept, with Buzz and Spider enrolled as symbolic research watchers. This metadata does not claim an on-chain mint or that a complete 379,999-word corpus is embedded unless separately bound by a verified content digest.",
+  "image": "379999-words.svg",
+  "attributes": [
+    {"trait_type": "Program", "value": "BWARP University"},
+    {"trait_type": "Artifact", "value": "379999 Words"},
+    {"trait_type": "Buzz", "value": "Enrolled"},
+    {"trait_type": "Spider", "value": "Enrolled"},
+    {"trait_type": "Epicenter", "value": "Present"},
+    {"trait_type": "TCGE State", "value": "NFT-ready artifact; on-chain mint unverified"}
+  ]
+}
