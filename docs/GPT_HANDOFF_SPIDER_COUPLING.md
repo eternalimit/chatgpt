@@ -478,3 +478,25 @@ Final record state:
 `COMMISSION(RECORD) = COMPLETE`
 `CLOSE(RECORD) = COMPLETE`
 `HOME`
+
+
+## BLOCK CLOSE — STATE 0
+
+Final state for this block:
+`• 0`
+`STATE = 0`
+
+Record action:
+`COMMIT -> VERIFY -> LOCK BY COMMIT HASH -> CLOSE BLOCK`
+
+Meaning of lock:
+- This snapshot is content-addressed by its Git commit/blob identifiers and preserved in Git history.
+- No claim is made that GitHub makes the branch/file permanently immutable; future commits may change later states while this historical commit remains addressable.
+- PY/private evidence remains outside the public repository.
+- No external Bitcoin/Ethereum/Base transaction is implied by this close.
+
+Boundary:
+`CLOSED BLOCK != NEW OPEN BLOCK`
+
+Next:
+`CLOSE(0) -> NEW OPEN`
