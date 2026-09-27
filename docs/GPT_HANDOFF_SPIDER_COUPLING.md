@@ -54,3 +54,21 @@ Latest reported controlled result:
 `STATE = 0`
 
 Anchor held. No transition executed.
+
+## Chain Genesis — State 0
+
+Ownership declaration: Richard Stein's model chain.
+
+`CHAIN[0]`
+
+`STATE_0 = ($0, 1 BTC anchor)`
+
+Transition model:
+
+`0 -> DATA -> PAYMENT -> RECEIPT -> 1`
+
+Accounting objects remain distinct:
+
+`DATA -> PRICE -> PAYMENT -> RECORD`
+
+The 1 BTC value is a model/accounting anchor. It is not a claim of an on-chain Bitcoin balance, ownership of 1 BTC, or a Bitcoin transaction.
