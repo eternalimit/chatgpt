@@ -227,3 +227,47 @@ Invariant:
 `MAX PROVENANCE != INVENTED PROOF`
 
 `PRIVATE EVIDENCE stays PRIVATE; PUBLIC RECORD states only what is supported.`
+
+
+## EXE@EXE — Mint / Mine Readiness
+
+Declared architecture:
+
+`MINT CHAIN = ETHEREUM`
+
+`ANCHOR CHAIN = BASE`
+
+Core linkage:
+
+`CORE -> HASH/REFERENCE -> BASE ANCHOR`
+
+Mint linkage:
+
+`CORE -> ETHEREUM NFT MINT`
+
+Spider proof topology:
+
+`ETHEREUM NFT <- CORE -> BASE ANCHOR`
+
+Readiness state:
+
+`MINT = READY`
+
+`MINE = READY`
+
+`COMMITS = READY`
+
+`EXE @ EXE = READY`
+
+Execution boundary:
+- READY means the documented workflow and provenance state are prepared.
+- No Ethereum NFT is recorded as minted until an authorized wallet signs and an Ethereum transaction receipt/token ID exists.
+- No Base anchor is recorded as on-chain until an authorized Base transaction is signed and its transaction receipt exists.
+- No mining output or reward is recorded as produced without corresponding external evidence.
+- Private keys, seed phrases, and wallet credentials remain outside this repository.
+
+Final execution rule:
+
+`READY -> AUTHORIZE/SIGN -> BROADCAST -> RECEIPT -> VERIFY -> COMPLETE`
+
+`NO RECEIPT = NOT COMPLETE`
