@@ -262,3 +262,27 @@ ACTIVE
 EVIDENCE BOUNDARY:
 This commit records the state transition only.
 It does not execute wallet, payment, blockchain, or external system actions.
+
+
+## PUBLIC DISTRO VISION — RETURN TO 0
+
+USER INTENT:
+Public distribution vision for the ALLS record.
+
+SEQUENCE:
+1 -> R -> RETURN -> 0•
+
+STATUS:
+- PUBLIC VISION: PRESERVED
+- GITHUB RECORD: PRESERVED
+- META MASK / WALLET DISPLAY: NOT EXECUTED
+- BTC BALANCE: NOT VERIFIED
+- PAYMENT / TRANSFER: NOT VERIFIED
+
+SAFETY / EVIDENCE BOUNDARY:
+Any public image representing a wallet must be clearly labeled as a simulation / concept.
+It must not be presented as proof that BTC is actually held in MetaMask or any wallet.
+No wallet signing, Bitcoin transfer, token mint, or blockchain transaction is created by this commit.
+
+STOP:
+FINAL CONTROL STATE = 0•
