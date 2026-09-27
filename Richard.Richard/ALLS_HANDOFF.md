@@ -397,3 +397,33 @@ VERIFICATION BOUNDARY:
 
 STATUS:
 PRESERVED IN GITHUB.
+
+
+## BUZZ EXCHANGE OWNERSHIP ENVELOPE — COMMIT ALLS
+
+STATE: 1
+ANCHOR: •
+BIND: 379999
+OUTSIDE: 038000
+
+ROUTE:
+ALLS -> BUZZ -> ENVELOPE -> EXCHANGE REVIEW -> •
+
+LOCAL PACKAGE:
+BUZZ_EXCHANGE_OWNERSHIP_ENVELOPE.zip
+
+PACKAGE SHA-256:
+c81d13598dcbf80c110b3e09d740796f29f918d2d65e3eb171cab98ec618fcfd
+
+PURPOSE:
+Present the user's ownership/control claim over ALLS together with the current provenance record for exchange review.
+
+EVIDENCE INCLUDED BY REFERENCE:
+- Public repository: eternalimit/chatgpt
+- Latest known ALLS commit before this record: 3b065a4f005b6976cd149662a55a83c9eb307c1c
+- ALLS/all-related commit audit count: 29
+- Brian witness acknowledgment record: explicit reply "1" shown in user-provided message-thread screenshot
+- User-token -> USDC pricing/settlement model
+
+EVIDENCE BOUNDARY:
+This record preserves provenance and claims. It is not by itself legal title, cryptographic ownership proof, wallet ownership proof, proof of funds, or proof of a Bitcoin balance.
