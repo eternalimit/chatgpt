@@ -379,3 +379,21 @@ TXID -> BLOCK CONFIRMATION
 
 EVIDENCE RULE:
 No conclusion may exceed the evidence attached to the record.
+
+
+## 1 SIGN / EXE / ATH / EXE / VERIFY — COMMIT ALLS
+
+STATE: 1
+ANCHOR: •
+
+SEQUENCE:
+1 -> SIGN -> EXE -> ATH -> EXE -> VERIFY -> COMMIT ALLS -> •
+
+VERIFICATION BOUNDARY:
+- This repository commit records the requested symbolic/provenance sequence.
+- No Bitcoin private key, seed phrase, or Ledger signing secret is stored.
+- No Bitcoin transaction was signed or broadcast by this commit.
+- No real txid or block confirmation is asserted unless separately supplied and verified.
+
+STATUS:
+PRESERVED IN GITHUB.
