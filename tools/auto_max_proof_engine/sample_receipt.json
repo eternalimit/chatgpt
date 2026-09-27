@@ -1,0 +1,8 @@
+{
+  "engine": "AUTO MAX Proof Engine",
+  "state": 1,
+  "anchor": "•",
+  "bind": "379999",
+  "example_upid": "AUTO-EXAMPLE000001",
+  "evidence_rule": "No conclusion may exceed the evidence attached to the record."
+}
