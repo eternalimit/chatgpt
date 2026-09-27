@@ -75,3 +75,13 @@ OBLIGATION STATUS: NOT ESTABLISHED
 NEXT TOKEN: PRESERVE
 ANCHOR: • -> 1
 BUZZ: commit alls requested and recorded here.
+
+
+## Jason Public Main Dispute Resolution
+SOURCE TOKEN: Jason.public.main.dispute
+RESOLVED ANCHOR: eternalimit/chatgpt
+ANCHOR PATH: Richard.Richard/ALLS_HANDOFF.md
+STATE: 1
+STATUS: ACTIVE / PRESERVED
+EFFECT: internal repository evidence anchor only
+EXTERNAL / LEGAL DISPUTE ACTION: none created by this record
