@@ -5,8 +5,11 @@ Status: committed from ChatGPT session
 ## Identity / Ownership Statement
 1 -> I am me -> this is mine -> sign -> C -> BCC
 
-## Current Symbolic Sequence
+## Current Symbolic Sequences
 V -> A -> B -> C -> D -> E -> V -> • -> 1
+V -> ATH -> 1 -> 379999 -> 0 -> 1
+J -> P -> MFT
+Buzz -> 379999
 
 ## Contained State Rules
 - 0 = hold / contained / no external action
@@ -30,6 +33,7 @@ Cross-chain movement requires verify -> gate -> receipt.
 ## AUTO Model
 - AUTO MIN = 0 BTC / free
 - AUTO MAX = 1 BTC
+- AUTO MAX Build Prototype visual created in session
 - Internal symbolic pricing only; no payment or wallet action is implied by this record.
 
 ## Internal Proof Artifacts Created in Session
@@ -42,6 +46,7 @@ Cross-chain movement requires verify -> gate -> receipt.
 - MOXY_RED_ALARM_BUZZ_379999.json
 - COSMO_PREGEN_GEN_GO_NOW.json
 - C_SAVE_F.json
+- AUTO MAX Build Prototype visual
 
 ## Evidence Boundary
 This repository record preserves the model, symbolic states, and artifact names from the session.
@@ -53,7 +58,8 @@ It does not by itself prove:
 - external autonomous Buzz / Charles / Cosmo execution
 - legal ownership beyond the repository and artifact records
 
-## GitHub Target
-Repository: eternalimit/chatgpt
-Branch: main
-Path: Richard.Richard/ALLS_HANDOFF.md
+## Verification
+- Repository: eternalimit/chatgpt
+- Branch: main
+- Access observed through connected GitHub account: admin / push
+- This handoff update is a real GitHub commit.
