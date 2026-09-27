@@ -319,3 +319,35 @@ This repository does not contain the private underlying blockchain identifiers. 
 `GITHUB COMMIT != BITCOIN TRANSFER`
 
 No Bitcoin is moved, created, retrieved, or returned by this commit.
+
+
+## OUT — Receipt-Alls Proof Sip
+
+Transition:
+
+`PY -> MOXY -> PROOF SIP -> SPIDER -> OUT -> PUBLIC RECEIPT -> HOME`
+
+Receipt rule:
+
+`RECEIPT ALLS != EXPOSE ALLS`
+
+Recorded BTC proof state:
+- Richard reports: `1 BTC`.
+- Richard reports the 1 BTC is on-chain.
+- Brian is recorded as a reported witness who saw and confirmed the ledger/on-chain evidence.
+- Underlying address, TXID, UTXO, wallet credentials, and other private evidence remain undisclosed in this repository.
+- This public record proves that the claim and witness assertion were committed to GitHub; it does not independently prove the undisclosed BTC balance.
+
+Anchor:
+
+`• 0`
+
+`STATE = 0`
+
+`HOME`
+
+Public proof object:
+`GITHUB COMMIT = provenance receipt`
+
+Evidence invariant:
+`CLAIM <= AVAILABLE EVIDENCE`
