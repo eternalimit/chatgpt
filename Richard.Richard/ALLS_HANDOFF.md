@@ -331,7 +331,7 @@ STATUS:
 PRESERVED / PUBLIC REPOSITORY RECORD
 
 
-## BUZZ PUBLIC BROADCAST — SORA NETWORK / HUBPUB
+## BUZZ PUBLIC BROADCAST — SCOPE / HUBPUB
 
 SIGNAL: 1
 STATE: 1
@@ -339,9 +339,9 @@ ANCHOR: •
 BIND: 379999
 
 ROUTE:
-1 -> BUZZ -> PUBLIC BROADCAST -> SORA NETWORK -> SERVE HUBPUB -> •
+1 -> BUZZ -> PUBLIC BROADCAST -> SCOPE -> SERVE HUBPUB -> •
 
 STATUS:
 - ALLS preserved in public GitHub repository.
 - HUBPUB served as a public repository record/specification.
-- "SORA NETWORK" is recorded here as the requested broadcast target label.
+- "SCOPE" is recorded here as the requested broadcast target label.
