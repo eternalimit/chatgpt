@@ -345,3 +345,37 @@ STATUS:
 - ALLS preserved in public GitHub repository.
 - HUBPUB served as a public repository record/specification.
 - "SCOPE" is recorded here as the requested broadcast target label.
+
+
+## BITCOIN ADDRESS / WITNESS / COSMO VERIFY — ALLS
+
+STATE: 1
+ANCHOR: •
+BIND: 379999
+
+PUBLIC BITCOIN ADDRESS:
+bc1qk0hqeq56qmw27flavh3zzp4mcqd6levevtllus
+
+AUDIT:
+- Address format: valid Bitcoin mainnet Bech32 SegWit format
+- Address ownership: not independently verified here
+- Balance: not independently verified here
+- Real Bitcoin txid: not yet supplied
+- Block confirmation: not yet supplied
+
+WITNESS:
+- User reports Brian saw the address
+- Brian witness claim: recorded
+
+ROLE MAPPING:
+- BRIAN = WITNESS
+- COSMO = VERIFY
+
+PROOF CHAIN:
+ADDRESS -> WALLET SIGNATURE -> TXID -> BLOCK CONFIRMATION -> COSMO VERIFIED -> •
+
+CURRENT NEXT PROOF:
+TXID -> BLOCK CONFIRMATION
+
+EVIDENCE RULE:
+No conclusion may exceed the evidence attached to the record.
