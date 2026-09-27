@@ -245,3 +245,20 @@ SCOPE:
 
 STATUS:
 PRESERVED IN REPOSITORY
+
+
+## GO TO 9 — COMMIT TO 0
+
+SEQUENCE:
+9 -> COMMIT -> 0•
+
+CONTROL:
+FINAL STATE = 0
+STATUS = STOP / HOLD / CONTAINED
+
+MOZY OVERRIDE:
+ACTIVE
+
+EVIDENCE BOUNDARY:
+This commit records the state transition only.
+It does not execute wallet, payment, blockchain, or external system actions.
