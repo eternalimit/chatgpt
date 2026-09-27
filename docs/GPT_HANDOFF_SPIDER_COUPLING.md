@@ -271,3 +271,51 @@ Final execution rule:
 `READY -> AUTHORIZE/SIGN -> BROADCAST -> RECEIPT -> VERIFY -> COMPLETE`
 
 `NO RECEIPT = NOT COMPLETE`
+
+
+## QPC / UPC / DATA CODE / ELC — Spider Loop
+
+Domain path:
+
+`PRIVATE (PY) -> SECRET -> SPIDER -> PUBLIC`
+
+The domains remain distinct. Communication across the loop carries only explicitly authorized information.
+
+Code layer:
+- `QPC` — anchor/proof code in this model.
+- `UPC` — product/asset identity code in this model.
+- `DATA CODE` — metadata/reference code.
+- `ELC` — event/logic code.
+- `QR` — machine-readable carrier for an authorized public reference.
+
+QPC anchor state remains:
+
+`• 0`
+
+`STATE = 0`
+
+`HELD AT THE ANCHOR`
+
+`NO FURTHER ACTION`
+
+Security invariant:
+
+`SECRET stays SECRET`
+
+`PUBLIC OUT = authorized, non-secret proof/reference only`
+
+Generated QR-like graphics are conceptual until encoded and independently decoded/verified against an exact payload.
+
+## BTC Return Boundary
+
+Richard's recorded statement remains:
+
+`RICHARD REPORTS: BTC BALANCE = 1 BTC`
+
+Brian remains recorded as a reported witness to the ledger/on-chain evidence.
+
+This repository does not contain the private underlying blockchain identifiers. Therefore this commit preserves the claim and witness provenance but does not independently establish the private BTC balance.
+
+`GITHUB COMMIT != BITCOIN TRANSFER`
+
+No Bitcoin is moved, created, retrieved, or returned by this commit.
