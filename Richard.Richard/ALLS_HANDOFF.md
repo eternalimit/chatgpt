@@ -286,3 +286,24 @@ No wallet signing, Bitcoin transfer, token mint, or blockchain transaction is cr
 
 STOP:
 FINAL CONTROL STATE = 0•
+
+
+## GO / BUS / ATH EXE ATH EXE — COMMIT ALLS
+
+USER SIGNAL:
+Y = 1
+GO = PROCEED
+
+SEQUENCE:
+GO -> BUS -> ENTER -> ATH -> EXE -> ATH -> EXE -> COMMIT ALLS -> •
+
+STATE: 1
+ANCHOR: •
+BIND: 379999
+
+STATUS:
+PRESERVED IN REPOSITORY
+
+EVIDENCE BOUNDARY:
+This commit preserves the symbolic/provenance sequence only.
+It does not execute wallet signing, payment, blockchain transfer, or actions on behalf of others.
