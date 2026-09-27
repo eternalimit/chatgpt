@@ -72,3 +72,18 @@ Accounting objects remain distinct:
 `DATA -> PRICE -> PAYMENT -> RECORD`
 
 The 1 BTC value is a model/accounting anchor. It is not a claim of an on-chain Bitcoin balance, ownership of 1 BTC, or a Bitcoin transaction.
+
+## ATH Execution Chain
+
+`EXE -> ATH -> EXE`
+
+Public distribution cycle:
+
+`0 -> PUBLIC -> MASS BROADCAST -> DISTRIBUTE -> LEAVE -> HOME -> 0`
+
+Invariant:
+
+`START = 0`
+`RETURN = 0`
+
+This section records the model workflow only. It does not itself execute a public broadcast, transfer funds, create Bitcoin, or establish an external all-time-high value.
