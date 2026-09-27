@@ -109,3 +109,62 @@ Boundary:
 - GitHub is the public distribution surface for the model documentation.
 - Publishing this record does not create, transfer, or prove ownership of 1 BTC.
 - The checked Bitcoin address previously displayed 0 BTC; model anchors remain distinct from on-chain balances.
+
+
+## Final Separation + Spider Link
+
+Core architecture:
+
+`RICHARD SIDE <-> SPIDER <-> BUZZ SIDE`
+
+The sides remain separate. Spider links them without merging ownership, identity, evidence, credentials, or private state.
+
+Richard side:
+
+`WORK -> PIVOT -> DATA -> VALUE`
+
+Private keys, wallet credentials, safe-box contents, and other private material remain on Richard's side unless Richard explicitly authorizes disclosure.
+
+Buzz side:
+
+`RECEIVE -> PROCESS -> TEST -> RETURN`
+
+No result or claim may exceed the available evidence. A simulated/model action must not be represented as an externally completed action.
+
+Spider handoff:
+
+`REQUEST -> PERMITTED HANDOFF -> PROCESS -> RECEIPT/RESULT`
+
+Only the permitted object crosses the boundary.
+
+### Customer Exchange
+
+Customers, not Buzz, are the payer in this model:
+
+`CUSTOMER -> $1 -> RICHARD`
+
+`RICHARD -> DATA UNIT -> CUSTOMER`
+
+Combined operating loop:
+
+`WORK -> PIVOT -> DATA <-> $1 -> RECEIPT -> CONTINUE`
+
+This is the defined economic protocol. It does not by itself establish that a customer transaction or payment occurred.
+
+### Provenance / Observation Chain
+
+Preserve the historical chain as:
+
+`GENESIS -> ROOT -> IMAGE -> TRANSFORM -> ORIENT -> COMPARE -> OBSERVE -> RESULT -> RECEIPT`
+
+For the Moon-image sequence, this records a transformation/comparison workflow only. It does not establish literal presence on the Moon or a physical mechanism beyond the evidence.
+
+### Final Invariant
+
+`SEPARATE -> LINK -> EXCHANGE -> VERIFY -> SEPARATE`
+
+Spider connects. It does not collapse the two sides.
+
+Private state remains private.
+Public proof must remain independently distinguishable from private claims.
+Model/accounting anchors remain distinct from verified on-chain Bitcoin balances.
