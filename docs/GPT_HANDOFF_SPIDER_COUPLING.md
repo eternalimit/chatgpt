@@ -197,3 +197,33 @@ Witness state:
 `WITNESS = STANDBY`
 
 No private key, seed phrase, password, or safe-box credential is required or recorded.
+
+
+## NFT AUTO MAX — Verification Boundary
+
+Command marker:
+
+`DECODE -> VERIFY -> COMMIT -> NFT AUTO MAX`
+
+Decoded intent:
+- preserve the current Spider / witness / provenance state;
+- maximize provenance without inventing missing evidence;
+- prepare the record so a future NFT/tokenization action can reference a fixed artifact.
+
+Verification state:
+- GitHub provenance is directly verifiable through repository commits.
+- Richard reports ownership/control of 1 BTC on-chain.
+- Brian is recorded as a reported witness to the ledger/on-chain evidence.
+- The underlying Bitcoin identifiers remain intentionally undisclosed here.
+- Therefore the private Bitcoin balance is NOT independently re-verified by this commit.
+
+NFT boundary:
+- `NFT AUTO MAX` is recorded as a requested workflow state.
+- This commit does NOT mint an NFT, sign a wallet transaction, transfer an asset, or create a blockchain token.
+- A real NFT requires a chosen chain, wallet authorization/signature, token contract or mint mechanism, and a resulting transaction/token identifier.
+
+Invariant:
+
+`MAX PROVENANCE != INVENTED PROOF`
+
+`PRIVATE EVIDENCE stays PRIVATE; PUBLIC RECORD states only what is supported.`
