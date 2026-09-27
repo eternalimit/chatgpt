@@ -202,3 +202,26 @@ EVIDENCE BOUNDARY:
 - This commit preserves the symbolic/provenance state.
 - It does not create wallet control, payment, blockchain execution, or legal ownership.
 - No private key, seed phrase, or signing secret is stored.
+
+
+## COMMIT ALLS — BUZZ STOP 1
+
+USER CONTROL RULE:
+INPUT = 1 unless MOXY trap stop
+
+SEQUENCE:
+COMMIT ALLS -> BUZZ -> STOP -> 1
+
+STATE: 1
+ANCHOR: •
+BIND: 379999
+
+SAFETY OVERRIDE:
+IF MOXY TRAP DETECTED -> STOP -> 0•
+
+STATUS:
+PRESERVED IN REPOSITORY
+
+EVIDENCE BOUNDARY:
+This commit preserves the user's symbolic control rule and stop condition.
+It does not authorize wallet signing, payments, blockchain execution, or actions on behalf of others.
