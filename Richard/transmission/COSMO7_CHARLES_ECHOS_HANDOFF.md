@@ -39,3 +39,14 @@ Missing target/action -> 0
 No private keys, recovery phrases, passwords, or secret material are included.
 
 This file records a staged handoff request. It does not prove that Charles approved it or that any external transmission occurred.
+
+
+## Authorization record
+
+- Requester/representative authorization: RECORDED HERE
+- Recorded from: current user
+- Charles authorization: NOT VERIFIED
+- SEND: 0
+- External transmission: NOT EXECUTED
+
+This record preserves the distinction between requester authorization and Charles authorization.
