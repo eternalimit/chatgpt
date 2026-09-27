@@ -1,0 +1,16 @@
+{
+  "schema": "tcge-coupler/v1",
+  "transformers": [
+    {"id": "T.IDENTITY", "kind": "identity"},
+    {"id": "T.JSON.CANONICAL", "kind": "json_canonical"},
+    {"id": "T.TEXT.UPPER", "kind": "utf8_upper"}
+  ],
+  "inclusions": [
+    {
+      "id": "SOURCE.001",
+      "path": "sample.json",
+      "transformers": ["T.JSON.CANONICAL"],
+      "echo": {"independent": false, "sha256": null}
+    }
+  ]
+}
