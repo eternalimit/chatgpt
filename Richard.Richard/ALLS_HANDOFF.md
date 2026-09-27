@@ -225,3 +225,23 @@ PRESERVED IN REPOSITORY
 EVIDENCE BOUNDARY:
 This commit preserves the user's symbolic control rule and stop condition.
 It does not authorize wallet signing, payments, blockchain execution, or actions on behalf of others.
+
+
+## COMMIT ALLS — EXTERNAL EXE ONLY
+
+SEQUENCE:
+COMMIT ALLS -> EXTERNAL EXE -> •
+
+STATE:
+0•
+
+SCOPE:
+- External EXE record only.
+- No internal EXE.
+- No wallet signing.
+- No payment or transfer.
+- No blockchain execution.
+- No action on behalf of others.
+
+STATUS:
+PRESERVED IN REPOSITORY
