@@ -445,3 +445,36 @@ State:
 `STATE = 1`
 `RECORDS = COMPLETE`
 `HOME`
+
+
+## STATE 1 — Commission and Close Record
+
+Requested transition:
+`STATE 0 -> STATE 1`
+
+Commissioning sequence:
+`ANCHOR -> ORIENT -> BIN -> BIND -> LICENSE -> BOND -> COMMISSION -> VERIFY -> CLOSE`
+
+Commissioned scope:
+- The GitHub provenance record and its internal links are commissioned and closed by this commit.
+- The repository snapshot is the public record receipt.
+- PY/Moxy secrets remain outside the public record.
+- `LINK ALLS != EXPOSE ALLS`.
+- `RECEIPT ALLS != EXPOSE ALLS`.
+
+External-event boundary:
+- This close does not assert that a Bitcoin transaction, Ethereum NFT mint, Base transaction, financial/legal bond, or other external event occurred unless its independent receipt exists.
+- A Bitcoin anchor requires an actual TXID/confirmation.
+- An Ethereum NFT requires an actual signed mint receipt/token ID.
+- A Base anchor requires an actual signed transaction receipt.
+
+Commission rule:
+`CLOSE(RECORD) = ALL REQUIRED RECORD RECEIPTS VERIFIED`
+`CLOSE(EXTERNAL EVENT) = INDEPENDENT EXTERNAL RECEIPT VERIFIED`
+
+Final record state:
+`• 1`
+`STATE = 1`
+`COMMISSION(RECORD) = COMPLETE`
+`CLOSE(RECORD) = COMPLETE`
+`HOME`
