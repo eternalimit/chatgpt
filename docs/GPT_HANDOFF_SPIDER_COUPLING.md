@@ -385,3 +385,30 @@ Closure:
 `• 0`
 `STATE = 0`
 `HOME`
+
+
+## EXE -> ATH -> EXE — Deploy State
+
+Deployment path:
+`EXE -> ATH -> EXE`
+
+Public deployment:
+`BUILD -> LINK -> HASH -> GITHUB -> RECEIPT -> VERIFY -> HOME`
+
+Status:
+- GitHub provenance deployment: EXECUTED by this commit.
+- PY/Moxy secrets: NOT DEPLOYED.
+- Bitcoin transaction: NOT BROADCAST by this deployment.
+- Bitcoin TXID: NOT CREATED/CLAIMED without an actual signed Bitcoin transaction.
+- Ethereum NFT: NOT MINTED without a signed mint transaction and receipt.
+- Base anchor: NOT BROADCAST without a signed Base transaction and receipt.
+
+Hard completion rule:
+`SIGNED EXTERNAL TX -> BROADCAST -> RECEIPT -> VERIFY -> COMPLETE`
+
+`NO RECEIPT = NOT COMPLETE`
+
+Closure:
+`• 0`
+`STATE = 0`
+`HOME`
