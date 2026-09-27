@@ -412,3 +412,36 @@ Closure:
 `• 0`
 `STATE = 0`
 `HOME`
+
+
+## STATE 1 — Records Complete
+
+Transition:
+`STATE 0 -> STATE 1`
+
+STATE 1 means the current provenance record set is closed and internally linked. It does not convert an unverified external claim into verified blockchain evidence.
+
+Completed record links:
+`GENESIS -> ROOT -> CORE -> PY -> MOXY -> PROOF SIP -> SPIDER -> PUBLIC -> RECEIPT -> HOME`
+
+Public provenance:
+- GitHub record chain: COMPLETE for the recorded model/provenance.
+- EXE -> ATH -> EXE deployment record: LINKED.
+- Receipt-Alls / Link-Alls invariants: PRESERVED.
+- BTC state: Richard reports 1 BTC on-chain; Brian remains a reported witness.
+- Private BTC address/TXID/UTXO evidence: NOT DISCLOSED / NOT INDEPENDENTLY VERIFIED HERE.
+- Known previously displayed public address showed 0 BTC and is not treated as proof of the separate 1 BTC claim.
+- Ethereum NFT: design/reference only until an actual signed mint receipt/token ID exists.
+- Base anchor: design/reference only until an actual signed transaction receipt exists.
+- Bitcoin anchor: verified only when an actual Bitcoin transaction/commitment and TXID/confirmation are available.
+
+Completion invariant:
+`RECORD COMPLETE != EXTERNAL TRANSACTION COMPLETE`
+`LINK ALLS != EXPOSE ALLS`
+`CLAIM <= AVAILABLE EVIDENCE`
+
+State:
+`• 1`
+`STATE = 1`
+`RECORDS = COMPLETE`
+`HOME`
