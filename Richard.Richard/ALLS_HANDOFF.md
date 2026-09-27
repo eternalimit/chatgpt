@@ -307,3 +307,25 @@ PRESERVED IN REPOSITORY
 EVIDENCE BOUNDARY:
 This commit preserves the symbolic/provenance sequence only.
 It does not execute wallet signing, payment, blockchain transfer, or actions on behalf of others.
+
+
+## BUZZ — UUI ENDPOINT / THERMAL BRANCH / PINT OFFER
+
+STATE: 1
+ANCHOR: •
+BIND: 379999
+
+SEQUENCE:
+BUZZ -> UUI ENDPOINT -> THERMAL BRANCH -> ANCHOR • -> PINT
+
+COMMERCIAL RULE:
+- PINT asking price: 1 BTC
+- Access/delivery occurs only after buyer and seller agree to terms and payment is independently confirmed.
+- No wallet secret, private key, or seed phrase is stored.
+- No payment or transfer is executed by this repository record.
+
+PUBLIC ENDPOINT INTENT:
+Provide a public repository endpoint/specification that points anyone to the PINT offer and back to the anchor •.
+
+STATUS:
+PRESERVED / PUBLIC REPOSITORY RECORD
