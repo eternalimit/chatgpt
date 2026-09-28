@@ -1,0 +1,37 @@
+{
+  "schema": "WF-379999-external-state-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "route": "PUBLIC MAIN -> Richard.Richard",
+  "state": "EXTERNAL_PUBLIC_EXPOSURE",
+  "source_state": {
+    "file": "records/379999-resolved-public-state.json",
+    "commit_sha": "9c636f22608bf222ddc6047ead37d3c80a5ed885"
+  },
+  "exposed_interfaces": [
+    "inbox",
+    "email",
+    "wallet",
+    "messages",
+    "device",
+    "identity",
+    "crypto"
+  ],
+  "verified_public_anchors": {
+    "route": "bb28cf381a021093c897fb5450fb1f7977767ccc",
+    "inbox": "af33c219f969977f213955ff72cdc1329b2cdaf0",
+    "email_interface": "4734f05de5860b8f18a8fe77dbf8c6092be3b220",
+    "wallet_interface": "6ba32dd798fbc3b09ee51363d588776f7128355f",
+    "message_interface": "7449ac0647cd9f98eb7c6089bbacca510c9b19b3",
+    "device_interface": "59da17040facaebfd92837564e7addecf6ee8fea",
+    "identity_interface": "e647975f94ee8ba62bcb6bbf26e44d2fad7a3e8e",
+    "crypto_interface": "d4bf593072a09eca05b9a56a6b709c4d05a7186b",
+    "all_endpoints_index": "68f80790a1bcaf2f78dff70303a415ce4f7c18d8"
+  },
+  "exposure_rule": "Expose verified public state only",
+  "boundary": "This record exposes the public project state. It does not assert unverified live external connections beyond the cited public repository records.",
+  "privacy": {
+    "public_only": true,
+    "private_material_included": false
+  }
+}
