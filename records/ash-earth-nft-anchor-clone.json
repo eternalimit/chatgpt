@@ -1,0 +1,35 @@
+{
+  "schema": "ash-earth-nft-anchor-clone-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "target_anchor": {
+    "record": "records/ash-earth-nft-mint-package.json",
+    "status": "PREPARED_NOT_MINTED"
+  },
+  "cloned_references": {
+    "MAX_MIN": {
+      "source": "UNIVERSAL_AXIOM_MIN_MAX_0_1.md",
+      "definition": {
+        "MIN": 0,
+        "MAX": 1,
+        "point": "•",
+        "axiom": "0 <= • <= 1"
+      }
+    },
+    "MINE": {
+      "source": "MINE_Richard_Stein.md",
+      "author": "Richard Stein",
+      "core_boundary": "CLAIM != RECORD != PROOF != OWNERSHIP"
+    },
+    "CONTRACT": {
+      "source": "Richard/contracts/PUBLIC_NOTICE_CONTRACT_100X.md",
+      "label": "Public Notice Contract — 100 Verbatim Copies",
+      "status": "REFERENCE_CLONED"
+    }
+  },
+  "clone_status": "REPOSITORY_REFERENCE_CLONE_COMPLETE",
+  "onchain_status": "NOT_MINTED",
+  "contract_execution_status": "NOT_EXECUTED",
+  "private_state_included": false,
+  "boundary": "This record clones repository references and definitions into the prepared NFT anchor package. It does not mint an NFT, execute a legal contract, transfer ownership, sign a wallet transaction, or create an on-chain token."
+}
