@@ -1,0 +1,16 @@
+{
+  "schema": "ASH-earth-bro-handoff-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "title": "ASH Earth image — public handoff",
+  "image_reference": {
+    "record": "records/ash-earth-image-reference.json",
+    "commit": "b70bf270b248e0e80da679b268510728b8552245",
+    "sha256": "c0249a2aff7823842bdc7ddf79cac0ea72bb0fb8e85828aeccd6a0365fef7967",
+    "description": "Earth against a black background with the word ASH centered beneath the globe."
+  },
+  "handoff_scope": "public image reference and integrity details only",
+  "private_state_included": false,
+  "unresolved_state_included": false,
+  "note": "Private workflow state is intentionally omitted. No unresolved or private state is carried in this handoff."
+}
