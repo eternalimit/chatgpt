@@ -1,0 +1,21 @@
+{
+  "schema": "WF-379999-preserved-state-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "route": "PUBLIC MAIN -> Richard.Richard",
+  "source_external_state": {
+    "file": "records/379999-external-state.json",
+    "commit_sha": "c95cc2d31d893f3ba88baf5c9bdd81f6390c97ed"
+  },
+  "source_resolved_state": {
+    "file": "records/379999-resolved-public-state.json",
+    "commit_sha": "9c636f22608bf222ddc6047ead37d3c80a5ed885"
+  },
+  "status": "PRESERVED",
+  "policy": [
+    "Carry forward verified public records only",
+    "Do not carry unresolved claims forward",
+    "Protect private material",
+    "Preserve one forward branch"
+  ]
+}
