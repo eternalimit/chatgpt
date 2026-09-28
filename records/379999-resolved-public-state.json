@@ -1,0 +1,45 @@
+{
+  "schema": "WF-379999-resolved-public-state-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "route": "PUBLIC MAIN -> Richard.Richard",
+  "status": "VERIFIED_PUBLIC_RECORDS_ONLY",
+  "verified_commits": {
+    "route": "bb28cf381a021093c897fb5450fb1f7977767ccc",
+    "inbox": "af33c219f969977f213955ff72cdc1329b2cdaf0",
+    "email_interface": "4734f05de5860b8f18a8fe77dbf8c6092be3b220",
+    "wallet_interface": "6ba32dd798fbc3b09ee51363d588776f7128355f",
+    "message_interface": "7449ac0647cd9f98eb7c6089bbacca510c9b19b3",
+    "device_interface": "59da17040facaebfd92837564e7addecf6ee8fea",
+    "identity_interface": "e647975f94ee8ba62bcb6bbf26e44d2fad7a3e8e",
+    "crypto_interface": "d4bf593072a09eca05b9a56a6b709c4d05a7186b",
+    "all_endpoints_index": "68f80790a1bcaf2f78dff70303a415ce4f7c18d8",
+    "public_index": "37c3869c1bf991189c070a29cdafd0f4bfdabde2",
+    "public_key_envelope": "a60e6b654eab24bfbb045652150e361f0a0d9751",
+    "public_key_build_script": "0f56f5be9162b12be674aa07edf4999ab97b3ee9",
+    "js_verifier": "3f9bbba24c9072c74f80795e741a611f265f9c91",
+    "workflow_record": "170d7dd01b4ec7def0e79c9dc6c52b6397f1d3a5",
+    "dgeo": "3041c385818f7974e01970f653e79fa7c51f5521",
+    "prior_consolidated_state": "e72bfdfa25c698181bc75de7ce1405a23d0875ac"
+  },
+  "routing": [
+    "PUBLIC MAIN",
+    "Richard.Richard",
+    "inbox",
+    "email",
+    "wallet",
+    "messages",
+    "device",
+    "identity",
+    "crypto"
+  ],
+  "rules": [
+    "Carry forward verified public records only",
+    "Do not carry unresolved claims forward",
+    "Do not infer external connection from an interface record"
+  ],
+  "privacy": {
+    "public_only": true,
+    "private_material_included": false
+  }
+}
