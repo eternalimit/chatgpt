@@ -1,0 +1,37 @@
+{
+  "schema": "WF-379999-public-key-envelope-v1",
+  "workflow": "WF-379999",
+  "repository": "eternalimit/chatgpt",
+  "key_identifier": "bbbbdddd",
+  "policy": {
+    "public_only": true,
+    "forbid_private_material": true
+  },
+  "expected_artifacts": [
+    {
+      "path": "keys/bbbbdddd.asc",
+      "type": "openpgp-public-key",
+      "required_header": "-----BEGIN PGP PUBLIC KEY BLOCK-----",
+      "status": "NOT_YET_PRESENT"
+    },
+    {
+      "path": "keys/bbbbdddd.fingerprint.txt",
+      "type": "openpgp-full-fingerprint",
+      "status": "NOT_YET_PRESENT"
+    }
+  ],
+  "anchors": {
+    "dgeo_commit": "3041c385818f7974e01970f653e79fa7c51f5521",
+    "workflow_commit": "170d7dd01b4ec7def0e79c9dc6c52b6397f1d3a5",
+    "verifier_commit": "3f9bbba24c9072c74f80795e741a611f265f9c91",
+    "public_key_build_script_commit": "0f56f5be9162b12be674aa07edf4999ab97b3ee9"
+  },
+  "verification": {
+    "public_key_file_present": false,
+    "fingerprint_file_present": false,
+    "fingerprint_matches_public_key": "PENDING",
+    "signature_verified": "PENDING",
+    "overall": "OPEN"
+  },
+  "note": "This envelope contains no private key material. Publish only the armored public key and its full fingerprint."
+}
