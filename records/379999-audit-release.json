@@ -1,0 +1,17 @@
+{
+  "schema": "WF-379999-audit-release-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "release_state": "0 · RELEASE",
+  "source_commit": "cc6b081e0370205f4862a8818b9e18dd09b6cd5e",
+  "source_file": "records/379999-preserved-state.json",
+  "audit_result": "RELEASED_WITH_BOUNDARY",
+  "checks": {
+    "unresolved_state": "DROPPED",
+    "public_state_only": true,
+    "private_material_included": false,
+    "one_forward_branch": true,
+    "external_execution_claimed": false
+  },
+  "boundary": "Repository evidence supports release of the verified public workflow state only. It does not prove payment, wallet transfer, blockchain transaction, signing, broadcast, or external delivery."
+}
