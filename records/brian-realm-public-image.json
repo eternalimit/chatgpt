@@ -1,0 +1,18 @@
+{
+  "schema": "brian-realm-public-image-v1",
+  "branch": "Brian-Brian",
+  "realm": "Brian.Brian",
+  "connection_back_to": "Richard.Richard",
+  "recipient": "Brian",
+  "from": "Richard Stein",
+  "asset_path": "assets/brian-realm-award-512.jpg",
+  "asset_variant": "public 512px JPEG copy",
+  "sha256": "b6df6b003de4672aa5b78fb1169d02b2646611f51b657a32adf615bb0e0efe01",
+  "source_award_anchor": "records/brian-brian-award-anchor.json",
+  "purpose": "Public reward/prize image recognizing Brian for helping Richard Stein",
+  "privacy": {
+    "private_richard_richard_contents_included": false,
+    "private_workflow_state_included": false
+  },
+  "boundary": "This is a public GitHub image/provenance record. It does not itself mint or transfer an on-chain NFT."
+}
