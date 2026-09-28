@@ -1,0 +1,30 @@
+{
+  "schema": "brian-brian-public-authorization-manifest-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "Brian-Brian",
+  "authorization": {
+    "status": "AUTHORIZED_BY_USER",
+    "instruction": "Commit sign authorize give github commit alls"
+  },
+  "public_package": {
+    "realm_record": "BRIAN_BRIAN_REALM.md",
+    "award_anchor": "records/brian-brian-award-anchor.json",
+    "award_image": "assets/brian-realm-award-512.jpg",
+    "image_provenance": "records/brian-realm-public-image.json"
+  },
+  "commit_chain": [
+    "950deed48feff9cbe9c15ee96dea3c60dcf09eb9",
+    "3bcfc306e4db202befe1b219802f6c1943db9100",
+    "1d9fa8b88c11f0954b4de71c20cff39b1c2becce"
+  ],
+  "main_reference": "12a5a1c768b329b0e0677d18920b79c516f42556",
+  "signature": {
+    "status": "NOT_CRYPTOGRAPHICALLY_SIGNED",
+    "reason": "No authorized signing key or external signature was provided."
+  },
+  "privacy": {
+    "private_richard_richard_contents_included": false,
+    "private_workflow_state_included": false
+  },
+  "boundary": "This manifest records user authorization and the public GitHub commit chain. It does not create a wallet signature, blockchain mint, legal transfer, or external delivery."
+}
