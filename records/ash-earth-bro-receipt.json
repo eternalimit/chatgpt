@@ -1,0 +1,21 @@
+{
+  "schema": "ASH-earth-bro-receipt-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "title": "ASH Earth image — receipt",
+  "approval": {
+    "status": "APPROVED",
+    "basis": "User reports bro approved saving a copy as a receipt",
+    "human_confirmation_token": "1"
+  },
+  "anchor": {
+    "label": "ASH Earth image",
+    "reference_record": "records/ash-earth-image-reference.json",
+    "handoff_record": "records/ash-earth-bro-handoff.json",
+    "image_sha256": "c0249a2aff7823842bdc7ddf79cac0ea72bb0fb8e85828aeccd6a0365fef7967"
+  },
+  "scope": "public image reference and integrity details only",
+  "private_state_included": false,
+  "unresolved_state_included": false,
+  "note": "This receipt records the user-reported approval to preserve a copy of the public ASH image handoff as an anchor/receipt. It does not independently verify the bro's identity or consent outside the user's report."
+}
