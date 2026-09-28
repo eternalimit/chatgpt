@@ -1,0 +1,19 @@
+{
+  "schema": "public-bind-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "verified_parent_commit": "80172676f43a9a8ff1324bfa455846bc0447f828",
+  "binding": {
+    "public_boundary": "038000",
+    "bind_layer": "379999",
+    "relation": "038000 <-> 379999"
+  },
+  "unresolved_state_rule": "DROP U",
+  "unresolved_state_carried_forward": false,
+  "assistant_disclosure": {
+    "product": "ChatGPT",
+    "model": "GPT-5.6 Sol",
+    "role": "Created and committed this public record at the user's instruction.",
+    "boundary": "This record verifies repository state and this commit only. It does not prove wallet, blockchain, payment, network, or other external execution."
+  }
+}
