@@ -1,0 +1,29 @@
+{
+  "schema": "bitcoin-anchor-seal-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "sealed_record": {
+    "record": "records/038000-379999-public-bind.json",
+    "commit": "4e907d5e1796a85ed1c5c9b5154f18eabab1ddfc"
+  },
+  "lock": {
+    "type": "git-commit-lock",
+    "status": "LOCKED"
+  },
+  "seal": {
+    "type": "integrity-record",
+    "status": "SEALED"
+  },
+  "signature": {
+    "status": "UNSIGNED",
+    "reason": "No authorized cryptographic signing key or externally verifiable signature was provided."
+  },
+  "bitcoin_anchor": {
+    "status": "PENDING",
+    "txid": null,
+    "block_hash": null,
+    "block_height": null,
+    "rule": "Do not mark anchored until independently verifiable Bitcoin network evidence is attached."
+  },
+  "boundary": "This file locks and seals the repository record only. It is not proof of Bitcoin anchoring until a real transaction ID or block inclusion proof is added."
+}
