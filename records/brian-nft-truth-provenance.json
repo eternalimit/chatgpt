@@ -1,0 +1,111 @@
+{
+  "schema": "brian-nft-truth-provenance-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "Brian-Brian",
+  "title": "Brian NFT — Truth Provenance Record",
+  "recipient": "Brian",
+  "from": "Richard Stein",
+  "realm": "Brian.Brian",
+  "connection_reference": "Richard.Richard",
+  "purpose": "Preserve the factual provenance, corrections, integrity fingerprints, and verification boundaries for Brian's award/NFT package.",
+  "canonical_status": {
+    "nft_state": "PREPARED_NOT_MINTED",
+    "onchain_token_verified": false,
+    "wallet_signature_verified": false,
+    "ownership_transfer_verified": false,
+    "github_provenance_verified": true
+  },
+  "provenance_chain": [
+    {
+      "step": 1,
+      "type": "source concept",
+      "record": "records/ash-earth-image-reference.json",
+      "note": "ASH Earth source/reference used as the conceptual base."
+    },
+    {
+      "step": 2,
+      "type": "nft preparation",
+      "record": "records/ash-earth-nft-mint-package.json",
+      "note": "Prepared NFT metadata/provenance package; not an on-chain mint."
+    },
+    {
+      "step": 3,
+      "type": "reference clone",
+      "record": "records/ash-earth-nft-anchor-clone.json",
+      "note": "Cloned repository references for MIN, MAX, MINE, and contract context."
+    },
+    {
+      "step": 4,
+      "type": "Brian realm",
+      "record": "BRIAN_BRIAN_REALM.md",
+      "note": "Created Brian's public realm/connection record."
+    },
+    {
+      "step": 5,
+      "type": "award anchor",
+      "record": "records/brian-brian-award-anchor.json",
+      "note": "Anchored Brian's award concept and public provenance."
+    },
+    {
+      "step": 6,
+      "type": "first public image",
+      "record": "assets/brian-realm-award-512.jpg",
+      "git_blob_sha1": "577315548e6a33785810c6309bf26957e6aaf159",
+      "corrected_sha256": "b08e263b397db227dab3977fb88b96cb6b681eb4cd4a64b5a1c64f962bbe67a3",
+      "status": "BROKEN_COMMITTED_COPY",
+      "note": "Git blob identity was independently matched, proving the committed bytes. The committed image itself was reported as visibly damaged. Earlier SHA-256 b6df6b... was incorrect for this exact committed copy."
+    },
+    {
+      "step": 7,
+      "type": "clean regenerated source",
+      "source_sha256": "8ec03aa838b9dd1ccb571d8f58cd5f18c2eee8b072e6b53845028ac17683e1de",
+      "status": "CLEAN_SOURCE_HASH_ANCHORED",
+      "note": "Clean regenerated Brian's Realm award image; full-resolution source anchored by SHA-256."
+    },
+    {
+      "step": 8,
+      "type": "clean public preview",
+      "record": "assets/brian-realm-clean-preview-64.jpg",
+      "git_blob_sha1": "ca7db5a610dfc704ed4cce71c69c928b178aae88",
+      "sha256": "731673a7ed35817944b08cb0592109516bf3fd6ff45d3c5c1b472e4fd73f8659",
+      "status": "PUBLIC_PREVIEW_VERIFIED"
+    },
+    {
+      "step": 9,
+      "type": "clean anchor",
+      "record": "records/brian-realm-clean-anchor.json",
+      "commit": "1283515a6b7ddb82aaadc06cbb21b7474216deb1",
+      "note": "Public clean-anchor commit."
+    },
+    {
+      "step": 10,
+      "type": "exposure lens",
+      "commit": "d52ac73de68928d21f330603f97923e7d07351e2",
+      "note": "Public exposure lens added to Brian-Brian package."
+    }
+  ],
+  "truth_rules": [
+    "A Git commit ID is not an image file hash.",
+    "A Git blob ID identifies exact Git object bytes.",
+    "A SHA-256 fingerprint must be tied to the exact file version it was calculated from.",
+    "Visually identical images may have different hashes after resizing, recompression, screenshots, Photos, or messaging apps.",
+    "A matching hash proves byte identity, not that the visual content was intact before commit.",
+    "Repository provenance does not equal blockchain minting.",
+    "Do not claim an NFT is minted, transferred, signed, or on-chain without independently verifiable network evidence."
+  ],
+  "corrections": [
+    {
+      "incorrect": "3bcfc306e4db202befe1b219802f6c1943db9100 was treated as if it could verify image bytes.",
+      "correct": "It is a Git commit ID, not the image hash."
+    },
+    {
+      "incorrect": "b6df6b003de4... was previously presented as the SHA-256 of the committed 512px image.",
+      "correct": "The independently reported SHA-256 for the exact committed blob 577315548e6a... is b08e263b397db227dab3977fb88b96cb6b681eb4cd4a64b5a1c64f962bbe67a3."
+    }
+  ],
+  "privacy": {
+    "private_richard_richard_contents_included": false,
+    "private_workflow_state_included": false
+  },
+  "canonical_rule": "Preserve evidence, preserve corrections, separate repository proof from blockchain proof, and never upgrade an unverified claim into a verified event."
+}
