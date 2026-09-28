@@ -1,0 +1,10 @@
+.private/
+private/
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
+*.asc.private
+.env
+.env.*
