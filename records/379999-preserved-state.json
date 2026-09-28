@@ -1,23 +1,25 @@
 {
-  "schema": "WF-379999-preserved-state-v3",
+  "schema": "WF-379999-preserved-state-v4",
   "repository": "eternalimit/chatgpt",
   "branch": "main",
-  "status": "HOLD",
-  "canonical_state": "0 · HOLD",
-  "state_sequence": ["Richard", "Intent=1", "1", "0", "HOLD"],
+  "status": "RELEASE",
+  "canonical_state": "0 · RELEASE",
+  "state_sequence": ["Richard", "Intent=1", "1", "0", "RELEASE"],
   "symbols": {
     "1": "Richard confirms the human-only step",
     "0": "OPEN / reset workflow state",
-    "HOLD": "prevent further workflow advancement"
+    "RELEASE": "verified public state may move forward"
   },
   "literal_saved_token": "bbbbbddddd.",
   "unresolved_state_rule": "DROP U",
-  "evidence_boundary": "This workflow state does not itself prove external execution, transaction, or delivery.",
+  "unresolved_state": "DROPPED",
+  "release_scope": "verified public state only",
+  "evidence_boundary": "This workflow release does not itself prove external execution, transaction, blockchain activity, payment, or delivery.",
   "policy": [
     "Carry verified public state only",
     "Drop unresolved state",
     "Keep private material local and out of public GitHub state",
     "Use one forward branch",
-    "Do not advance while HOLD is active"
+    "Require independent evidence before claiming external execution or delivery"
   ]
 }
