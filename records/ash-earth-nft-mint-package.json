@@ -1,0 +1,23 @@
+{
+  "schema": "ash-earth-nft-mint-package-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "name": "ASH Earth",
+  "description": "Earth against a black background with the word ASH centered beneath the globe.",
+  "source_image_reference": "records/ash-earth-image-reference.json",
+  "source_image_sha256": "c0249a2aff7823842bdc7ddf79cac0ea72bb0fb8e85828aeccd6a0365fef7967",
+  "public_bind_record": "records/038000-379999-public-bind.json",
+  "seal_record": "records/bitcoin-anchor-seal-pending.json",
+  "mint_status": "PREPARED_NOT_MINTED",
+  "onchain": {
+    "network": null,
+    "contract_address": null,
+    "token_id": null,
+    "transaction_hash": null
+  },
+  "privacy": {
+    "private_state_included": false,
+    "unresolved_state_included": false
+  },
+  "boundary": "This package prepares NFT metadata and provenance references only. Minting requires a wallet/network transaction and is not complete until a verifiable transaction hash and token record exist."
+}
