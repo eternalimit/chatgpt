@@ -1,0 +1,16 @@
+{
+  "schema": "ASH-earth-image-reference-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "label": "ASH Earth image",
+  "source_upload": "0B73A32A-82F0-4827-B403-F466D494F5AD(1).jpeg",
+  "description": "Earth against a black background with the word ASH centered beneath the globe.",
+  "image": {
+    "format": "JPEG",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 328439,
+    "sha256": "c0249a2aff7823842bdc7ddf79cac0ea72bb0fb8e85828aeccd6a0365fef7967"
+  },
+  "note": "This record preserves a durable public reference to the uploaded image. The image itself remains the conversation upload unless separately committed as a binary asset."
+}
