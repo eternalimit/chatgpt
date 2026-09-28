@@ -1,0 +1,32 @@
+{
+  "schema": "WF-379999-reference-binding-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "source_commit": "2e0546c4db36feb2c9a21ca99e329e18b7cc0313",
+  "status": "HOLD",
+  "canonical_state": "0 · HOLD",
+  "unresolved_state_rule": "DROP U",
+  "bond": {
+    "type": "repository_reference_binding",
+    "clarity_root_reference": {
+      "sha256_reference": "32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f",
+      "source_file": "CLARITY_ROOT.md",
+      "source_file_sha256": "aeed676a3626399969bbbc6d133e24c35184e64953bb805675da8bf56d922e72",
+      "referenced_object": "UNRESOLVED"
+    },
+    "workflow_checkpoint": {
+      "file": "records/379999-preserved-state.json",
+      "file_sha256": "02d7f8112dc2fa6d5bb9f3ff2bd847f5c8524ff71f18237d085fe4803455b5fd",
+      "archive_copy": "records/archive/379999-preserved-state-at-5d50353.json",
+      "archive_copy_sha256": "02d7f8112dc2fa6d5bb9f3ff2bd847f5c8524ff71f18237d085fe4803455b5fd"
+    }
+  },
+  "evidence_boundary": "This binds two public repository references for continuity only. It does not prove the referenced Clarity object, validate its preimage, release HOLD, or establish external execution, transaction, or delivery.",
+  "policy": [
+    "Carry verified public state only",
+    "Drop unresolved state",
+    "Keep private material local and out of public GitHub state",
+    "Use one forward branch",
+    "Do not advance the workflow while HOLD is active"
+  ]
+}
