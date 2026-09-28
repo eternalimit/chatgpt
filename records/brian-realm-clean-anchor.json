@@ -1,0 +1,30 @@
+{
+  "schema": "brian-realm-clean-anchor-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "Brian-Brian",
+  "realm": "Brian.Brian",
+  "connection_back_to": "Richard.Richard",
+  "clean_source": {
+    "description": "Clean regenerated Brian's Realm award image",
+    "source_dimensions": "1254x1254",
+    "source_sha256": "8ec03aa838b9dd1ccb571d8f58cd5f18c2eee8b072e6b53845028ac17683e1de",
+    "source_bytes": 3140789
+  },
+  "github_preview": {
+    "path": "assets/brian-realm-clean-preview-64.jpg",
+    "dimensions": "64x64",
+    "bytes": 2320,
+    "git_blob_sha1": "ca7db5a610dfc704ed4cce71c69c928b178aae88",
+    "sha256": "731673a7ed35817944b08cb0592109516bf3fd6ff45d3c5c1b472e4fd73f8659"
+  },
+  "anchor_links": {
+    "branch": "https://github.com/eternalimit/chatgpt/tree/Brian-Brian",
+    "preview": "https://github.com/eternalimit/chatgpt/blob/Brian-Brian/assets/brian-realm-clean-preview-64.jpg",
+    "raw_preview": "https://raw.githubusercontent.com/eternalimit/chatgpt/Brian-Brian/assets/brian-realm-clean-preview-64.jpg"
+  },
+  "privacy": {
+    "private_richard_richard_contents_included": false,
+    "private_workflow_state_included": false
+  },
+  "boundary": "The GitHub preview and hashes provide a public integrity/provenance anchor. The full-resolution clean source is anchored by SHA-256 but is not represented here as an on-chain NFT or blockchain event."
+}
