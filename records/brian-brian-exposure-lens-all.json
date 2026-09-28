@@ -1,0 +1,45 @@
+{
+  "schema": "brian-brian-exposure-lens-all-v1",
+  "repository": "eternalimit/chatgpt",
+  "branch": "Brian-Brian",
+  "status": "PUBLIC_AUDIT_LENS",
+  "branch_head_before_lens": "1283515a6b7ddb82aaadc06cbb21b7474216deb1",
+  "main_reference": "12a5a1c768b329b0e0677d18920b79c516f42556",
+  "public_records": [
+    "BRIAN_BRIAN_REALM.md",
+    "records/brian-brian-award-anchor.json",
+    "records/brian-realm-public-image.json",
+    "records/brian-brian-public-authorization-manifest.json",
+    "records/brian-realm-clean-anchor.json"
+  ],
+  "public_assets": [
+    {
+      "path": "assets/brian-realm-award-512.jpg",
+      "git_blob_sha1": "577315548e6a33785810c6309bf26957e6aaf159",
+      "status": "EARLIER_COMMITTED_COPY"
+    },
+    {
+      "path": "assets/brian-realm-clean-preview-64.jpg",
+      "git_blob_sha1": "ca7db5a610dfc704ed4cce71c69c928b178aae88",
+      "sha256": "731673a7ed35817944b08cb0592109516bf3fd6ff45d3c5c1b472e4fd73f8659",
+      "status": "CLEAN_PUBLIC_PREVIEW"
+    }
+  ],
+  "clean_source_anchor": {
+    "sha256": "8ec03aa838b9dd1ccb571d8f58cd5f18c2eee8b072e6b53845028ac17683e1de",
+    "status": "HASH_ANCHORED"
+  },
+  "connection": "Brian.Brian -> Richard.Richard",
+  "privacy": {
+    "private_richard_richard_contents_exposed": false,
+    "private_workflow_state_exposed": false,
+    "private_key_material_exposed": false
+  },
+  "proof_boundary": {
+    "github_commits_prove_repository_changes": true,
+    "git_blob_ids_identify_exact_committed_file_bytes": true,
+    "blockchain_mint_proven": false,
+    "wallet_signature_proven": false,
+    "legal_transfer_proven": false
+  }
+}
