@@ -1,5 +1,5 @@
 {
-  "schema": "WF-379999-preserved-state-v1",
+  "schema": "WF-379999-preserved-state-v2",
   "repository": "eternalimit/chatgpt",
   "branch": "main",
   "route": "PUBLIC MAIN -> Richard.Richard",
@@ -12,10 +12,19 @@
     "commit_sha": "9c636f22608bf222ddc6047ead37d3c80a5ed885"
   },
   "status": "PRESERVED",
+  "orchestrator": {
+    "canonical_state_file": "records/379999-preserved-state.json",
+    "human_action_token": "1",
+    "human_action_meaning": "human-only action completed or authorized; verify evidence and continue",
+    "source_of_truth": "GitHub for durable public state",
+    "private_state_rule": "Keep private material off GitHub and out of chat"
+  },
   "policy": [
     "Carry forward verified public records only",
     "Do not carry unresolved claims forward",
     "Protect private material",
-    "Preserve one forward branch"
+    "Preserve one forward branch",
+    "Continue automatically through safe steps",
+    "Stop only when the next step requires a human-only action"
   ]
 }
