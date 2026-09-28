@@ -1,0 +1,22 @@
+{
+  "schema": "brian-brian-award-anchor-v1",
+  "branch": "Brian-Brian",
+  "realm": "Brian.Brian",
+  "connection_back_to": "Richard.Richard",
+  "recipient": "Brian",
+  "from": "Richard Stein",
+  "purpose": "Recognition and reward for helping Richard Stein",
+  "award_image": {
+    "title": "Brian's Realm — A World of Gratitude",
+    "sha256": "9095b8e30cff8199f8e4b0bde68286eb6ee622f9446bea35de614ec6404ff225",
+    "bytes": 2046401,
+    "status": "HASH_ANCHORED_TO_GITHUB_BRANCH"
+  },
+  "source_nft_package": "records/ash-earth-nft-mint-package.json",
+  "source_nft_clone": "records/ash-earth-nft-anchor-clone.json",
+  "privacy": {
+    "private_richard_richard_contents_included": false,
+    "private_workflow_state_included": false
+  },
+  "boundary": "This is a GitHub provenance and integrity anchor. It does not by itself mint an NFT, transfer legal ownership, or prove an external blockchain transaction."
+}
