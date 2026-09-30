@@ -1,0 +1,19 @@
+{
+  "schema": "richard-controller/v1",
+  "root": "Anchor 1",
+  "controller": "GitHub",
+  "principal": "Richard",
+  "default_action": "deny",
+  "authorization_rule": "no-valid-richard-authorization-no-external-execution",
+  "states": ["draft", "authorized", "executed", "independently_verified", "receipt", "preserved"],
+  "secret_policy": "never-commit-private-signing-material",
+  "signature_policy": {
+    "required_for_high_assurance": true,
+    "registered_public_keys": []
+  },
+  "external_execution": {
+    "requires_explicit_scope": true,
+    "requires_receipt": true,
+    "requires_independent_verification": true
+  }
+}
