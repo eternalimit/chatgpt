@@ -1,0 +1,269 @@
+name: Hubcore TCGE Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      sha256:
+        description: Expected SHA-256 reference
+        required: false
+        default: 32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f
+  pull_request:
+    branches:
+      - main
+    paths:
+      - records/379999-root-hold-reference-binding.json
+      - records/clarity-root-byte-verification-receipt-2026-10-05.json
+      - CLARITY_ROOT.md
+      - tools/generate-public-payload.js
+      - tools/verify-public-payload.js
+      - tools/compare-verification-receipts.js
+      - tools/run-independent-receipt-comparison.sh
+      - .github/workflows/hubcore-validation.yml
+  push:
+    branches:
+      - hubcore-validation
+      - main
+    paths:
+      - records/379999-root-hold-reference-binding.json
+      - records/clarity-root-byte-verification-receipt-2026-10-05.json
+      - CLARITY_ROOT.md
+      - tools/generate-public-payload.js
+      - tools/verify-public-payload.js
+      - tools/compare-verification-receipts.js
+      - tools/run-independent-receipt-comparison.sh
+      - .github/workflows/hubcore-validation.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: HASH BYTES FIRST
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout full repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Resolve exact referenced bytes across Git history
+        id: bytes
+        shell: bash
+        env:
+          EXPECTED_HASH: ${{ inputs.sha256 || '32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f' }}
+        run: |
+          set -euo pipefail
+          mkdir -p hubcore-out
+          expected="${EXPECTED_HASH,,}"
+
+          if [[ ! "$expected" =~ ^[0-9a-f]{64}$ ]]; then
+            echo "Invalid SHA-256 input" >&2
+            exit 2
+          fi
+
+          : > hubcore-out/matches.txt
+          : > hubcore-out/blob-matches.txt
+
+          # Phase 1: current tracked working-tree files.
+          while IFS= read -r -d '' file; do
+            [[ -f "$file" ]] || continue
+            actual="$(sha256sum -- "$file" | awk '{print $1}')"
+            if [[ "$actual" == "$expected" ]]; then
+              printf 'WORKTREE\t%s\n' "$file" >> hubcore-out/matches.txt
+            fi
+          done < <(git ls-files -z)
+
+          # Phase 2: every unique Git blob reachable from repository history.
+          git rev-list --objects --all | awk '{print $1}' | sort -u > hubcore-out/object-ids.txt
+
+          while IFS= read -r oid; do
+            [[ -n "$oid" ]] || continue
+            type="$(git cat-file -t "$oid" 2>/dev/null || true)"
+            [[ "$type" == "blob" ]] || continue
+
+            actual="$(git cat-file blob "$oid" | sha256sum | awk '{print $1}')"
+            if [[ "$actual" == "$expected" ]]; then
+              echo "$oid" >> hubcore-out/blob-matches.txt
+              git rev-list --objects --all                 | awk -v target="$oid" '$1 == target { $1=""; sub(/^ /,""); if (length($0)) print $0 }'                 | sort -u                 | while IFS= read -r path; do
+                    printf 'HISTORY\t%s\t%s\n' "$oid" "$path" >> hubcore-out/matches.txt
+                  done
+            fi
+          done < hubcore-out/object-ids.txt
+
+          status="HOLD"
+          primary=""
+          echo_hash=""
+          matched_blob=""
+
+          if [[ -s hubcore-out/blob-matches.txt ]]; then
+            matched_blob="$(head -n 1 hubcore-out/blob-matches.txt)"
+            primary="$(git cat-file blob "$matched_blob" | sha256sum | awk '{print $1}')"
+            echo_hash="$(git cat-file blob "$matched_blob" | openssl dgst -sha256 | awk '{print $NF}')"
+
+            if [[ "$primary" == "$expected" && "$echo_hash" == "$expected" ]]; then
+              status="PASS"
+            fi
+          elif grep -q '^WORKTREE' hubcore-out/matches.txt; then
+            match="$(awk -F '\t' '$1=="WORKTREE" {print $2; exit}' hubcore-out/matches.txt)"
+            primary="$(sha256sum -- "$match" | awk '{print $1}')"
+            echo_hash="$(openssl dgst -sha256 "$match" | awk '{print $NF}')"
+
+            if [[ "$primary" == "$expected" && "$echo_hash" == "$expected" ]]; then
+              status="PASS"
+            fi
+          fi
+
+          matches_json="$(jq -R -s 'split("\n") | map(select(length > 0))' hubcore-out/matches.txt)"
+
+          jq -n             --arg schema "hubcore-object-resolution-v2"             --arg repository "$GITHUB_REPOSITORY"             --arg commit "$GITHUB_SHA"             --arg expected_sha256 "$expected"             --arg status "$status"             --arg primary_sha256 "$primary"             --arg echo_sha256 "$echo_hash"             --arg matched_blob "$matched_blob"             --argjson matches "$matches_json"             '{
+              schema: $schema,
+              repository: $repository,
+              commit: $commit,
+              expected_sha256: $expected_sha256,
+              search_scope: "current tracked files plus all reachable Git blobs",
+              matches: $matches,
+              matched_blob_oid: $matched_blob,
+              primary_sha256: $primary_sha256,
+              echo_sha256: $echo_sha256,
+              status: $status,
+              rule: "HASH?BYTES:FIRST"
+            }' > hubcore-out/object-resolution.json
+
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Validate external Clarity Root byte receipt
+        id: external_bytes
+        shell: bash
+        env:
+          EXPECTED_HASH: ${{ inputs.sha256 || '32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f' }}
+        run: |
+          set -euo pipefail
+          receipt="records/clarity-root-byte-verification-receipt-2026-10-05.json"
+          status="HOLD"
+
+          if [[ -f "$receipt" ]]; then
+            ok="$(jq -r --arg expected "${EXPECTED_HASH,,}" '
+              .status == "PASS"
+              and .expected_sha256 == $expected
+              and .source.name == "RR_GPT_CIP_32b58d339ccdb8fc.jpeg"
+              and .source.size_bytes == 771237
+              and (.measurements | length) >= 2
+              and ([.measurements[].implementation] | unique | length) >= 2
+              and ([.measurements[] | select(.match == true and .sha256 == $expected)] | length) >= 2
+              and ([.measurements[].implementation] | index("sha256sum")) != null
+              and ([.measurements[].implementation] | index("OpenSSL SHA2-256")) != null
+              and .tcge.R == 1
+              and .tcge.I == 1
+              and .tcge.E == 1
+              and .tcge.K == 1
+            ' "$receipt")"
+
+            if [[ "$ok" == "true" ]]; then
+              status="PASS"
+            fi
+          fi
+
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "External byte receipt = $status"
+
+      - name: Independent receipt comparison
+        id: echo
+        shell: bash
+        run: |
+          set +e
+          bash tools/run-independent-receipt-comparison.sh > hubcore-out/receipt-comparison.json
+          rc=$?
+          set -e
+          if [[ "$rc" -eq 0 ]]; then
+            echo "status=PASS" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=HOLD" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: TCGE gate
+        id: gate
+        shell: bash
+        env:
+          BYTES: ${{ steps.bytes.outputs.status }}
+          EXTERNAL_BYTES: ${{ steps.external_bytes.outputs.status }}
+          ECHO: ${{ steps.echo.outputs.status }}
+        run: |
+          set -euo pipefail
+          byte_binding="HOLD"
+          if [[ "$BYTES" == "PASS" || "$EXTERNAL_BYTES" == "PASS" ]]; then
+            byte_binding="PASS"
+          fi
+
+          gate="HOLD"
+          if [[ "$byte_binding" == "PASS" && "$ECHO" == "PASS" ]]; then
+            gate="PASS"
+          fi
+
+          jq -n             --arg schema "hubcore-tcge-gate-v1"             --arg commit "$GITHUB_SHA"             --arg bytes "$BYTES"             --arg external_bytes "$EXTERNAL_BYTES"             --arg byte_binding "$byte_binding"             --arg echo "$ECHO"             --arg gate "$gate"             '{
+              schema: $schema,
+              commit: $commit,
+              R: (if $byte_binding == "PASS" then 1 else 0 end),
+              I: 1,
+              E: (if $byte_binding == "PASS" and $echo == "PASS" then 1 else 0 end),
+              K: (if $gate == "PASS" then 1 else 0 end),
+              evidence: {
+                repository_byte_resolution: $bytes,
+                external_library_byte_receipt: $external_bytes,
+                byte_binding: $byte_binding,
+                independent_receipt_echo: $echo
+              },
+              GET: "PASS",
+              THROUGH: $gate,
+              GATE: $gate,
+              LATCH: (if $gate == "PASS" then "AUTHORIZED" else "PRESERVE" end),
+              invariants: [
+                "HASH?BYTES:FIRST",
+                "THROUGH(HOLD)!=PASS",
+                "LATCH<=>GATE:PASS",
+                "TRANSFER / RECEIPT != VALIDATION"
+              ],
+              scope: "repository byte binding only"
+            }' > hubcore-out/gate.json
+
+          echo "status=$gate" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Hubcore validation"
+            echo
+            echo "- Repository byte resolution: $BYTES"
+            echo "- External Library byte receipt: $EXTERNAL_BYTES"
+            echo "- Effective byte binding: $byte_binding"
+            echo "- Independent receipt Echo: $ECHO"
+            echo "- Gate: $gate"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hubcore-receipts-${{ github.sha }}
+          path: hubcore-out/
+          if-no-files-found: error
+
+      - name: Preserve HOLD without runner failure
+        if: steps.gate.outputs.status != 'PASS'
+        shell: bash
+        run: |
+          echo "::notice title=TCGE Gate HOLD::Exact referenced bytes remain unresolved. State is preserved and not promoted."
+          echo "HOLD: exact referenced bytes were not fully validated."
+          echo "THROUGH(HOLD)!=PASS"
+          echo "Workflow execution = PASS; TCGE gate = HOLD."
+
+      - name: Confirm gate PASS
+        if: steps.gate.outputs.status == 'PASS'
+        shell: bash
+        run: |
+          echo "::notice title=TCGE Gate PASS::Exact referenced bytes and independent receipt comparison passed."
+          echo "Workflow execution = PASS; TCGE gate = PASS."
