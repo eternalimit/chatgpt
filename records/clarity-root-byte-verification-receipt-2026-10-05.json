@@ -1,0 +1,37 @@
+{
+  "schema": "clarity-root-byte-verification-receipt-v1",
+  "date": "2026-10-05",
+  "status": "PASS",
+  "scope": "exact byte identity of the referenced Clarity Root object only",
+  "expected_sha256": "32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f",
+  "source": {
+    "kind": "ChatGPT Library native file",
+    "name": "RR_GPT_CIP_32b58d339ccdb8fc.jpeg",
+    "file_id": "file_000000003090820b920cb1dc4c797104",
+    "library_file_id": "libfile_e065cd36658881919665a1a6c33325e3",
+    "version_id": "1",
+    "mime_type": "image/jpeg",
+    "size_bytes": 771237
+  },
+  "measurements": [
+    {
+      "implementation": "sha256sum",
+      "sha256": "32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f",
+      "match": true
+    },
+    {
+      "implementation": "OpenSSL SHA2-256",
+      "sha256": "32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f",
+      "match": true
+    }
+  ],
+  "tcge": {
+    "R": 1,
+    "I": 1,
+    "E": 1,
+    "K": 1,
+    "claim": "The exact Library JPEG bytes are the object identified by the declared SHA-256."
+  },
+  "provenance_boundary": "This receipt establishes byte identity for the referenced JPEG. It does not establish physical execution, Title 24 compliance, ownership, blockchain transaction state, external endorsement, or TCGE as a universal theory.",
+  "history_rule": "Append-only successor receipt. The prior HOLD record remains unchanged."
+}
