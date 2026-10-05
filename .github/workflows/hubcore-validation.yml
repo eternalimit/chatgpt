@@ -41,15 +41,17 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - name: Checkout
+      - name: Checkout full repository history
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
-      - name: Resolve exact referenced bytes
+      - name: Resolve exact referenced bytes across Git history
         id: bytes
         shell: bash
         env:
@@ -65,34 +67,67 @@ jobs:
           fi
 
           : > hubcore-out/matches.txt
+          : > hubcore-out/blob-matches.txt
+
+          # Phase 1: current tracked working-tree files.
           while IFS= read -r -d '' file; do
             [[ -f "$file" ]] || continue
             actual="$(sha256sum -- "$file" | awk '{print $1}')"
             if [[ "$actual" == "$expected" ]]; then
-              printf '%s\n' "$file" >> hubcore-out/matches.txt
+              printf 'WORKTREE\t%s\n' "$file" >> hubcore-out/matches.txt
             fi
           done < <(git ls-files -z)
 
-          count="$(wc -l < hubcore-out/matches.txt | tr -d ' ')"
+          # Phase 2: every unique Git blob reachable from repository history.
+          git rev-list --objects --all | awk '{print $1}' | sort -u > hubcore-out/object-ids.txt
+
+          while IFS= read -r oid; do
+            [[ -n "$oid" ]] || continue
+            type="$(git cat-file -t "$oid" 2>/dev/null || true)"
+            [[ "$type" == "blob" ]] || continue
+
+            actual="$(git cat-file blob "$oid" | sha256sum | awk '{print $1}')"
+            if [[ "$actual" == "$expected" ]]; then
+              echo "$oid" >> hubcore-out/blob-matches.txt
+              git rev-list --objects --all                 | awk -v target="$oid" '$1 == target { $1=""; sub(/^ /,""); if (length($0)) print $0 }'                 | sort -u                 | while IFS= read -r path; do
+                    printf 'HISTORY\t%s\t%s\n' "$oid" "$path" >> hubcore-out/matches.txt
+                  done
+            fi
+          done < hubcore-out/object-ids.txt
+
           status="HOLD"
           primary=""
           echo_hash=""
+          matched_blob=""
 
-          if [[ "$count" -gt 0 ]]; then
-            match="$(head -n 1 hubcore-out/matches.txt)"
+          if [[ -s hubcore-out/blob-matches.txt ]]; then
+            matched_blob="$(head -n 1 hubcore-out/blob-matches.txt)"
+            primary="$(git cat-file blob "$matched_blob" | sha256sum | awk '{print $1}')"
+            echo_hash="$(git cat-file blob "$matched_blob" | openssl dgst -sha256 | awk '{print $NF}')"
+
+            if [[ "$primary" == "$expected" && "$echo_hash" == "$expected" ]]; then
+              status="PASS"
+            fi
+          elif grep -q '^WORKTREE' hubcore-out/matches.txt; then
+            match="$(awk -F '\t' '$1=="WORKTREE" {print $2; exit}' hubcore-out/matches.txt)"
             primary="$(sha256sum -- "$match" | awk '{print $1}')"
             echo_hash="$(openssl dgst -sha256 "$match" | awk '{print $NF}')"
+
             if [[ "$primary" == "$expected" && "$echo_hash" == "$expected" ]]; then
               status="PASS"
             fi
           fi
 
-          jq -n             --arg schema "hubcore-object-resolution-v1"             --arg repository "$GITHUB_REPOSITORY"             --arg commit "$GITHUB_SHA"             --arg expected_sha256 "$expected"             --arg status "$status"             --arg primary_sha256 "$primary"             --arg echo_sha256 "$echo_hash"             --argjson matched_paths "$(jq -R -s 'split("\n") | map(select(length > 0))' hubcore-out/matches.txt)"             '{
+          matches_json="$(jq -R -s 'split("\n") | map(select(length > 0))' hubcore-out/matches.txt)"
+
+          jq -n             --arg schema "hubcore-object-resolution-v2"             --arg repository "$GITHUB_REPOSITORY"             --arg commit "$GITHUB_SHA"             --arg expected_sha256 "$expected"             --arg status "$status"             --arg primary_sha256 "$primary"             --arg echo_sha256 "$echo_hash"             --arg matched_blob "$matched_blob"             --argjson matches "$matches_json"             '{
               schema: $schema,
               repository: $repository,
               commit: $commit,
               expected_sha256: $expected_sha256,
-              matched_paths: $matched_paths,
+              search_scope: "current tracked files plus all reachable Git blobs",
+              matches: $matches,
+              matched_blob_oid: $matched_blob,
               primary_sha256: $primary_sha256,
               echo_sha256: $echo_sha256,
               status: $status,
