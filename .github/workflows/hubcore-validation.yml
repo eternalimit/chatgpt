@@ -153,9 +153,9 @@ jobs:
           {
             echo "## Hubcore validation"
             echo
-            echo "- Byte resolution: `$BYTES`"
-            echo "- Independent receipt Echo: `$ECHO`"
-            echo "- Gate: `$gate`"
+            echo "- Byte resolution: $BYTES"
+            echo "- Independent receipt Echo: $ECHO"
+            echo "- Gate: $gate"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload receipts
