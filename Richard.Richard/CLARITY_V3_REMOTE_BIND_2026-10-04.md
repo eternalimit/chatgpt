@@ -72,3 +72,38 @@ No private key, seed phrase, wallet password, or signing secret is stored here.
 BIND = PASS after verified repository readback
 REMOTE DEPLOYMENT = HOLD until target write and readback
 REMOTE MATCH = HOLD until payload verification
+
+
+## Deployment Attempt Receipt
+
+Attempted via connected GitHub contents write path after bind verification.
+
+First target path:
+run_all_8.sh
+
+Result:
+FORBIDDEN / HTTP 403
+
+GitHub message:
+Resource not accessible by integration
+
+No target payload file was created by this attempt.
+Subsequent payload writes were not attempted after the first fail-closed error.
+
+Target main readback after failure:
+1939b70658d614e38446bb2e08f193ea2c84b6e8
+
+Expected pre-deployment base:
+1939b70658d614e38446bb2e08f193ea2c84b6e8
+
+Target branch unchanged:
+YES
+
+State:
+BIND = PASS
+TARGET WRITE = BLOCKED
+REMOTE DEPLOYMENT = HOLD
+REMOTE MATCH = HOLD
+
+Boundary:
+The 403 is an integration-access limitation. It does not negate the source bind or package identity, and it does not establish target deployment.
