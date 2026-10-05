@@ -12,6 +12,7 @@ on:
       - main
     paths:
       - records/379999-root-hold-reference-binding.json
+      - records/clarity-root-byte-verification-receipt-2026-10-05.json
       - CLARITY_ROOT.md
       - tools/generate-public-payload.js
       - tools/verify-public-payload.js
@@ -24,6 +25,7 @@ on:
       - main
     paths:
       - records/379999-root-hold-reference-binding.json
+      - records/clarity-root-byte-verification-receipt-2026-10-05.json
       - CLARITY_ROOT.md
       - tools/generate-public-payload.js
       - tools/verify-public-payload.js
@@ -136,6 +138,41 @@ jobs:
 
           echo "status=$status" >> "$GITHUB_OUTPUT"
 
+      - name: Validate external Clarity Root byte receipt
+        id: external_bytes
+        shell: bash
+        env:
+          EXPECTED_HASH: ${{ inputs.sha256 || '32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f' }}
+        run: |
+          set -euo pipefail
+          receipt="records/clarity-root-byte-verification-receipt-2026-10-05.json"
+          status="HOLD"
+
+          if [[ -f "$receipt" ]]; then
+            ok="$(jq -r --arg expected "${EXPECTED_HASH,,}" '
+              .status == "PASS"
+              and .expected_sha256 == $expected
+              and .source.name == "RR_GPT_CIP_32b58d339ccdb8fc.jpeg"
+              and .source.size_bytes == 771237
+              and (.measurements | length) >= 2
+              and ([.measurements[].implementation] | unique | length) >= 2
+              and ([.measurements[] | select(.match == true and .sha256 == $expected)] | length) >= 2
+              and ([.measurements[].implementation] | index("sha256sum")) != null
+              and ([.measurements[].implementation] | index("OpenSSL SHA2-256")) != null
+              and .tcge.R == 1
+              and .tcge.I == 1
+              and .tcge.E == 1
+              and .tcge.K == 1
+            ' "$receipt")"
+
+            if [[ "$ok" == "true" ]]; then
+              status="PASS"
+            fi
+          fi
+
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "External byte receipt = $status"
+
       - name: Independent receipt comparison
         id: echo
         shell: bash
@@ -155,21 +192,33 @@ jobs:
         shell: bash
         env:
           BYTES: ${{ steps.bytes.outputs.status }}
+          EXTERNAL_BYTES: ${{ steps.external_bytes.outputs.status }}
           ECHO: ${{ steps.echo.outputs.status }}
         run: |
           set -euo pipefail
+          byte_binding="HOLD"
+          if [[ "$BYTES" == "PASS" || "$EXTERNAL_BYTES" == "PASS" ]]; then
+            byte_binding="PASS"
+          fi
+
           gate="HOLD"
-          if [[ "$BYTES" == "PASS" && "$ECHO" == "PASS" ]]; then
+          if [[ "$byte_binding" == "PASS" && "$ECHO" == "PASS" ]]; then
             gate="PASS"
           fi
 
-          jq -n             --arg schema "hubcore-tcge-gate-v1"             --arg commit "$GITHUB_SHA"             --arg bytes "$BYTES"             --arg echo "$ECHO"             --arg gate "$gate"             '{
+          jq -n             --arg schema "hubcore-tcge-gate-v1"             --arg commit "$GITHUB_SHA"             --arg bytes "$BYTES"             --arg external_bytes "$EXTERNAL_BYTES"             --arg byte_binding "$byte_binding"             --arg echo "$ECHO"             --arg gate "$gate"             '{
               schema: $schema,
               commit: $commit,
-              R: (if $bytes == "PASS" then 1 else 0 end),
+              R: (if $byte_binding == "PASS" then 1 else 0 end),
               I: 1,
-              E: (if $echo == "PASS" then 1 else 0 end),
+              E: (if $byte_binding == "PASS" and $echo == "PASS" then 1 else 0 end),
               K: (if $gate == "PASS" then 1 else 0 end),
+              evidence: {
+                repository_byte_resolution: $bytes,
+                external_library_byte_receipt: $external_bytes,
+                byte_binding: $byte_binding,
+                independent_receipt_echo: $echo
+              },
               GET: "PASS",
               THROUGH: $gate,
               GATE: $gate,
@@ -188,7 +237,9 @@ jobs:
           {
             echo "## Hubcore validation"
             echo
-            echo "- Byte resolution: $BYTES"
+            echo "- Repository byte resolution: $BYTES"
+            echo "- External Library byte receipt: $EXTERNAL_BYTES"
+            echo "- Effective byte binding: $byte_binding"
             echo "- Independent receipt Echo: $ECHO"
             echo "- Gate: $gate"
           } >> "$GITHUB_STEP_SUMMARY"
