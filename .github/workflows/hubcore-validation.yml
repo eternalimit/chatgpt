@@ -1,0 +1,164 @@
+name: Hubcore TCGE Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      sha256:
+        description: Expected SHA-256 reference
+        required: false
+        default: 32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f
+  push:
+    branches:
+      - hubcore-validation
+      - main
+    paths:
+      - records/379999-root-hold-reference-binding.json
+      - CLARITY_ROOT.md
+      - tools/generate-public-payload.js
+      - tools/verify-public-payload.js
+      - tools/compare-verification-receipts.js
+      - tools/run-independent-receipt-comparison.sh
+      - .github/workflows/hubcore-validation.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: HASH BYTES FIRST
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Resolve exact referenced bytes
+        id: bytes
+        shell: bash
+        env:
+          EXPECTED_HASH: ${{ inputs.sha256 || '32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f' }}
+        run: |
+          set -euo pipefail
+          mkdir -p hubcore-out
+          expected="${EXPECTED_HASH,,}"
+
+          if [[ ! "$expected" =~ ^[0-9a-f]{64}$ ]]; then
+            echo "Invalid SHA-256 input" >&2
+            exit 2
+          fi
+
+          : > hubcore-out/matches.txt
+          while IFS= read -r -d '' file; do
+            [[ -f "$file" ]] || continue
+            actual="$(sha256sum -- "$file" | awk '{print $1}')"
+            if [[ "$actual" == "$expected" ]]; then
+              printf '%s\n' "$file" >> hubcore-out/matches.txt
+            fi
+          done < <(git ls-files -z)
+
+          count="$(wc -l < hubcore-out/matches.txt | tr -d ' ')"
+          status="HOLD"
+          primary=""
+          echo_hash=""
+
+          if [[ "$count" -gt 0 ]]; then
+            match="$(head -n 1 hubcore-out/matches.txt)"
+            primary="$(sha256sum -- "$match" | awk '{print $1}')"
+            echo_hash="$(openssl dgst -sha256 "$match" | awk '{print $NF}')"
+            if [[ "$primary" == "$expected" && "$echo_hash" == "$expected" ]]; then
+              status="PASS"
+            fi
+          fi
+
+          jq -n             --arg schema "hubcore-object-resolution-v1"             --arg repository "$GITHUB_REPOSITORY"             --arg commit "$GITHUB_SHA"             --arg expected_sha256 "$expected"             --arg status "$status"             --arg primary_sha256 "$primary"             --arg echo_sha256 "$echo_hash"             --argjson matched_paths "$(jq -R -s 'split("\n") | map(select(length > 0))' hubcore-out/matches.txt)"             '{
+              schema: $schema,
+              repository: $repository,
+              commit: $commit,
+              expected_sha256: $expected_sha256,
+              matched_paths: $matched_paths,
+              primary_sha256: $primary_sha256,
+              echo_sha256: $echo_sha256,
+              status: $status,
+              rule: "HASH?BYTES:FIRST"
+            }' > hubcore-out/object-resolution.json
+
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Independent receipt comparison
+        id: echo
+        shell: bash
+        run: |
+          set +e
+          bash tools/run-independent-receipt-comparison.sh > hubcore-out/receipt-comparison.json
+          rc=$?
+          set -e
+          if [[ "$rc" -eq 0 ]]; then
+            echo "status=PASS" >> "$GITHUB_OUTPUT"
+          else
+            echo "status=HOLD" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: TCGE gate
+        id: gate
+        shell: bash
+        env:
+          BYTES: ${{ steps.bytes.outputs.status }}
+          ECHO: ${{ steps.echo.outputs.status }}
+        run: |
+          set -euo pipefail
+          gate="HOLD"
+          if [[ "$BYTES" == "PASS" && "$ECHO" == "PASS" ]]; then
+            gate="PASS"
+          fi
+
+          jq -n             --arg schema "hubcore-tcge-gate-v1"             --arg commit "$GITHUB_SHA"             --arg bytes "$BYTES"             --arg echo "$ECHO"             --arg gate "$gate"             '{
+              schema: $schema,
+              commit: $commit,
+              R: (if $bytes == "PASS" then 1 else 0 end),
+              I: 1,
+              E: (if $echo == "PASS" then 1 else 0 end),
+              K: (if $gate == "PASS" then 1 else 0 end),
+              GET: "PASS",
+              THROUGH: $gate,
+              GATE: $gate,
+              LATCH: (if $gate == "PASS" then "AUTHORIZED" else "PRESERVE" end),
+              invariants: [
+                "HASH?BYTES:FIRST",
+                "THROUGH(HOLD)!=PASS",
+                "LATCH<=>GATE:PASS",
+                "TRANSFER / RECEIPT != VALIDATION"
+              ],
+              scope: "repository byte binding only"
+            }' > hubcore-out/gate.json
+
+          echo "status=$gate" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Hubcore validation"
+            echo
+            echo "- Byte resolution: `$BYTES`"
+            echo "- Independent receipt Echo: `$ECHO`"
+            echo "- Gate: `$gate`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hubcore-receipts-${{ github.sha }}
+          path: hubcore-out/
+          if-no-files-found: error
+
+      - name: Enforce HOLD
+        if: steps.gate.outputs.status != 'PASS'
+        shell: bash
+        run: |
+          echo "HOLD: exact referenced bytes were not fully validated."
+          echo "THROUGH(HOLD)!=PASS"
+          exit 1
