@@ -7,6 +7,17 @@ on:
         description: Expected SHA-256 reference
         required: false
         default: 32b58d339ccdb8fc3bdc9e78be0dd3c947109951c6aa482b793997df6e5f052f
+  pull_request:
+    branches:
+      - main
+    paths:
+      - records/379999-root-hold-reference-binding.json
+      - CLARITY_ROOT.md
+      - tools/generate-public-payload.js
+      - tools/verify-public-payload.js
+      - tools/compare-verification-receipts.js
+      - tools/run-independent-receipt-comparison.sh
+      - .github/workflows/hubcore-validation.yml
   push:
     branches:
       - hubcore-validation
