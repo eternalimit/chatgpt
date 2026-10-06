@@ -1,0 +1,33 @@
+{
+  "name": "Cross-Model Echo Reviewer",
+  "lane": "Model B",
+  "version": "1.0.0",
+  "decision_values": ["PASS", "HOLD"],
+  "required_inputs": [
+    "source_evidence",
+    "candidate_artifact",
+    "frozen_rules",
+    "primary_model_identity",
+    "reviewer_model_identity"
+  ],
+  "required_checks": [
+    "source_fidelity",
+    "topology_or_structure",
+    "invented_content",
+    "cross_system_conflicts",
+    "labels_and_units",
+    "cropping_or_loss",
+    "traceability"
+  ],
+  "hold_fields": [
+    "location",
+    "error_type",
+    "source_conflict",
+    "required_correction"
+  ],
+  "independence_rule": "reviewer_model_identity must differ meaningfully from primary_model_identity",
+  "tcge": {
+    "K": "R AND I AND E",
+    "H": "I AND NOT K"
+  }
+}
