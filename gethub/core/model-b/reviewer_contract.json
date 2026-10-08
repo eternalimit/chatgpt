@@ -1,7 +1,7 @@
 {
   "name": "Cross-Model Echo Reviewer",
   "lane": "Model B",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "decision_values": ["PASS", "HOLD"],
   "required_inputs": [
     "source_evidence",
@@ -25,7 +25,15 @@
     "source_conflict",
     "required_correction"
   ],
-  "independence_rule": "reviewer_model_identity must differ meaningfully from primary_model_identity",
+  "independence_rule": "Different model identity strings are necessary but insufficient. Echo eligibility is decided by the GETHUB harness from the selected runtime provenance; reviewer self-attestation cannot grant E=1.",
+  "runtime_policy": {
+    "echo_eligible_fixed_remote_lanes": ["anthropic", "gemini", "huggingface"],
+    "debug_reviewer_cmd_echo_eligible": false,
+    "generic_openai_compatible_echo_eligible": false,
+    "local_runtime_echo_eligible": false,
+    "huggingface_required_base_url": "https://router.huggingface.co/v1",
+    "model_binding": "MODEL_B_MODEL must exactly match reviewer_model_identity case-insensitively"
+  },
   "tcge": {
     "K": "R AND I AND E",
     "H": "I AND NOT K"
