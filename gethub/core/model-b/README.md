@@ -1,10 +1,10 @@
 # Cross-Model Echo Reviewer (Model B)
 
-Purpose: independent review lane for Gethub.GitHub artifacts before final output.
+Purpose: independent review lane for GETHUB artifacts before final output.
 
 ## Definition
 
-Model B is not the primary builder and is not allowed to repair the candidate silently. It receives frozen source evidence, a candidate artifact, and frozen review rules. It returns only a structured PASS/HOLD audit.
+Model B is not the primary builder and is not allowed to repair the candidate silently. It receives frozen source evidence, a candidate artifact, and frozen review rules. It returns a structured PASS/HOLD audit.
 
 ## Governing chain
 
@@ -20,7 +20,16 @@ Balance means reconciliation against source evidence, not averaging opinions.
 
 ## Independence
 
-The harness refuses to mark Echo as independent unless the reviewer declares a model/runtime identity different from the primary lane. A same-model second pass is never sufficient Echo.
+Echo independence is decided by the GETHUB harness, not by the reviewer response.
+
+- Different identity strings are necessary but not sufficient.
+- Reviewer self-reporting `E=1` never proves independence by itself.
+- `--reviewer-cmd` is a debug/test lane and can never earn Echo or PASS.
+- Harness-selected fixed remote provider lanes may be Echo-eligible only when the configured runtime model exactly matches the frozen reviewer identity.
+- Hugging Face may earn Echo only through the fixed `https://router.huggingface.co/v1` endpoint; a custom base URL is HOLD.
+- Local runtimes and generic OpenAI-compatible endpoints are not automatically Echo-eligible.
+
+These controls establish runtime provenance only. They do not prove that a reviewer conclusion is factually correct, and they do not substitute for claim-specific Reality evidence.
 
 ## AUTO MAX alignment
 
@@ -32,7 +41,8 @@ Model B is used inside REVIEW. Its report becomes evidence input to the next bui
 
 ## Current state
 
-BUILD: complete
+BUILD: hardened against reviewer self-attestation
 HARNESS: executable
-INDEPENDENT MODEL RUNTIME: external adapter required
-ECHO: HOLD until a meaningfully separate reviewer runtime is actually connected and used
+NEGATIVE CONTROL: arbitrary fake PASS cannot earn Echo
+INDEPENDENT MODEL RUNTIME: external provider credentials still required for a real review
+ECHO: HOLD until a genuinely independent runtime executes the frozen review and the claim-specific evidence is sufficient
