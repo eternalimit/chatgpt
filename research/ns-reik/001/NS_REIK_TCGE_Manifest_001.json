@@ -1,0 +1,74 @@
+{
+  "canonical_json": "UTF-8, sort_keys=True, ensure_ascii=False, separators=(comma,colon), no terminal newline",
+  "chain_method": "r_i=SHA256(canonicalJSON(event_i)); h_i=SHA256(raw32(h_(i-1)) || raw32(r_i))",
+  "commit": "NOT_PERFORMED",
+  "deployment": "NOT_PERFORMED",
+  "generated_date": "2026-10-09",
+  "hash_meaning": "Local artifact identity only; not math truth or proof of historical chain",
+  "historical_references": {
+    "EC-025_parent_sha256": "c7d121fde0e2f7c827ee78805181c9adcaf1a8b41910d3f692a656a38e489835",
+    "EC-026_manifest_sha256": "bfc9d82285e7dc4934115d0c28153b18e1cedee27144a32ca4e93b03bf5a380e"
+  },
+  "independent_echo": "NOT_PERFORMED",
+  "kernel_reference_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "local_file_sha256": {
+    "NS_REIK_TCGE_Research_Paper_001.md": "d2ff419dbb74a08e56761c7242ed48d771bfb9718be31725ff27468a759787db",
+    "NS_REIK_TCGE_Research_Paper_001.pdf": "50c90ebf84317f32e1fe489e9d7c676b7427bdef54bb7b9e31655c8868d7955e",
+    "ns_symbolic_test.json": "a1e90a53ca95ef99dbe5c9150db689eadfcceb8a0bcf2aad3c4d5128d75c4988",
+    "test_navier_control.py": "4beb12e4fc54bbda18aae0ab6546143fef76927579a1cb001a583f1d0f286522",
+    "verify_NS_REIK_001.py": "90c00e1cb0de6b837fe5e32de0166f9f6ef5d00badd71299bda0652bc9be9472"
+  },
+  "local_genesis_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "local_receipt_tip_sha256": "88ae11b2208bba94bb55cef7126233e5f9388ce0265d294623ab6d4f0bbccca3",
+  "project": "Navier-Stokes x REIK/TCGE / Universal Axiom / FIDELITY",
+  "receipts": [
+    {
+      "chain_tip_sha256": "bbc1630d326f76ce3efc8c86c34283795104cd676d0cc380e8a682c63750e6e8",
+      "event": {
+        "claim": "Clay alternatives A/B differ from C/D by admissible forcing; OpenAI public claim concerns forced C/D; Clay evaluation underway",
+        "event_id": "NS-REIK-001-E01",
+        "kind": "SOURCE_SCOPE",
+        "source_refs": [
+          "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf",
+          "https://www.claymath.org/news/navier-stokes-announcement/",
+          "https://github.com/openai/NavierStokesAndEuler",
+          "https://github.com/eternalimit/clarity/blob/main/REIK_ROOT.md"
+        ],
+        "status": "DOCUMENTS_REVIEWED_NOT_ORIGINAL_BYTES_REHASHED"
+      },
+      "event_digest_sha256": "a140a61fa0259b617a9045551dfc3df63ef32f900e50cfea78029a89cbb53591",
+      "index": 1
+    },
+    {
+      "chain_tip_sha256": "3ba12013f477c349bf8f519096db16dfd575c676b6cc7d0ddda5158d3e3039fa",
+      "event": {
+        "event_id": "NS-REIK-001-E02",
+        "kind": "SYMBOLIC_CONTROL",
+        "method": "SymPy 1.14.0 symbolic differentiation; exact solution and negative control",
+        "proof_scope": "one exact solution, one negative control",
+        "status": "PASS_WITHIN_SCOPED_TEST",
+        "test_id": "NS-REIK-CONTROL-001",
+        "test_json_sha256": "a1e90a53ca95ef99dbe5c9150db689eadfcceb8a0bcf2aad3c4d5128d75c4988"
+      },
+      "event_digest_sha256": "e2f759cdb73447533e11ae128e5943b3b30f75d127aeef0a0ebecd8edda6214d",
+      "index": 2
+    },
+    {
+      "chain_tip_sha256": "88ae11b2208bba94bb55cef7126233e5f9388ce0265d294623ab6d4f0bbccca3",
+      "event": {
+        "claim": "new global regularity or finite-time blowup theorem proven by REIK/TCGE",
+        "event_id": "NS-REIK-001-E03",
+        "kind": "CLAIM_GATE",
+        "reason": "No universal new PDE derivation or independently certified theorem; historical parent hashes not locally rehashed; no independent Lean build performed",
+        "status": "HOLD"
+      },
+      "event_digest_sha256": "108c5cb10e1afbc5e464f4ea70b76f70a4814d837599b364c30800be99fa935a",
+      "index": 3
+    }
+  ],
+  "schema": "NS-REIK-001-MANIFEST-v1",
+  "signing": "NOT_PERFORMED",
+  "symbolic_control_status": "PASS_WITHIN_SCOPE",
+  "universal_navier_stokes_proof": "HOLD",
+  "verified_external_lineage": false
+}

@@ -1,0 +1,22 @@
+{
+  "correct_divergence": "0",
+  "correct_pass": true,
+  "correct_residual": [
+    "0",
+    "0",
+    "0"
+  ],
+  "correct_solution": "(exp(-nu*t)*sin(y), 0, 0)",
+  "domain": "periodic 3D torus (2*pi periodic coordinates); viscosity nu > 0; p=0; f=0",
+  "negative_control": "(sin(y), 0, 0)",
+  "negative_control_detected": true,
+  "negative_divergence": "0",
+  "negative_residual": [
+    "nu*sin(y)",
+    "0",
+    "0"
+  ],
+  "scope": "single exact special solution and single deliberately incorrect candidate; not a universal theorem",
+  "sympy_version": "1.14.0",
+  "test_id": "NS-REIK-CONTROL-001"
+}

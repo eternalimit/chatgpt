@@ -1,0 +1,92 @@
+{
+  "commit_sha1": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+  "files": [
+    {
+      "byte_count": 72,
+      "connector_utf8_sha256": "aa93efae7c7d7e44f2bb421d85587e7e9610e03ce67e15a15ed86acad2d014a1",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes.lean",
+      "git_blob_sha1": "999bc01cfa63e5cdae0185b3a4f47a76f8283df9",
+      "path": "NavierStokes.lean"
+    },
+    {
+      "byte_count": 375,
+      "connector_utf8_sha256": "7610ecead7b390d80ff7f4229a3ff8f18d630e046f7ad1de4f92c7e8e76845b8",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.json",
+      "git_blob_sha1": "b5fd32b1211faf7d282dac09d70be5527da9f486",
+      "path": "ComparatorChallenges/NavierStokes.json"
+    },
+    {
+      "byte_count": 2711,
+      "connector_utf8_sha256": "629c992327e531611c20165eb14db24edcabcf8f646a1d2689be9ac6fe2a9c68",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorTheorem.lean",
+      "git_blob_sha1": "b92d0efd0a59660d9fd484a35fc2c45c4829b65f",
+      "path": "NavierStokes/ComparatorTheorem.lean"
+    },
+    {
+      "byte_count": 2098,
+      "connector_utf8_sha256": "d05cd1c55e78709dabe1996546eb6ddaaa46e602d2ef1b05c6e2085320781207",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorR3Theorem.lean",
+      "git_blob_sha1": "3d651180befa2348b02d4507a7892940eeb89abd",
+      "path": "NavierStokes/ComparatorR3Theorem.lean"
+    },
+    {
+      "byte_count": 3850,
+      "connector_utf8_sha256": "e896ba297671c33d516d41fa47e7e186438b71ec14ab0738d3d3fc9e4df341cb",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/R3/Theorem.lean",
+      "git_blob_sha1": "4151e7c90a9de31d8454fc49932b066d475bed08",
+      "path": "NavierStokes/R3/Theorem.lean"
+    },
+    {
+      "byte_count": 8048,
+      "connector_utf8_sha256": "ca8ff98ef146dbbc136b0837888565385ad035f6e47b606d0bb075156c1ff7b2",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/PeriodicPaperTheorem.lean",
+      "git_blob_sha1": "e7cdc29594f635a0eebf6967352a148be1b818e9",
+      "path": "NavierStokes/PeriodicPaperTheorem.lean"
+    },
+    {
+      "byte_count": 2470,
+      "connector_utf8_sha256": "25f3752edf6d674064b67f995691ddd15bffaf347822086cba3fbd5333781f49",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/README.md",
+      "git_blob_sha1": "fd962639f68bc87d7a3087a3a5b85d4303276658",
+      "path": "README.md"
+    },
+    {
+      "byte_count": 665,
+      "connector_utf8_sha256": "f28c5f581d7bbc9504db467b88686a89ad5a94e4fd38b48a1866ae6224b5a1d8",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/README.md",
+      "git_blob_sha1": "bbe080b9fa8fd091617914290eb815e831cf16b2",
+      "path": "ComparatorChallenges/README.md"
+    },
+    {
+      "byte_count": 29,
+      "connector_utf8_sha256": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+      "fixed_url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/lean-toolchain",
+      "git_blob_sha1": "b814d987e0c93cb99938be934d9b277778495ba1",
+      "path": "lean-toolchain"
+    }
+  ],
+  "lean_file_bytes_reported": 33721830,
+  "lean_file_count": 2659,
+  "pdf_sources": [
+    {
+      "binary_download": "FAILED_DNS_UNAVAILABLE",
+      "name": "Fefferman official Clay PDF",
+      "pdf_page_count_reported": 6,
+      "sha256": null,
+      "url": "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf"
+    },
+    {
+      "binary_download": "FAILED_DNS_UNAVAILABLE",
+      "name": "OpenAI finite time blowup paper",
+      "pdf_page_count_reported": 166,
+      "sha256": null,
+      "url": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf"
+    }
+  ],
+  "repo": "openai/NavierStokesAndEuler",
+  "scope": "Clay A/B unforced, C/D forced; author Lean claim C/D; no independent Lean compilation",
+  "source_limit": "selected files only; no local rebuild; source byte completeness and external independent audit not established",
+  "source_method": "GitHub connector fetch_file(ref=exact_commit) -> UTF-8 content -> standard SHA-256 implemented in JavaScript; Git object IDs independently supplied by GitHub; bytes not stored as standalone local files",
+  "status": "SELECTED_PINNED_GITHUB_SOURCES_RETRIEVED_AND_UTF8_HASHED",
+  "tree_count": 2673
+}
