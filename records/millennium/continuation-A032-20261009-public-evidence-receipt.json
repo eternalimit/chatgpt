@@ -1,0 +1,87 @@
+{
+  "schema": "REIK-TCGE-A032-public-audit-receipt-v1",
+  "date": "2026-10-09",
+  "owner_attribution": "Richard Stein / Clarity",
+  "kernel_file": "kernel001.py",
+  "kernel_size_bytes": 4299,
+  "kernel_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "status": "0 HOLD",
+  "FIDELITY": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "original_archive_variants": {
+    "030_280": {
+      "zip_sha256": "b6019822134374d88a86a3eb01570e5a223bc4f37a2e5a999cbd7901000ad8ed",
+      "manifest_sha256": "c0be9baaa07b93dca6f3fd5feae10fa52ae92748485defefdeea078a06a750e1",
+      "receipt_tip_sha256": "d641bf6c30cd6252afad60892de645420bfc6ce8011c707477d0883b50b4b074",
+      "total_receipts": 280,
+      "manifest_covered_file_checks_across_nesting": 317,
+      "result": "PASS_BOUNDED_FINITE_REPLAY"
+    },
+    "030_282": {
+      "zip_sha256": "228532a88eb450311ad55ae40401fc1014599a12ffaead9e1d3bac0914a94942",
+      "manifest_sha256": "357e87c5a9d2f89f1a1061a20ad7762880485ac355c4e3c8464ba0956551a435",
+      "receipt_tip_sha256": "7d80eea546257f665f6e9ff8a69e7c963ef458097238820d96b87a0ef9f2f5a5",
+      "total_receipts": 282,
+      "manifest_covered_file_checks_across_nesting": 318,
+      "result": "PASS_BOUNDED_FINITE_REPLAY"
+    },
+    "031_from280_290": {
+      "zip_sha256": "43e33376f7bbb46fcc4be22f6da71ba1a441240b92e0e45ab0e634b339bd4cce",
+      "manifest_sha256": "a87519190b9ee28f756a11b8fa88c7f946d8d165738c59f2d5aa1e3919a587c2",
+      "receipt_tip_sha256": "ab62f9dc50e1778cc80360b7651fd1a04249ae3feda8936b9e6abfaec282c768",
+      "total_receipts": 290,
+      "manifest_covered_file_checks_across_nesting": 334,
+      "result": "PASS_BOUNDED_FINITE_REPLAY"
+    },
+    "031_A_294": {
+      "zip_sha256": "969d9a1f1590dc368e55f5fc42201cc784cd23099331cc8b22bd7b9ce94ce62a",
+      "manifest_sha256": "3e6294c0bbee715b8029140b73bb47dce8b4e9cfff3c1629bf559ef1339e9e48",
+      "receipt_tip_sha256": "57c2b6affaaa4d0251895301082d1f18f02db11cccd9f75c7704f93d1ace9384",
+      "total_receipts": 294,
+      "manifest_covered_file_checks_across_nesting": 332,
+      "result": "PASS_BOUNDED_FINITE_REPLAY"
+    },
+    "031_B_294": {
+      "zip_sha256": "50b131ece121135360d4ab943b828878bd9859e6ff804adf2ebcfccb0e871bff",
+      "manifest_sha256": "349f507b06e27976e87ea0047c8042593552dcd2dd6e1713a034b14fde178fe6",
+      "receipt_tip_sha256": "6ad3ceefdab55d2bf595eeac64c463087a8013c87e34a33fc86146a1ac466c6f",
+      "total_receipts": 294,
+      "manifest_covered_file_checks_across_nesting": 333,
+      "result": "PASS_BOUNDED_FINITE_REPLAY"
+    }
+  },
+  "finite_unsat_certificates": 4,
+  "source_formula_variable_count": 256,
+  "original_source": "archived_internal_json_cnf",
+  "resolution_steps_verified": 3076,
+  "independent_negative_controls": {
+    "kernel_one_byte_digest_change": "PASS",
+    "receipt_sequence_corruption_rejected": "PASS",
+    "zip_one_byte_digest_change": "PASS"
+  },
+  "replay_method": "New independent read-only Python standard-library code; ZIP CRC, sha256 of original binaries/manifests and all listed evidence, nested 019-031 receipt tips, original exact source JSON, full finite resolution steps. No embedded programs executed.",
+  "library_duplicates_do_not_create_new_trials": true,
+  "full_original_archives_publicly_uploaded": false,
+  "source_audit_json_sha256": "ba32ffaf4415da4228f510c8f1adede8e550588b412de659062e303828301e86",
+  "independent_verifier_script_sha256": "098260901f1f7346ac62d794ddf8a94fe929447d58c46d73034a720dfb8e8b5d",
+  "external_original_256_sat_and_unsat_files_with_certificates": "HOLD",
+  "debian_cadical_package_publisher_expected_sha256": "a87259c8fa8b5a19e90607a0077227b3a4c64777affd59ed34d22437c996bc25",
+  "debian_package_original_bytes_received": false,
+  "debian_package_download_status": "DNS FAILED; NOT HASHED OR EXECUTED",
+  "dedicated_solver_benchmark": "NOT RUN",
+  "general_sat_polynomial_time_proof": "NOT ESTABLISHED",
+  "p_vs_np": "HOLD",
+  "clarity_pi_semantic_correspondence": "OPEN; normalization alone cannot infer independent evidence admission",
+  "community_adoption_independently_documented": false,
+  "github_research_paper_commit": "d3bc32ce8590b5b67dcb69c14568d44553645401",
+  "github_hash_structure_correction_commit": "8a623649c214affed9aac6962d25c8e4f184d506",
+  "evidence_boundary": "PASS refers only to inspected finite archive bytes/chronology and certificate derivations; hash chain does not prove authenticity of third-party source, broader theorem, independent peer review, signature, execution or external uptake."
+}
