@@ -1,0 +1,95 @@
+{
+  "schema": "REIK-TCGE-A033-public-ledger-receipt-v1",
+  "date": "2026-10-09",
+  "research_attribution": "Richard Stein / Clarity",
+  "state": "0 HOLD",
+  "original_kernel_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "kernel_modified": false,
+  "FIDELITY": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "parent_A032_git_blob_hashes": {
+    "paper": "4f2f483d5115a758a1fe22410ef85d0ddc57a1aa",
+    "hash": "988410e53bdfd9ae2851756d3c73781e5de1327c",
+    "receipt": "c9ef247e61921af4885fd81cbe7db52109d3a411"
+  },
+  "parent_archive_lineages": [
+    {
+      "label": "030_280",
+      "events": 280,
+      "zip_sha256": "b6019822134374d88a86a3eb01570e5a223bc4f37a2e5a999cbd7901000ad8ed",
+      "manifest_sha256": "c0be9baaa07b93dca6f3fd5feae10fa52ae92748485defefdeea078a06a750e1",
+      "tip_sha256": "d641bf6c30cd6252afad60892de645420bfc6ce8011c707477d0883b50b4b074"
+    },
+    {
+      "label": "030_282",
+      "events": 282,
+      "zip_sha256": "228532a88eb450311ad55ae40401fc1014599a12ffaead9e1d3bac0914a94942",
+      "manifest_sha256": "357e87c5a9d2f89f1a1061a20ad7762880485ac355c4e3c8464ba0956551a435",
+      "tip_sha256": "7d80eea546257f665f6e9ff8a69e7c963ef458097238820d96b87a0ef9f2f5a5"
+    },
+    {
+      "label": "031_from_030280_290",
+      "events": 290,
+      "zip_sha256": "43e33376f7bbb46fcc4be22f6da71ba1a441240b92e0e45ab0e634b339bd4cce",
+      "manifest_sha256": "a87519190b9ee28f756a11b8fa88c7f946d8d165738c59f2d5aa1e3919a587c2",
+      "tip_sha256": "ab62f9dc50e1778cc80360b7651fd1a04249ae3feda8936b9e6abfaec282c768"
+    },
+    {
+      "label": "031_A294",
+      "events": 294,
+      "zip_sha256": "969d9a1f1590dc368e55f5fc42201cc784cd23099331cc8b22bd7b9ce94ce62a",
+      "manifest_sha256": "3e6294c0bbee715b8029140b73bb47dce8b4e9cfff3c1629bf559ef1339e9e48",
+      "tip_sha256": "57c2b6affaaa4d0251895301082d1f18f02db11cccd9f75c7704f93d1ace9384"
+    },
+    {
+      "label": "031_B294",
+      "events": 294,
+      "zip_sha256": "50b131ece121135360d4ab943b828878bd9859e6ff804adf2ebcfccb0e871bff",
+      "manifest_sha256": "349f507b06e27976e87ea0047c8042593552dcd2dd6e1713a034b14fde178fe6",
+      "tip_sha256": "6ad3ceefdab55d2bf595eeac64c463087a8013c87e34a33fc86146a1ac466c6f"
+    }
+  ],
+  "independent_local_archived_replay": "Five original-byte archives rehashed, nested receipt chains and finite UNSAT resolution proofs replayed; each PASS_FINITE_BYTE_AUDIT. Shared 3076 steps are not five independent proof sets.",
+  "replay_json_sha256": "ba32ffaf4415da4228f510c8f1adede8e550588b412de659062e303828301e86",
+  "new_adapter_python_sha256": "884e7ee3e54b336c3d68b8a1f8eea782038b6f15bbcbd2e9afecef15ca436d52",
+  "new_adapter_result_json_sha256": "2c954ada9ad272aeeb16da4308098407b9d44ab1df505441e14e7aed15f9cb9c",
+  "adapter_results": {
+    "canonical_K_truth_rows": 8,
+    "admission_negative_controls": 9,
+    "explicit_conflicting_falsifier_status": "UNRESOLVED",
+    "self_normalization_noninjective_counterexample": "2!=3; N(2)=N(3)=1",
+    "kernel_to_adapter_semantic_correspondence": "NOT_PROVEN",
+    "independent_attestation_eligibility": "ASSUMED, NOT VERIFIED BY IDENTIFIER"
+  },
+  "new_external_sat_candidate": {
+    "name": "queens16.cnf",
+    "variables_reported": 256,
+    "clauses_reported": 6336,
+    "published_status": "SAT",
+    "source_page": "https://www.comp.nus.edu.sg/~gregory/sat/",
+    "research_publication_doi": "10.4204/EPTCS.303.1",
+    "original_bytes_locally_received": false,
+    "witness_locally_verified": false,
+    "status": "DISCOVERY_ONLY_HOLD"
+  },
+  "independent_external_256_SAT_UNSAT_original_pair_acquired": false,
+  "cadical_2_1_3_3_amd64_expected_sha256": "a87259c8fa8b5a19e90607a0077227b3a4c64777affd59ed34d22437c996bc25",
+  "cadical_expected_size_bytes": 467080,
+  "cadical_downloaded_or_executed": false,
+  "external_download_limit": "Runtime DNS resolution failure",
+  "fair_solver_benchmark_run": false,
+  "p_vs_np_solved": false,
+  "independently_documented_third_party_adoption": false,
+  "research_paper_public_blob": "9c2f8040c981fcf2d916fd19cc6d6a68280152cc",
+  "hash_structure_public_blob": "20da4c6447d9bb8ca468cdbd6ab4f2923a7e6843",
+  "local_complete_public_safe_bundle_sha256": "bd5e78c1b15313eec0ddb5f9b843727d4ac90790d9b8bfea05b50d6e47830547",
+  "evidence_boundary": "Public text reports the local checks. ZIP original bytes and dedicated CaDiCaL package were not acquired from external sources or uploaded. Code tests do not provide independent third-party certification. No root-kernel change, crypto signing, monetary deployment, blockchain anchor or general proof."
+}
