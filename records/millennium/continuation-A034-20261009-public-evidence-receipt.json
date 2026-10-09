@@ -1,0 +1,144 @@
+{
+  "schema": "REIK-TCGE-A034-public-safe-audit-receipt-v1",
+  "date": "2026-10-09",
+  "research_attribution": "Richard Stein / Clarity; first-party claim only, not independently adjudicated ownership or research priority",
+  "original_immutable_kernel_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "original_kernel_changed": false,
+  "canonical_state": "0 HOLD",
+  "FIDELITY": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "parent_A033_commits": {
+    "paper": "7829497d17678b81bc5c131bb9bb8f319db99339",
+    "hash": "66f782331b9126d07b6c3d05c1d28d26046e465b",
+    "receipt": "dd8be7f0bf92f25d84a93db1b536309b121bd3da"
+  },
+  "A034_original_archive_recheck": {
+    "status": "PASS_FINITE_BYTE_AUDIT",
+    "separate_lineages": [
+      {
+        "name": "030_280",
+        "receipts": 280,
+        "original_zip_sha256": "b6019822134374d88a86a3eb01570e5a223bc4f37a2e5a999cbd7901000ad8ed"
+      },
+      {
+        "name": "030_282",
+        "receipts": 282,
+        "original_zip_sha256": "228532a88eb450311ad55ae40401fc1014599a12ffaead9e1d3bac0914a94942"
+      },
+      {
+        "name": "031_from_030280_290",
+        "receipts": 290,
+        "original_zip_sha256": "43e33376f7bbb46fcc4be22f6da71ba1a441240b92e0e45ab0e634b339bd4cce"
+      },
+      {
+        "name": "031_A294_from_030282",
+        "receipts": 294,
+        "original_zip_sha256": "969d9a1f1590dc368e55f5fc42201cc784cd23099331cc8b22bd7b9ce94ce62a"
+      },
+      {
+        "name": "031_B294_from_030282",
+        "receipts": 294,
+        "original_zip_sha256": "50b131ece121135360d4ab943b828878bd9859e6ff804adf2ebcfccb0e871bff"
+      }
+    ],
+    "inherited_finite_UNSAT_certificates": 4,
+    "inherited_resolution_steps": 3076,
+    "original_archives_publicly_uploaded": false,
+    "local_replay_json_sha256": "ba32ffaf4415da4228f510c8f1adede8e550588b412de659062e303828301e86",
+    "event_counts_must_not_be_added_as_independent_trials": true
+  },
+  "A034_new_external_SAT_witness": {
+    "status": "PASS_FINITE_SAT_WITNESS",
+    "original_source": "https://github.com/andricicezar/sat-solver-dafny/blob/418e5cbb1e7a311fec2c15913c0c504ec603ca91/benchmarks/queens16.cnf",
+    "source_author_in_file_comments": "Forrest Sheng Bao",
+    "original_ascii_source_bytes": 71945,
+    "original_source_sha256": "c5177c8e6523ddd9378b3b864d52fcf73b81c0a92a033433cc37e5450fa1fcd5",
+    "git_blob_sha1": "85b9071d8399839eff2352bb22315b5940bcda7c",
+    "other_fixed_public_repositories_same_Git_blob": [
+      "Vlamonster/RocqSAT",
+      "Vectorized/CECSATSolver"
+    ],
+    "header": "p cnf 256 6336",
+    "all_256_variables_actually_present": true,
+    "clause_widths": {
+      "2": 6320,
+      "16": 16
+    },
+    "strict_3_CNF": false,
+    "full_model_256_vars_defined_by_true_1based": [
+      1,
+      19,
+      37,
+      50,
+      77,
+      89,
+      110,
+      124,
+      143,
+      150,
+      176,
+      183,
+      196,
+      219,
+      232,
+      250
+    ],
+    "other_240_variables_false": true,
+    "clause_count": 6336,
+    "clauses_satisfied": 6336,
+    "clauses_failed": 0,
+    "negative_control_flip_var_1_false_failed_clause_count": 1,
+    "public_witness_commit": "51419c3d507ed6c741590739ceaebea1f54bce06",
+    "full_external_source_retrieved_via_GitHub_connector": true,
+    "locally_cached_source_bytes": false
+  },
+  "external_256_UNSAT_pair": {
+    "status": "HOLD",
+    "exact_original_bytes_acquired": false,
+    "proof_checked": false
+  },
+  "dedicated_solver": {
+    "status": "HOLD",
+    "pkg": "cadical_2.1.3-3_amd64.deb",
+    "Debian_expected_bytes": 467080,
+    "expected_package_sha256": "a87259c8fa8b5a19e90607a0077227b3a4c64777affd59ed34d22437c996bc25",
+    "source": "https://packages.debian.org/sid/amd64/cadical/download",
+    "local_download_error": "DNS resolution failed",
+    "package_bytes_received": false,
+    "local_package_digest_verified": false,
+    "executable_digest_verified": false,
+    "benchmark_run": false
+  },
+  "A033_Clarity_Pi_adapter_independent_review": {
+    "status": "PASS_FINITE_CONDITIONAL_GATE_WITH_DOCUMENTED_ECHO_GAP",
+    "source_sha256": "884e7ee3e54b336c3d68b8a1f8eea782038b6f15bbcbd2e9afecef15ca436d52",
+    "independent_black_box_auditor_sha256": "5228c0e15d07be3ecd3d762373728075e68fa7b639ce02e50fa885e1377ab6e2",
+    "independent_audit_json_sha256": "4fab058d8becd971d06feddd41981556844301145c4fba32287920d3f908cc10",
+    "RIE_truth_table_rows_tested": 8,
+    "conditional_positive_cases": 4,
+    "negative_evidence_mutations_tested": 10,
+    "conflict_to_unresolved": true,
+    "full_kernel_semantic_equivalence": "NOT_PROVEN",
+    "negative_falsification": "A caller can set independent_attestation=true with two arbitrary distinct origin names; adapter returns CONFIRMED without authenticating independent checker; therefore that result is not genuine externally certified Echo",
+    "origin_independence_externally_authenticated": false
+  },
+  "published_A034_docs": {
+    "paper_blob_sha1": "6876377be72d8592052834cb14849b4a7492406f",
+    "paper_final_commit": "b3f34dd7ef6d7d55394431aff93d2b36cbd00411",
+    "hash_structure_blob_sha1": "5d54fafe81d2a618c4dc8f394e07a29b6059b95b",
+    "hash_final_commit": "4e5bfc313e3f7d7f44b3338a50e99d192e1043e1"
+  },
+  "local_public_safe_bundle_sha256": "7f0c4ed8d1ffda736c6d485bdee23d98611c5c6503cbfbfb4e5d336ee5dfc7fa",
+  "external_adoption_OpenAI_community": "HOLD / not independently established",
+  "Bitcoin_signing_or_anchor": "HOLD / no authenticated external transaction evidence",
+  "P_vs_NP": "NOT_SOLVED",
+  "public_safety": "No private keys, original internal ZIP binaries, account credentials, signed Bitcoin assertions, or original third-party licensed CNF contents uploaded. Artifacts are scope-bounded research records."
+}
