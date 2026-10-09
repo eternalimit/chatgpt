@@ -1,0 +1,107 @@
+{
+  "schema": "REIK-TCGE-A033-EXTERNAL-ORIGINAL-SOURCE-SAT256-v1",
+  "date": "2026-10-09",
+  "provenance_classification": "public-safe; original source bytes not re-published",
+  "attribution": "Richard Stein / Clarity REIK/TCGE; AI-assisted independent file inspection and documentation",
+  "status": "0 HOLD",
+  "parent_public_receipt_commit": "32df7f25714dcfea823de257deaed74a787044a1",
+  "parent_public_paper_commit": "4d03295705ac7826fe841f08359fb8af15455867",
+  "new_paper_commit": "d8c709351b1c5c2a369521bd61db53e45ce2f4b0",
+  "original_kernel_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "experiment029": {
+    "original_zip_sha256": "4f773d940dba2f97328c8be360a6cc8293ceb28e25017113a14c9c4ff138cdbd",
+    "manifest_sha256": "5fda444185059ad6e9cd2fcc7bd0457e0a37fb7bcd284b2f6c79e930cbc58e78",
+    "event_count": 270,
+    "tip_sha256": "55a743ee913da7b03bd16221977ab6d39ec58f18e0f79876912705851f12eebd"
+  },
+  "experiment030_sibling_archives": {
+    "A_282": {
+      "zip_sha256": "228532a88eb450311ad55ae40401fc1014599a12ffaead9e1d3bac0914a94942",
+      "manifest_sha256": "357e87c5a9d2f89f1a1061a20ad7762880485ac355c4e3c8464ba0956551a435",
+      "tip_sha256": "7d80eea546257f665f6e9ff8a69e7c963ef458097238820d96b87a0ef9f2f5a5",
+      "receipt_count": 282
+    },
+    "B_280": {
+      "zip_sha256": "b6019822134374d88a86a3eb01570e5a223bc4f37a2e5a999cbd7901000ad8ed",
+      "manifest_sha256": "c0be9baaa07b93dca6f3fd5feae10fa52ae92748485defefdeea078a06a750e1",
+      "tip_sha256": "d641bf6c30cd6252afad60892de645420bfc6ce8011c707477d0883b50b4b074",
+      "receipt_count": 280
+    },
+    "topology": "both point to same exact original Experiment 029 parent; do not merge event chains"
+  },
+  "inherited_finite_verification_reexecuted": {
+    "original_kernel_preserved": true,
+    "archived_receipt_chains": "PASS",
+    "finite_unsat_certificates": 4,
+    "finite_resolution_steps_checked": 3076,
+    "negative_controls": 7,
+    "scope": "local finite proof replay only; external UNSAT source still missing"
+  },
+  "new_independent_source": {
+    "repo": "domenlusina/SAT_SOLVER_PAJACA",
+    "fixed_commit": "1a8be2a13d9c3a45903ddf07e918205b272baf1d",
+    "original_path": "CNF1.txt",
+    "source_url": "https://github.com/domenlusina/SAT_SOLVER_PAJACA/blob/1a8be2a13d9c3a45903ddf07e918205b272baf1d/CNF1.txt",
+    "github_blob_sha1": "45d3dc06e4ac28d19326c38d92b9f9421f3b2bd6",
+    "github_returned_text_utf8_sha256": "5f4be6d6d859422e6a1b837f965a2db10d9e64e580f77ecfef2d9930301d072c",
+    "source_bytes": 191052,
+    "header": "p cnf 256 20864",
+    "variable_count_declared": 256,
+    "variable_count_actually_active": 256,
+    "clause_count_declared": 20864,
+    "clause_count_parsed": 20864,
+    "clause_width": 2,
+    "positive_literal_count": 41728,
+    "negative_literal_count": 0,
+    "malformed_clause_terminators": 0,
+    "independently_checked_model": "all 256 Boolean variables TRUE",
+    "model_checked_satisfied_clauses": 20864,
+    "finite_sat_witness": "PASS",
+    "limitation": "easy monotone 2-CNF; NOT an external 3-SAT hard benchmark or UNSAT proof; not representative of asymptotic complexity",
+    "independent_negative_controls": {
+      "flip_positive_clause_to_negative": "PASS_REJECTED_MODEL",
+      "change_header_variable_count": "PASS_REJECTED_HEADER",
+      "remove_clause_without_count_edit": "PASS_REJECTED_COUNT",
+      "eliminate_variable_256_while_preserving_header": "PASS_REJECTED_ACTIVE_SET"
+    },
+    "hash_implementation_test_vector": "SHA256('abc') = ba7816bf8f01cfea414140de5dae2223b00361f20015ad"
+  },
+  "excluded_sources": {
+    "satlib_250": "NOT_ADMITTED_VARIABLE_COUNT_250",
+    "RandSATBench_256": "PUBLIC_DATASET_METADATA_ONLY; FILE_BYTES_AND_INDEPENDENT_CERTIFICATES_NOT_RECEIVED",
+    "missing_independent_256_unsat": "HOLD"
+  },
+  "cadical": {
+    "required_package": "cadical_2.1.3-3_amd64.deb",
+    "publisher_page": "https://packages.debian.org/forky/amd64/cadical/download",
+    "publisher_expected_bytes": 467080,
+    "publisher_expected_sha256": "a87259c8fa8b5a19e90607a0077227b3a4c64777affd59ed34d22437c996bc25",
+    "actual_package_download": "FAILED",
+    "actual_received_sha256": null,
+    "extracted_executable_sha256": null,
+    "executable_run": false,
+    "dedicated_solver_benchmark": "NOT RUN"
+  },
+  "FIDELITY": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "admission_gates": {
+    "authenticated_original_block_minus1": "HOLD",
+    "independent_fully_active_256_variable_sat": "PASS_FINITE_2CNF_ONLY",
+    "independent_fully_active_256_variable_unsat_original_and_proof": "HOLD",
+    "independent_full_256_variable_3sat_pair": "HOLD",
+    "formal_clarity_pi_to_reik_semantic_correspondence": "HOLD",
+    "independent_external_echo": "HOLD",
+    "p_vs_np": "NOT_ESTABLISHED",
+    "OpenAI_adoption": "NO_EVIDENCE",
+    "digital_signature_or_blockchain_transaction": "NOT_CLAIMED"
+  },
+  "conclusion": "One new externally published exact-content 256-variable SAT specimen and independently checked all-true model; broader paired UNSAT and external execution gates still 0 HOLD."
+}
