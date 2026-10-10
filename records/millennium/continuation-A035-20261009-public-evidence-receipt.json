@@ -1,0 +1,146 @@
+{
+  "schema": "REIK-TCGE-A035-public-evidence-receipt-v1",
+  "date": "2026-10-09",
+  "research_attribution": "Richard Stein / Clarity (first-party; independent priority not adjudicated)",
+  "canonical_state": "0 HOLD",
+  "drop_u": "Never promote unresolved claims; preserve their history",
+  "original_kernel": {
+    "file": "kernel001.py",
+    "bytes": 4299,
+    "sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+    "modified": false,
+    "executed": false
+  },
+  "FIDELITY": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "parent_A034_receipt_commit": "9fcb2192f9f11fd6784d51cfad6fc48abef68423",
+  "separate_inherited_archives": [
+    {
+      "lineage": "030/280",
+      "events": 280,
+      "zip_sha256": "b6019822134374d88a86a3eb01570e5a223bc4f37a2e5a999cbd7901000ad8ed"
+    },
+    {
+      "lineage": "030/282",
+      "events": 282,
+      "zip_sha256": "228532a88eb450311ad55ae40401fc1014599a12ffaead9e1d3bac0914a94942"
+    },
+    {
+      "lineage": "031/290",
+      "events": 290,
+      "zip_sha256": "43e33376f7bbb46fcc4be22f6da71ba1a441240b92e0e45ab0e634b339bd4cce"
+    },
+    {
+      "lineage": "031/A294",
+      "events": 294,
+      "zip_sha256": "969d9a1f1590dc368e55f5fc42201cc784cd23099331cc8b22bd7b9ce94ce62a"
+    },
+    {
+      "lineage": "031/B294",
+      "events": 294,
+      "zip_sha256": "50b131ece121135360d4ab943b828878bd9859e6ff804adf2ebcfccb0e871bff"
+    }
+  ],
+  "A035_replay": {
+    "status": "PASS_FINITE_ARCHIVE_LINKAGE_AND_CERTIFICATE_REPLAY",
+    "source": "five exact user Library original ZIPs re-checked in read-only mode",
+    "shared_inherited_UNSAT_certificates": 4,
+    "shared_resolution_steps": 3076,
+    "not_independent_five_proofs": true,
+    "audit_json_sha256": "ba32ffaf4415da4228f510c8f1adede8e550588b412de659062e303828301e86"
+  },
+  "inherited_external_SAT": {
+    "status": "PASS_FINITE_ONLY",
+    "source": "https://github.com/andricicezar/sat-solver-dafny/blob/418e5cbb1e7a311fec2c15913c0c504ec603ca91/benchmarks/queens16.cnf",
+    "original_sha256": "c5177c8e6523ddd9378b3b864d52fcf73b81c0a92a033433cc37e5450fa1fcd5",
+    "variables_actually_used": 256,
+    "clauses": 6336,
+    "strict_3SAT": false,
+    "complete_model_1based_true_variables": [
+      1,
+      19,
+      37,
+      50,
+      77,
+      89,
+      110,
+      124,
+      143,
+      150,
+      176,
+      183,
+      196,
+      219,
+      232,
+      250
+    ],
+    "other_variables_false": true,
+    "clauses_satisfied": 6336,
+    "admitted_in": "A034"
+  },
+  "external_UNSAT_search": {
+    "status": "DISCOVERY_ONLY_HOLD",
+    "third_party_manifest": "https://github.com/tamas-schwarcz/mfmc/blob/af4cc019c0700c9ecc33dd246b6f02088fb32cf8/manifests/manifest_all.json",
+    "git_blob_sha1": "d643f9d151c33557e7f917678e55b069384f813c",
+    "published_unsat_verified_count_by_authors": 221,
+    "variable_256_eligibility_checked": false,
+    "original_CNF_and_proof_bytes_received": false,
+    "independent_proof_checker_run": false
+  },
+  "cadical": {
+    "status": "HOLD",
+    "package": "cadical_2.1.3-3_amd64.deb",
+    "publisher_size_bytes": 467080,
+    "publisher_sha256": "a87259c8fa8b5a19e90607a0077227b3a4c64777affd59ed34d22437c996bc25",
+    "publisher_url": "https://packages.debian.org/sid/amd64/cadical/download",
+    "download_attempted": true,
+    "download_error": "DNS_RESOLUTION_FAILED",
+    "package_received": false,
+    "executable_sha256": null,
+    "executed": false
+  },
+  "A035_echo": {
+    "status": "PASS_FINITE_PUBLIC_ED25519_TEST_VECTORS_ONLY",
+    "rfc": "https://www.rfc-editor.org/rfc/rfc8032",
+    "rfc8032_public_vectors_verified": 2,
+    "tampered_message_or_signature_or_public_key_or_length_rejected": 8,
+    "review_only_envelope_negative_controls_rejected": 5,
+    "script_sha256": "ad02439c5fb78211ea2c394143b4a6b4c93df45081e9d9588d643cafb5b3e433",
+    "test_output_sha256": "dd81be41a7291a559ffe3f9c1da589b8d3f8ce06c1a42c56f0d9fb14fde5898e",
+    "actual_attestation_signed": false,
+    "user_signing_key_requested_or_used": false,
+    "real_independent_echo": "HOLD",
+    "caveat": "Cryptographic signature validity only binds bytes to key; real independent signer/key identity must be established out-of-band, not from caller flags."
+  },
+  "paper": {
+    "git_commit": "5b913b863efcd08402d88060e9e7e7e497839ecf",
+    "git_blob_sha1": "9251bcb649ac9ab5b441de2f79676f55300bc3ac",
+    "raw_sha256": "f5a48d400aa281dd44b583a0b931033a592086bb9f003043ab07d073a81a84dd"
+  },
+  "hash_structure": {
+    "git_commit": "82c854b63093251fdcf2a2edf434d6e74434d48a",
+    "git_blob_sha1": "fb62883ace1e536bf5c010a030823fbd97931f8b",
+    "raw_sha256": "6c55b4135a34b7440566c3f7eb419dbf356a1d885ff6e28edae901ab9b81303a"
+  },
+  "bundle_local_sha256": "e110a39bf2a131fa15282eb2191fee1b2ecb9843d4d6b58cd658287494352a81",
+  "unresolved": [
+    "external_original_full_256_variable_UNSAT_original_bytes_and_certificate",
+    "actual_CaDiCaL_package_and_executable",
+    "independently_authenticated_checker_provenance",
+    "formal_equivalence_to_original_kernel",
+    "P_vs_NP",
+    "OpenAI_or_community_adoption",
+    "Bitcoin_or_deployment"
+  ],
+  "no_benchmark_substitution": true,
+  "no_history_merge": true,
+  "no_external_signature_claim": true
+}
