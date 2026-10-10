@@ -1,0 +1,75 @@
+{
+  "experiment": "049",
+  "date": "2026-10-10",
+  "attribution": "Richard Stein — REIK/TCGE (AI-assisted bounded research)",
+  "parent_commit": "a0102fd8320aa8f5ea267ce48f57c740068cf600",
+  "parent_audit_git_blob_sha1": "efc0bf64620e5a14d969c8b50e3b0572b18b701a",
+  "parent_paper_git_blob_sha1": "73f98e70598cb378cdb13e5e038da546015d7c47",
+  "parent_check": "GitHub comparison b57b6d1... to a0102fd... = 1 commit ahead, exactly two 048 files; original local 048 verifier not in commit",
+  "original_kernel_historical_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "original_kernel_bytes_freshly_rehashed_in_049": false,
+  "local_execution": {
+    "python_cryptography_version": "46.0.4",
+    "total": 46,
+    "passed": 46,
+    "failed": 0,
+    "external_independent_rerun": false
+  },
+  "reproducible_source": {
+    "filename": "reik_checkpoint_049.py.gz",
+    "file_format": "gzip containing UTF-8 Python source",
+    "uncompressed_source_sha256": "bcfc799cca8c9993beafa41ba51cc250e9f8d1f039001c146d5e4fb6b1709444",
+    "gzip_sha256": "5dbc2013678e00714bb2ed8f0a8e7f89c136544dd7b0a01edabfdda0cf124bc6",
+    "gzip_git_blob_sha1": "6792f8f7098a0ea2a776997a0fa42eec8435c646",
+    "gzip_mtime": 0
+  },
+  "local_full_result_json_sha256": "a551a1118ce61f9b8685ef6d1414fd5ca741cff5a95497a896fecbc9850ca4fb",
+  "local_result_json_uploaded": false,
+  "synthetic_fixture_hashes": {
+    "genesis_sha256": "25e643454f6ea663a772c097513a017dec994da9a37b74f603bf8e6de8745f95",
+    "roster1_sha256": "6902865172aa5defe5e795af4de788273c00dbad9a1ab44f6fd25b3c90dd876d",
+    "roster2_sha256": "6b04e9cb8cd65c7619af8355d17c9c50e4347db2b8d20ffcc0546c5ff0e0c5be",
+    "checkpoint1_sha256": "f0a417583098a585d0ff420f4515b2707547d8c26594671518cc9a8492c32170",
+    "checkpoint2_sha256": "05f1c9ae2301b121647c339624a4e824a5d22b95b901691f13a4b0eabc9c8c38",
+    "checkpoint3_sha256": "1e046092dc303191ec69edfbccc058e7bf731183eb434e9e6abbc245df80c8d7",
+    "conflicting_checkpoint_sha256": "eb41b469097de95e77133b04683a07e46cc3ff2dff5bb637ca0079c1e8e10d8e",
+    "rotation_sha256": "195dda4a24242e008ca19e01e7c715267207ab4e4a26c581a476c7984d71fe85"
+  },
+  "falsifications": [
+    "Two conflicting same-height 3-of-4 synthetic certificates both cryptographically validate if witness non-equivocation is bypassed.",
+    "Two disjoint 2-of-4 signer subsets can sign incompatible histories with no double-signing.",
+    "A self-asserted alternative roster can sign its own statement, but fails against independently pinned roster digest.",
+    "Untrusted epoch jump, invalid old-roster rotation, stale/replayed rotation and absent trusted checkpoint anchor reject.",
+    "Rollback, unapproved quorum downgrade, mutated tip, wrong ledger, wrong genesis, signer duplication and cross-domain signature reject."
+  ],
+  "boundary": [
+    "Deterministic demonstration private keys are public, not secrets; no real person or organization signed.",
+    "External witness identity, independence, operator diversity, independent trust anchor and live dissemination unverified.",
+    "No real Merkle transparency proof, deployed consensus, authenticated scientific observation, external adoption or universal theorem.",
+    "The 048 38/38 claim is a preserved local audit report; unuploaded original 048 verifier cannot be replayed here.",
+    "Script uses cryptography Ed25519; no second cryptographic library or external independent Echo.",
+    "Full Experiment 030/031 histories and original kernel bytes were not replayed in this 049 run."
+  ],
+  "separate_histories": [
+    "030/280",
+    "030/282",
+    "031/290",
+    "031/A294",
+    "031/B294"
+  ],
+  "fidelity": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "state": "0 HOLD; DROP U",
+  "scientific_admission": "HOLD",
+  "independently_validated": false,
+  "kernel_modified": false,
+  "next": "050 — third-party independently obtained witnesses and trust pins, dissemination conflict test with separate operators, two-library verification and public plain-text source review"
+}
