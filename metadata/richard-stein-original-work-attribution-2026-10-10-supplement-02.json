@@ -1,0 +1,90 @@
+{
+  "schema": "reik-tcge/offchain-retroactive-attribution-supplement-v2",
+  "date": "2026-10-10",
+  "research_creator": "Richard Stein",
+  "research_author": "Richard Stein",
+  "original_project_owner": "Richard Stein",
+  "statement": "Richard Stein is the named originator, author and project owner of his original Clarity, REIK/TCGE, FIDELITY and first-party research. Technical evidence states are separate from attribution.",
+  "source_repository": "eternalimit/chatgpt",
+  "source_ref": "main",
+  "supplement_to": "metadata/richard-stein-original-work-attribution-2026-10-10.json",
+  "research_scope": "Attribution sidecar for historical first-party project/experiment specifications; unchanged originals, not claims of ownership of external referenced software, benchmarks, or third-party contributions.",
+  "new_metadata_entries": [
+    {
+      "source_path": "controller/AUTHORIZATION_MANIFEST.json",
+      "source_git_blob_sha1": "f6f386ac84f180404c738d6723f96f0bc3b77420",
+      "metadata_gap": "principal label Richard; originator name absent",
+      "scope": "controller authorization specification",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    },
+    {
+      "source_path": "gethub/library/manifest.json",
+      "source_git_blob_sha1": "9a80b49e979bb8b9af803f8d5c59b0237e3ac3e7",
+      "metadata_gap": "creator field absent",
+      "scope": "GetHub project library specification",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    },
+    {
+      "source_path": "code/core/main/tcge-coupler/manifest.example.json",
+      "source_git_blob_sha1": "48e59e1d574467d63b4318277e1e43c0669046b4",
+      "metadata_gap": "creator field absent",
+      "scope": "TCGE coupler example schema",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    },
+    {
+      "source_path": "research/millennium/experiment030/manifest030.json",
+      "source_git_blob_sha1": "8e43021cb0f91ebc83142692e97c78ef3ae89bce",
+      "metadata_gap": "creator field absent; preserve 030 variant",
+      "scope": "research/experiment manifest",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    },
+    {
+      "source_path": "research/millennium/experiment031-parent280/manifest031.json",
+      "source_git_blob_sha1": "4bfc759a7ff35bb9304d37d711675c594215c2ca",
+      "metadata_gap": "creator field absent; preserve parent280 lineage",
+      "scope": "research/experiment manifest",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    },
+    {
+      "source_path": "research/ns-reik/001/NS_REIK_TCGE_Manifest_001.json",
+      "source_git_blob_sha1": "17b77e9cd360375da97f8f59d001002b7ca1ee8c",
+      "metadata_gap": "creator field absent",
+      "scope": "NS-REIK experiment manifest",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    },
+    {
+      "source_path": "research/ns-reik/002/NS_REIK_TCGE_Manifest_002.json",
+      "source_git_blob_sha1": "bbb74e0895a8c90a7791469f32b48b5a6f2f9187",
+      "metadata_gap": "creator field absent",
+      "scope": "NS-REIK experiment manifest",
+      "full_name_creator": "Richard Stein",
+      "status": "source_blob_matched; attribution added by sidecar only"
+    }
+  ],
+  "technical_separation": {
+    "scientific_claims": "each experiment has its own evidence gate",
+    "wallet": "token-specific control separate",
+    "onchain_metadata_write": false,
+    "original_manifest_modifications": false,
+    "independent_echo": "not inferred from citation or Git blob match"
+  },
+  "historical_kernel_sha256_reference": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "preservation": {
+    "fidelity_eight_principles": true,
+    "keep_030_031_histories_distinct": true,
+    "retroactive_github_history_rewrite": false,
+    "hold_is_not_authorship_status": true
+  },
+  "audit": {
+    "source_path_count": 7,
+    "git_blob_sha1_equal_at_inspection": 7,
+    "missing_full_name_creator_fields": 7,
+    "expected_approval": "public-safe annotation; no secret material"
+  }
+}
