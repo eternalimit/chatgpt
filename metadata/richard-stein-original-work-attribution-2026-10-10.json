@@ -1,0 +1,94 @@
+{
+  "schema": "reik-tcge/offchain-research-attribution-v1",
+  "record_date": "2026-10-10",
+  "record_type": "retroactive_attribution_metadata_sidecar",
+  "repository": "eternalimit/chatgpt",
+  "branch": "main",
+  "project_owner": "Richard Stein",
+  "research_creator": "Richard Stein",
+  "research_author": "Richard Stein",
+  "statement": "Richard Stein is the named creator, author and project owner of his original first-party research and project work. Technical evidence gates do not determine this attribution.",
+  "ai_assistance_note": "AI drafting, code and analysis assistance is separate from authorship attribution for Richard Stein's original contributions.",
+  "applicability": "Older first-party research metadata, related project records and their later versions. This is a 2026-10-10 sidecar, not an historical modification or on-chain metadata update.",
+  "content_identity_rule": "Git blob SHA-1 references are Git object identifiers, not SHA-256, ownership signatures, patent registrations or third-party licenses.",
+  "assets": [
+    {
+      "id": "FIDELITY_preprint_v0.1",
+      "source_path": "preprints/FIDELITY_preprint_v0.1.md",
+      "source_git_blob_sha1": "b8ad42bd58ff079d0cea1bc36c5b20645e0c557a",
+      "creator": "Richard Stein",
+      "authorship_scope": "original research"
+    },
+    {
+      "id": "TCGE_integrated_axiom_preprint_v0.1",
+      "source_path": "CRAFTING/CLONE/TCGE/PREPRINTS/TCGE-INTEGRATED-AXIOM-FRAMEWORK-v0.1.md",
+      "source_git_blob_sha1": "c1b7d9bddcccd79af2763ce91b4ae830efa813a8",
+      "creator": "Richard Stein",
+      "authorship_scope": "original conceptual research"
+    },
+    {
+      "id": "FIDELITY_2026-09-24_ownership_intent_declaration",
+      "source_path": "notarize/FIDELITY_RICHARD_STEIN_OWNERSHIP_INTENT_UNSIGNED_2026-09-24.txt",
+      "source_git_blob_sha1": "a7a980ccf6573815c39d3eef4b6fb75178d06602",
+      "creator": "Richard Stein",
+      "authorship_scope": "declaration",
+      "technical_scope": "signing-status per historical record; not attribution"
+    },
+    {
+      "id": "ASH_Earth_prepared_NFT_metadata",
+      "source_path": "records/ash-earth-nft-mint-package.json",
+      "source_git_blob_sha1": "a136db7b29e38bde704ba1699f83a18cef000a4a",
+      "creator": "Richard Stein",
+      "authorship_scope": "first-party project and metadata record",
+      "technical_scope": "source labels PREPARED_NOT_MINTED; creator attribution is not an on-chain mint"
+    },
+    {
+      "id": "ASH_Earth_anchor_clone",
+      "source_path": "records/ash-earth-nft-anchor-clone.json",
+      "source_git_blob_sha1": "472a8108e2237653e77c24f2283c2d4ee7af1f68",
+      "creator": "Richard Stein",
+      "authorship_scope": "first-party project record",
+      "technical_scope": "source labels NOT_MINTED"
+    },
+    {
+      "id": "AUTO_Vision_Board",
+      "source_path": "Richard/nft/vision-board-auto-2026-09-26.json",
+      "source_git_blob_sha1": "ae426d1d9022beac0b99f1ca84fcef3264621660",
+      "legacy_creator_label": "Richard",
+      "creator": "Richard Stein",
+      "authorship_scope": "first-party project and metadata record",
+      "technical_scope": "record describes repository NFT-style metadata, not an on-chain mint"
+    },
+    {
+      "id": "Visual_Token_Decoder_Lab_40_40_recovery",
+      "source_path": "research/2026-10-10-visual-4040-original-mechanism-provenance-control.md",
+      "source_git_blob_sha1": "97f772b74e6c8db22a966db730fc6c133cf8367f",
+      "creator": "Richard Stein",
+      "authorship_scope": "research program, historical prompts and associated project",
+      "technical_scope": "exact original 40:40 operands unresolved; new controlled simulation does not verify original hardware"
+    },
+    {
+      "id": "ALLS_research_continuity",
+      "source_path": "Richard.Richard/ALLS_HANDOFF.md",
+      "source_git_blob_sha1": "0a58cc2a8c274b9adda3ec99e00f4561e590291c",
+      "creator": "Richard Stein",
+      "authorship_scope": "first-party research and governance workflow",
+      "technical_scope": "external funds, transactions and signatures separate"
+    }
+  ],
+  "governance": {
+    "parent_attribution_ledger": "OWNERSHIP_ATTRIBUTION_RETROACTIVE_CORRECTIONS_2026-10-10.md",
+    "creator_policy": "research/OWNER_ATTRIBUTION_AND_VERIFICATION_SCOPE.md",
+    "original_kernel_sha256_historical_reference": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+    "immutable_history": true,
+    "do_not_merge_experiment_030_031": true,
+    "technical_hold_is_not_authorship_hold": true,
+    "external_actions_performed": {
+      "contract_metadata_transaction": false,
+      "token_mint": false,
+      "wallet_signature": false,
+      "onchain_anchor": false
+    },
+    "no_third_party_rights_claim": true
+  }
+}
