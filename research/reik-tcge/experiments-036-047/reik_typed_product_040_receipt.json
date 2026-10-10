@@ -1,0 +1,42 @@
+{
+  "cadical_package_executable": "NOT_ACQUIRED",
+  "canonical_state": "0 HOLD",
+  "date_utc": "2026-10-10",
+  "distinct_evidence_contexts": 64,
+  "distinct_experiment_030_031_lineages_preserved": true,
+  "external_256_variable_unsat_proof": "HOLD",
+  "github_publication": "NOT_ATTEMPTED_AT_SCRIPT_RUNTIME",
+  "independent_truth_table_disagreements": 0,
+  "negative_controls_passed": 8,
+  "nested_path_to_kernel": [
+    "source/experiment034_immutable.zip",
+    "source/experiment033_immutable.zip",
+    "source/experiment032_immutable.zip",
+    "source/experiment031_immutable.zip",
+    "source/experiment030_immutable.zip"
+  ],
+  "original_kernel_sha256_rehashed": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "product_counts": {
+    "0": {
+      "ADMITTED": 3,
+      "HOLD": 46,
+      "REFUTED": 15
+    },
+    "1": {
+      "ADMITTED": 3,
+      "HOLD": 46,
+      "REFUTED": 15
+    },
+    "U": {
+      "ADMITTED": 3,
+      "HOLD": 46,
+      "REFUTED": 15
+    }
+  },
+  "product_states_tested": 192,
+  "scope": "Independent local product model; no claim of canonical semantic correspondence, third-party Echo, P vs NP proof, or external adoption.",
+  "source_archive_sha256_rehashed": "3e043e32c82dbdeb7bc299448a4121fd5f76c3b277334a22d20e181e82627d23",
+  "theorem": "No function of kernel state alone can equal this evidence-overlay verdict for all evidence contexts.",
+  "theorem_proof": "For fixed kernel state U, all-false evidence yields HOLD and complete positive evidence without admitted refutation yields ADMITTED; a single-valued function of U cannot equal both.",
+  "title": "Experiment 040 typed product-state bridge obstruction"
+}

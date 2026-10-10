@@ -1,0 +1,47 @@
+{
+  "archive_sha256_checked": "3e043e32c82dbdeb7bc299448a4121fd5f76c3b277334a22d20e181e82627d23",
+  "audit": "REIK/TCGE original-byte kernel partial_state versus separate Clarity Pi overlay",
+  "canonical_state": "0 HOLD",
+  "comparison_counts": {
+    "0": 1024,
+    "1": 1889,
+    "U": 3999
+  },
+  "dedicated_cadical_2_1_3_3_acquired": false,
+  "evidence_gate_counterexample": {
+    "conclusion": "No evidence-admission status can be inferred solely from kernel 0/U/1 without additional typed evidence mapping.",
+    "kernel_state": "1",
+    "overlay_with_independent_echo": "ADMITTED",
+    "overlay_without_independent_echo": "HOLD",
+    "same_assignment": [
+      true,
+      null,
+      null
+    ],
+    "same_cnf": [
+      [
+        1,
+        2,
+        3
+      ]
+    ]
+  },
+  "formal_full_kernel_correspondence": false,
+  "independently_sourced_256var_unsat_with_proof": false,
+  "kernel_function": "partial_state(clauses, assignment)",
+  "kernel_sha256_checked": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "kernel_state_semantics": {
+    "0": "at least one clause is false under the partial assignment",
+    "1": "every clause already satisfied under the partial assignment",
+    "U": "no clause false and at least one clause unresolved"
+  },
+  "oracle_mismatches": 0,
+  "p_vs_np_solved": false,
+  "scope": "finite three-variable three-literal CNF partial assignments; not global solver proof",
+  "source_kernel_bytes": 4299,
+  "source_kernel_found_at_nested_experiment": 30,
+  "tested_cnf_subsets": 256,
+  "tested_partial_assignments_per_cnf": 27,
+  "third_party_echo": false,
+  "total_comparisons": 6912
+}

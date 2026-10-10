@@ -1,0 +1,61 @@
+{
+  "archive_sha256_source_bytes": "3e043e32c82dbdeb7bc299448a4121fd5f76c3b277334a22d20e181e82627d23",
+  "audit": "REIK/TCGE kernel extension safety and U semantic limitation",
+  "bounded_family": "all 256 subsets of 8 signed 3-clauses on variables 1..3, all 27 partial assignments",
+  "canonical_state": "0 HOLD",
+  "examples": {
+    "u_but_unsat": {
+      "cnf": [
+        [
+          -1,
+          -2,
+          -3
+        ],
+        [
+          -1,
+          -2,
+          3
+        ]
+      ],
+      "completions": 2,
+      "mask": 3,
+      "partial": [
+        true,
+        true,
+        null
+      ]
+    }
+  },
+  "formal_general_kernel_correspondence": "HOLD",
+  "independent_total_assignment_satisfaction_oracle_checks": 16384,
+  "kernel_bytes": 4299,
+  "kernel_sha256_source_bytes": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "p_vs_np": "UNRESOLVED",
+  "partial_cases": 6912,
+  "result": "PASS_BOUNDED",
+  "scientific_echo": "HOLD",
+  "strict_3cnf_unsat_counterexample": {
+    "all_full_completions": "0",
+    "clauses": 8,
+    "full_completions": 8,
+    "partial_state": "U",
+    "variables": 3
+  },
+  "tautology_counterexample_non_strict_3cnf": {
+    "all_full_completions": "1",
+    "clauses": [
+      [
+        1,
+        -1
+      ]
+    ],
+    "partial_state": "U"
+  },
+  "terminal_state_refinement_checks": 3976,
+  "terminal_state_refinement_failures": 0,
+  "total_full_completion_checks": 16384,
+  "u_all_completions_satisfy_cases": 0,
+  "u_cases": 3999,
+  "u_mixed_completion_cases": 3134,
+  "u_no_satisfying_completion_cases": 865
+}

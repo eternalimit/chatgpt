@@ -1,0 +1,78 @@
+{
+  "archive_source_sha256": "3e043e32c82dbdeb7bc299448a4121fd5f76c3b277334a22d20e181e82627d23",
+  "counts": {
+    "completion_checks": 131072,
+    "formula_subsets": 2048,
+    "oracle_disagreements": 0,
+    "partial_assignments_per_formula": 27,
+    "partial_cases": 55296,
+    "terminal_0_cases": 8192,
+    "terminal_1_cases": 11457,
+    "terminal_refinement_disagreements": 0,
+    "theorem_disagreements": 0,
+    "u_all_completions_satisfy": 3655,
+    "u_cases": 35647,
+    "u_has_falsifying_completion": 31992,
+    "u_mixed_completions": 25072,
+    "u_no_satisfying_completion": 6920
+  },
+  "examples": {
+    "u_all_sat": {
+      "cnf": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "partial": [
+        null,
+        false,
+        false
+      ]
+    },
+    "u_falsifying_completion_exists": {
+      "cnf": [
+        [
+          -1,
+          -2,
+          -3
+        ]
+      ],
+      "partial": [
+        null,
+        null,
+        null
+      ]
+    },
+    "u_unsat": {
+      "cnf": [
+        [
+          -1,
+          -2,
+          -3
+        ],
+        [
+          -1,
+          -2,
+          3
+        ]
+      ],
+      "partial": [
+        true,
+        true,
+        null
+      ]
+    }
+  },
+  "independent_echo": "HOLD: independent local implementation is not external third-party review",
+  "kernel_byte_count": 4299,
+  "nested_zip_steps_to_kernel": 5,
+  "original_kernel_source_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "p_vs_np": "UNRESOLVED",
+  "scientific_adoption": "NOT_ESTABLISHED",
+  "state": "0 HOLD",
+  "theorem": "For U under partial_state, all compatible total completions satisfy the CNF iff every currently unresolved clause is tautological.",
+  "theorem_scope": "finite Boolean CNFs, consistent partial assignments, conventional literal semantics",
+  "title": "REIK/TCGE Experiment 039: exact characterization of U completions",
+  "universe": "all subsets of 8 strict signed 3-clauses plus 3 tautological clauses over variables 1,2,3"
+}

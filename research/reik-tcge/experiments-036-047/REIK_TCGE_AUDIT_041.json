@@ -1,0 +1,102 @@
+{
+  "attribution": "Richard Stein / Clarity REIK/TCGE",
+  "date_utc": "2026-10-10",
+  "external_holds": {
+    "cadical_debian_expected_sha256": "a87259c8fa8b5a19e90607a0077227b3a4c64777affd59ed34d22437c996bc25",
+    "exact_cadical_deb_and_executable": "NOT_ACQUIRED_DNS_FAILURE",
+    "experiment036_exact_zip": "NOT_ACQUIRED",
+    "external_echo_and_adoption": "NOT_ESTABLISHED",
+    "formal_semantic_correspondence": "HOLD",
+    "independently_sourced_256var_unsat_and_certificate": "HOLD",
+    "p_vs_np": "UNRESOLVED"
+  },
+  "fid_elity_principles": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "local_transition_audit": {
+    "monotone_pairs": 729,
+    "new_finding": "Boolean snapshot alone cannot enforce falsification persistence if evidence can be deleted; monotone accumulation forbids direct opposite verdict transitions but permits conflicting evidence to produce HOLD",
+    "opposite_direct_verdict_transitions": {
+      "ADMITTED_to_REFUTED": 0,
+      "REFUTED_to_ADMITTED": 0
+    },
+    "script_sha256": "7068afb7c9777ad97b6f20e81494b7fd33ec07dfc84936be2d2d57e0994e230b",
+    "six_flag_evidence_states": 64,
+    "transition_counts": {
+      "ADMITTED": {
+        "ADMITTED": 5,
+        "HOLD": 3,
+        "REFUTED": 0
+      },
+      "HOLD": {
+        "ADMITTED": 75,
+        "HOLD": 371,
+        "REFUTED": 195
+      },
+      "REFUTED": {
+        "ADMITTED": 0,
+        "HOLD": 15,
+        "REFUTED": 65
+      }
+    },
+    "underlying_local_receipt_sha256": "80223c14783715b48ffb3014b54cfce8b042ec3ac879f69e8312ae3ca35f7b92"
+  },
+  "pinned_upstream_sat_read": {
+    "bytes": 71945,
+    "clause_widths": {
+      "16": 16,
+      "2": 6320
+    },
+    "clauses": 6336,
+    "git_blob_sha1": "85b9071d8399839eff2352bb22315b5940bcda7c",
+    "positive_witness_variables": [
+      1,
+      19,
+      37,
+      50,
+      77,
+      89,
+      110,
+      124,
+      143,
+      150,
+      176,
+      183,
+      196,
+      219,
+      232,
+      250
+    ],
+    "retrieval": "Connected GitHub text read of original ASCII source; independently hashed with self-tested JS SHA256; independent new witness",
+    "satisfied_clauses": 6336,
+    "sha256": "c5177c8e6523ddd9378b3b864d52fcf73b81c0a92a033433cc37e5450fa1fcd5",
+    "source_url": "https://github.com/andricicezar/sat-solver-dafny/blob/418e5cbb1e7a311fec2c15913c0c504ec603ca91/benchmarks/queens16.cnf",
+    "strict_3cnf": false,
+    "variables": 256
+  },
+  "publication": {
+    "attempted_path": "research/2026-10-10-reik-tcge-evidence-accumulation-audit-041.md",
+    "attempted_repo": "eternalimit/clarity",
+    "chatgpt_main_after_attempt": "d79546b52923526919e61b277361b72d00c377a9",
+    "clarity_main_after_attempt": "106f15f1b26c51c046a23683485912506059585f",
+    "new_commit": null,
+    "outcome": "BLOCKED_BY_SAFETY_CHECK",
+    "path_readback": "404 NOT_FOUND"
+  },
+  "research_paper_sha256": "12250569fdbd7a3638f09474a053a5fb424a93a11fbf1dfbe1dfd82b13581795",
+  "source_rehash": {
+    "experiment035_zip_sha256": "3e043e32c82dbdeb7bc299448a4121fd5f76c3b277334a22d20e181e82627d23",
+    "original_kernel_modified": false,
+    "original_kernel_sha256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+    "selected_030_031_variants": "030-B/282 and 031-B/294; other histories not merged"
+  },
+  "state": "0 HOLD",
+  "title": "REIK/TCGE Experiment 041 \u2014 public-safe audit receipt (local only)"
+}
