@@ -1,0 +1,71 @@
+{
+  "experiment": "050",
+  "date": "2026-10-10",
+  "attribution": "Richard Stein — REIK/TCGE (AI-assisted bounded research)",
+  "parent_commit": "43b684d4004d467a6b365d5958d5c1f1e1046f25",
+  "source": "local retained artifacts; 050 Python and result JSON not committed to this GitHub update",
+  "kernel_historical_SHA256": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "kernel_freshly_rehashed": false,
+  "kernel_modified": false,
+  "parent049_gzip_SHA256": "5dbc2013678e00714bb2ed8f0a8e7f89c136544dd7b0a01edabfdda0cf124bc6",
+  "parent049_python_SHA256": "bcfc799cca8c9993beafa41ba51cc250e9f8d1f039001c146d5e4fb6b1709444",
+  "parent049_JSON_SHA256": "a551a1118ce61f9b8685ef6d1414fd5ca741cff5a95497a896fecbc9850ca4fb",
+  "parent049_replayed": {
+    "passed": 46,
+    "total": 46
+  },
+  "new050": {
+    "passed": 44,
+    "total": 44,
+    "source_python_SHA256": "5146ca764051a463f8fb6f8da03c8537de9d29d3db46a952d8e88434ab150f13",
+    "full_local_result_JSON_SHA256": "2c19e37cabb8c122909cb7b4e4e659ea4b56fc7959454affdb9f2ce8ba69bc71",
+    "full_source_and_result_publicly_uploaded": false
+  },
+  "falsifications": [
+    {
+      "id": "F050-01",
+      "condition": "prior_trust.epoch 99 vs anchor.epoch 1",
+      "original049": "ACCEPT",
+      "strict_overlay050": "REJECT"
+    },
+    {
+      "id": "F050-02",
+      "condition": "successor roster has three keys under three-of-four policy",
+      "original049": "ACCEPT",
+      "strict_overlay050": "REJECT"
+    },
+    {
+      "id": "F050-03",
+      "condition": "successor roster repeats one public key under two different labels",
+      "original049": "ACCEPT",
+      "strict_overlay050": "REJECT"
+    }
+  ],
+  "bounded_analyses": [
+    "RFC 8032 vectors and two local Ed25519 code paths agree",
+    "two signed conflicting checkpoints detectable only after each observer receives both",
+    "signer state loss permits synthetic equivocation",
+    "no proof of actual independent witnesses"
+  ],
+  "fid_elity": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "distinct_030_031_lineages": [
+    "030/280",
+    "030/282",
+    "031/290",
+    "031/A294",
+    "031/B294"
+  ],
+  "independent_external_echo": "HOLD",
+  "physical_inheritance": "HOLD",
+  "p_vs_np": "UNSOLVED",
+  "state": "0 HOLD; DROP U"
+}
