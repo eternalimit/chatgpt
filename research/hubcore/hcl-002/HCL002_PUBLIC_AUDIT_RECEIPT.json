@@ -1,0 +1,84 @@
+{
+  "schema": "hubcore-hcl002-public-audit/v1",
+  "research_attribution": "Richard Stein",
+  "parent_baseline": "6bd0dc8a5a3863ed3d0564b2d52edb5284a77bbc",
+  "archive_commit": "1113ab9fc5174c5b943f87a7091dd63ab17a92be",
+  "archive_path": "research/hubcore/hcl-002/HCL002_PUBLIC_REPRODUCIBLE_RECORD.md",
+  "archive_git_blob_sha1": "698f59ebd443bc6c00124060f2ea14aa21ed3d4a",
+  "archive_local_sha256": "680ad510bf8e1c11cd905f6c84da0bba51bd998366e015d05b109a8be3cb5c5e",
+  "archive_readback_exact_content_match": true,
+  "local_reproduction": {
+    "hcl001": {
+      "passed": 40,
+      "failed": 0,
+      "original_source_hash_matches_public_checkpoint": true
+    },
+    "hcl002": {
+      "passed": 53,
+      "failed": 0
+    },
+    "sample_receipt_byte_identical": true,
+    "openssl_secondary_implementation": {
+      "valid_signature_accepted": true,
+      "tampered_message_rejected": true,
+      "independent_administration": false
+    }
+  },
+  "scientific_gate": {
+    "R": 1,
+    "I": 1,
+    "E": 0,
+    "K": 0,
+    "state": "0 HOLD",
+    "independent_echo": "NOT_ESTABLISHED"
+  },
+  "synthetic_only": true,
+  "independently_administered_root": "NOT_OBTAINED",
+  "authenticated_external_freshness": "NOT_OBTAINED",
+  "external_signing": "NOT_PERFORMED",
+  "external_execution": "NOT_PERFORMED",
+  "fidelity": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "files_sha256": {
+    "RESEARCH_PAPER.md": "f5f64f78989d63410cc0a193b5474df855d3bf784609ad60a1c09c690d8d5748",
+    "TEST_RESULTS.json": "537897c982adf5816f899e77970beb05576bc25fd495e57dc635388244d0397b",
+    "hcl001.py": "09c3833ccfe0489f2924bb10a7a30f25351bed48ff4afa1f76d428d01063c023",
+    "hcl002.py": "a9534e3cbe1aeccb0325c369e770f60446e0aeb36119d84598327b56f2f6ea4d",
+    "make_sample.py": "5f9bc3d7efaf288937a8d77294725dc3659237b603c72c0d914251c00d388ea1",
+    "sample.hcl": "c575959bbf02397e6f70652f96beeb177893c8b24332480f84a8092b9090b663",
+    "sample_attestations.json": "8bf308b5c00afb09eb8f3e35247a5c8cf380e85efcf122f29a38406e27c96d3a",
+    "sample_checkpoint.json": "873c8ee9cca54a9c088126272dee0e067e50e06c761c30c8bb30c4e333f6b07e",
+    "sample_receipt.json": "4a4b3642d61e9e61ec7b4bfaf1ce45b1a4dceea7a5059597ade9fa411586e2d6",
+    "sample_registry.json": "804941f0fcdb0c2d75bc9609888404e67567014936ec93b79ce15db5dc7ebecd",
+    "sample_root_pin.txt": "840b7416a8b7144b2b0139f70901fc4436e0a828172dfb5c5aece67c01da2104",
+    "sample_source.dat": "760f5414a77e4f3311cfcf60061228ccb04925dbeac04f4fbcea7fddbb625cfe",
+    "test_hcl001.py": "3a5b0b83d961b75f75f671a20713471e8329d946190aefd2b1b33959734ce343",
+    "test_hcl002.py": "0d02c997b17d95af9197ad0fed65cbb927776a1e92b1ea9c0147d39ee6b48482"
+  },
+  "historical_hash_references_not_rehashed": {
+    "030_280": "c0be9baaa07b93dca6f3fd5feae10fa52ae92748485defefdeea078a06a750e1",
+    "030_282": "357e87c5a9d2f89f1a1061a20ad7762880485ac355c4e3c8464ba0956551a435",
+    "031_290": "a87519190b9ee28f756a11b8fa88c7f946d8d165738c59f2d5aa1e3919a587c2",
+    "031_294_A": "3e6294c0bbee715b8029140b73bb47dce8b4e9cfff3c1629bf559ef1339e9e48",
+    "031_294_B": "349f507b06e27976e87ea0047c8042593552dcd2dd6e1713a034b14fde178fe6",
+    "kernel001_py_historical_only": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402"
+  },
+  "package_local_zip_sha256": "de0f7cb798c911cd074db6c3f1f167e61d973869ba2e7840faa0db6e263c0cd2",
+  "publication_scope": "public-safe append only; preserves original kernel and Experiment 030/031 histories",
+  "findings": [
+    "Root PIN and locally signed enrollment validate keys, not independent operator custody",
+    "Caller-supplied clock and checkpoint do not establish external freshness",
+    "Rollback of caller-held replay checkpoint defeats local replay barrier",
+    "Different public keys and two signature implementations do not prove independently administered witnesses",
+    "AUTHORIZE records scope only; no EXECUTE capability",
+    "Original HCL001 archived Markdown fenced sample byte reconstruction contains an extra newline; preserve 50-byte original sample separately"
+  ]
+}
