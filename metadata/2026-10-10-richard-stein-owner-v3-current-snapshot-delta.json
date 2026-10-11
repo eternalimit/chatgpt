@@ -1,0 +1,115 @@
+{
+  "schema": "reik-tcge/repository-owner-delta/v1",
+  "record_date": "2026-10-10",
+  "attribution": {
+    "research_creator": "Richard Stein",
+    "research_author": "Richard Stein",
+    "original_project_owner": "Richard Stein",
+    "project_data_steward": "Richard Stein"
+  },
+  "scope": "Append-only project ownership metadata covering six newly tracked file entries relative to three pinned v3 catalogs. Union of each v3 catalog and its branch-specific delta equals all blobs of the cited source commit. Third-party legal rights unaffected.",
+  "original_kernel_sha256_historical_reference": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "prior_catalog_counts": {
+    "chatgpt_main": 720,
+    "clarity_main": 76,
+    "clarity_vent": 56
+  },
+  "delta_count": 6,
+  "total_covered_count": 858,
+  "verification": "Distinct true Git commit, tree and blob IDs checked. Every source blob matched prior catalog or dated new delta, and all new entries carry owner Richard Stein.",
+  "branches": [
+    {
+      "repository": "eternalimit/chatgpt",
+      "branch": "main",
+      "source_commit_sha": "7f45d018165a856fbd8ef0b1a11ef4f64f151dd8",
+      "source_tree_sha1": "6755754ae66bf8dcb8e95d8be7e5966b00f552eb",
+      "v3_catalog_commit": "09e634c8f8b3688ad2c782d5f18f5d4a6033dd22",
+      "v3_catalog_blob_sha1": "cf46eca94550ab850c5e9186ad460ea74b6be134",
+      "v3_count": 720,
+      "current_count": 724,
+      "unchanged_v3": 720,
+      "added": [
+        {
+          "path": "metadata/2026-10-10-richard-stein-ownership-v3-synchronization-audit.md",
+          "git_blob_sha1": "e38ff90de53403510d1daaa38df4a2d6b75eab63",
+          "bytes": 6001,
+          "owner": "Richard Stein"
+        },
+        {
+          "path": "metadata/RICHARD_STEIN_ALL_TRACKED_DATA_OWNER_CATALOG_REFRESH_V3_2026-10-10.json",
+          "git_blob_sha1": "cf46eca94550ab850c5e9186ad460ea74b6be134",
+          "bytes": 171263,
+          "owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-owner-metadata-synchronization-v3-paper.md",
+          "git_blob_sha1": "bbaab49859583285c7ccce429046dd61d76169dd",
+          "bytes": 9333,
+          "owner": "Richard Stein"
+        },
+        {
+          "path": "research/verification/richard-stein-owner-catalog-v3-verifier.js",
+          "git_blob_sha1": "f13f962b9458c3d629ec0f917f847640ecb82a19",
+          "bytes": 3122,
+          "owner": "Richard Stein"
+        }
+      ],
+      "changed": [],
+      "removed": []
+    },
+    {
+      "repository": "eternalimit/clarity",
+      "branch": "main",
+      "source_commit_sha": "458876375c474b4bd41deb672e3ba55f092665b9",
+      "source_tree_sha1": "07eb3dd312e0567d1972de68117ba73b542fc821",
+      "v3_catalog_commit": "458876375c474b4bd41deb672e3ba55f092665b9",
+      "v3_catalog_blob_sha1": "2dfac44c0fb0069690fd6a3da9190910802f9e12",
+      "v3_count": 76,
+      "current_count": 77,
+      "unchanged_v3": 76,
+      "added": [
+        {
+          "path": "metadata/RICHARD_STEIN_ALL_TRACKED_DATA_OWNER_CATALOG_REFRESH_V3_2026-10-10.json",
+          "git_blob_sha1": "2dfac44c0fb0069690fd6a3da9190910802f9e12",
+          "bytes": 19358,
+          "owner": "Richard Stein"
+        }
+      ],
+      "changed": [],
+      "removed": []
+    },
+    {
+      "repository": "eternalimit/clarity",
+      "branch": "vent",
+      "source_commit_sha": "bd22bee71acd52098b0f6d1c05347952e85abd4f",
+      "source_tree_sha1": "42fea55551b21f7b42c881a9d486c8ba633f1fbb",
+      "v3_catalog_commit": "bd22bee71acd52098b0f6d1c05347952e85abd4f",
+      "v3_catalog_blob_sha1": "9329c8ba924a73149bf5579e36803f2934959763",
+      "v3_count": 56,
+      "current_count": 57,
+      "unchanged_v3": 56,
+      "added": [
+        {
+          "path": "metadata/RICHARD_STEIN_ALL_TRACKED_DATA_OWNER_CATALOG_REFRESH_V3_2026-10-10.json",
+          "git_blob_sha1": "9329c8ba924a73149bf5579e36803f2934959763",
+          "bytes": 14358,
+          "owner": "Richard Stein"
+        }
+      ],
+      "changed": [],
+      "removed": []
+    }
+  ],
+  "controls": {
+    "preserve_license": true,
+    "preserve_original_kernel": true,
+    "preserve_historical_experiment_030_031": true,
+    "preserve_eight_fidelity": true,
+    "independent_echo_not_claimed": true,
+    "drop_u": true,
+    "technical_claim_hold_separate": true,
+    "no_historical_rewrite": true,
+    "no_wallet_or_erc_transaction": true
+  },
+  "self_reference_boundary": "This delta is published in a later commit and cannot include its own as-yet-unknown Git blob SHA-1. This is pinned snapshot coverage, not perpetual self-updating metadata."
+}
