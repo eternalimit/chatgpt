@@ -1,0 +1,177 @@
+{
+  "schema": "reik-tcge/pinned-source-owner-delta-v5",
+  "date": "2026-10-10",
+  "named_original_research_creator": "Richard Stein",
+  "named_research_author": "Richard Stein",
+  "original_project_owner": "Richard Stein",
+  "project_data_steward": "Richard Stein",
+  "scope": "Exact source Git blobs newly added since v3 catalogs; original research attribution and repository stewardship, not title to independent external content. V5 supersedes the earlier six-file snapshot delta for these later source commits; do not sum the two deltas.",
+  "previous_six_file_delta": "metadata/2026-10-10-richard-stein-owner-v3-current-snapshot-delta.json",
+  "snapshot_blobs_total": 868,
+  "prior_v3_blobs_total": 852,
+  "incremental_entries": 16,
+  "branches": [
+    {
+      "repo": "eternalimit/chatgpt",
+      "branch": "main",
+      "snapshot_commit": "d8f00c1acd75da4537773ad788a053099ceeb56b",
+      "snapshot_tree": "fe6ae49827a062f0b0a4d70801b50ca1187b084e",
+      "v3": "09e634c8f8b3688ad2c782d5f18f5d4a6033dd22",
+      "previous_v3_count": 720,
+      "source_blob_count": 732,
+      "unchanged_count": 720,
+      "added": [
+        {
+          "path": "metadata/2026-10-10-reik-tcge-owner-provenance-delta-v4-audit-receipt.md",
+          "git_blob_sha1": "e2a7855756d9ebac34f3e9d4970831e9718603fb",
+          "bytes": 5613,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "metadata/2026-10-10-richard-stein-owner-v3-current-snapshot-delta.json",
+          "git_blob_sha1": "9f0aebd6c9f30a72d0f8a7ee175a4ca9f05735dd",
+          "bytes": 4594,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "metadata/2026-10-10-richard-stein-ownership-v3-synchronization-audit.md",
+          "git_blob_sha1": "e38ff90de53403510d1daaa38df4a2d6b75eab63",
+          "bytes": 6001,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "metadata/RICHARD_STEIN_ALL_TRACKED_DATA_OWNER_CATALOG_REFRESH_V3_2026-10-10.json",
+          "git_blob_sha1": "cf46eca94550ab850c5e9186ad460ea74b6be134",
+          "bytes": 171263,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-cpu-gpu-tcge-br001-pinned-representation-audit.md",
+          "git_blob_sha1": "ca398e376878d5c9b03e4be95c2c738b0183cfa7",
+          "bytes": 6373,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-cpu-gpu-tcge-br002-original-pair-evidence-gate.md",
+          "git_blob_sha1": "70826eaa07918ddef1e0372ed49c58541e167dd9",
+          "bytes": 6005,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-cpu-gpu-tcge-br003-source-recovery-boundary.md",
+          "git_blob_sha1": "fc4c33e09cd9244dd23c4f34373bb7ae89e5f55a",
+          "bytes": 5204,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-owner-attribution-snapshot-delta-and-falsification-v4.md",
+          "git_blob_sha1": "e5445271b898548e19a7cbb953bcbebdb2d8b3d4",
+          "bytes": 10389,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-owner-metadata-synchronization-v3-paper.md",
+          "git_blob_sha1": "bbaab49859583285c7ccce429046dd61d76169dd",
+          "bytes": 9333,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/verification/richard-stein-owner-catalog-v3-verifier.js",
+          "git_blob_sha1": "f13f962b9458c3d629ec0f917f847640ecb82a19",
+          "bytes": 3122,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/verification/richard-stein-owner-catalog-v4-typed-verifier.js",
+          "git_blob_sha1": "5ffcf8cb35d403cace534bf47ce5ea3fc34903db",
+          "bytes": 5605,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/verification/richard-stein-pure-js-git-blob-sha1-v1.js",
+          "git_blob_sha1": "a33d60f2387de30501bc9f0e42c46c4f54b6493b",
+          "bytes": 1945,
+          "project_owner": "Richard Stein"
+        }
+      ],
+      "modified": [],
+      "deleted": [],
+      "gitlinks": [
+        {
+          "path": "scout/blockscout",
+          "external_commit_sha1": "3ea5c7ac7eea9a748f1fe7f932c4358194b0309e",
+          "mode": "160000",
+          "contents_included": false,
+          "external_original_authorship_claim": false
+        }
+      ]
+    },
+    {
+      "repo": "eternalimit/clarity",
+      "branch": "main",
+      "snapshot_commit": "99439a1b1e0a12c3a9ac087a0aeff869c466edc5",
+      "snapshot_tree": "795904b47215f8d6026efd25de07a4079fb2541c",
+      "v3": "458876375c474b4bd41deb672e3ba55f092665b9",
+      "previous_v3_count": 76,
+      "source_blob_count": 79,
+      "unchanged_count": 76,
+      "added": [
+        {
+          "path": "metadata/RICHARD_STEIN_ALL_TRACKED_DATA_OWNER_CATALOG_REFRESH_V3_2026-10-10.json",
+          "git_blob_sha1": "2dfac44c0fb0069690fd6a3da9190910802f9e12",
+          "bytes": 19358,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "records/2026-10-10-family017-source-comparison-receipt.md",
+          "git_blob_sha1": "a3a95cf8988e0ad40b6fa353a72c98cec8629b1a",
+          "bytes": 2401,
+          "project_owner": "Richard Stein"
+        },
+        {
+          "path": "research/2026-10-10-clarity-pi-openai-family017-source-level-comparison-v1.md",
+          "git_blob_sha1": "472137dc2d50336a81f8bf545b8666806b4302d6",
+          "bytes": 12390,
+          "project_owner": "Richard Stein"
+        }
+      ],
+      "modified": [],
+      "deleted": [],
+      "gitlinks": []
+    },
+    {
+      "repo": "eternalimit/clarity",
+      "branch": "vent",
+      "snapshot_commit": "bd22bee71acd52098b0f6d1c05347952e85abd4f",
+      "snapshot_tree": "42fea55551b21f7b42c881a9d486c8ba633f1fbb",
+      "v3": "bd22bee71acd52098b0f6d1c05347952e85abd4f",
+      "previous_v3_count": 56,
+      "source_blob_count": 57,
+      "unchanged_count": 56,
+      "added": [
+        {
+          "path": "metadata/RICHARD_STEIN_ALL_TRACKED_DATA_OWNER_CATALOG_REFRESH_V3_2026-10-10.json",
+          "git_blob_sha1": "9329c8ba924a73149bf5579e36803f2934959763",
+          "bytes": 14358,
+          "project_owner": "Richard Stein"
+        }
+      ],
+      "modified": [],
+      "deleted": [],
+      "gitlinks": []
+    }
+  ],
+  "source_identity_constraints": "commit SHA != tree SHA != blob SHA; independently reconstruct source-tree files before accepting owner entries",
+  "technical_controls": {
+    "source_immutability": true,
+    "original_kernel_sha256_historical_reference": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+    "fidelity_eight_principles": true,
+    "independent_echo_not_asserted": true,
+    "experiment030_031_distinct": true,
+    "drop_u": true,
+    "hold_scoped_to_technical_claims": true,
+    "third_party_license_rights_preserved": true,
+    "no_wallet_or_token_transaction": true
+  },
+  "self_reference": "Published v5 delta and later research/audit files are downstream of the pinned source commits and not counted as source snapshot entries."
+}
