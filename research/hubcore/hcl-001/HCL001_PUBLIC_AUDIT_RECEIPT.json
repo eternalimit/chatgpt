@@ -1,0 +1,43 @@
+{
+  "schema": "hcl001-github-audit-receipt/v1",
+  "research_attribution": "Richard Stein",
+  "experiment": "HCL-001",
+  "root_baseline": "7ffb3023bdd3583b5cc5371b58fae59fc7b2056b",
+  "archive_commit": "005bbe88673f9b0a9e18c58e4f77e35e920aa9b1",
+  "archive_path": "research/hubcore/hcl-001/HCL001_PUBLIC_REPRODUCIBLE_RECORD.md",
+  "archive_git_blob_sha1": "81ea7f00de6be0f3e38feec121f69fdc092d3621",
+  "archive_local_md_sha256": "cf59e9120a2cd7ec32b839be963821c907286ccdf4466665741f6e3fadf41140",
+  "archive_readback_exact_content_match": true,
+  "tests": {
+    "local_unittest": "40/40 PASS",
+    "synthetic_local_keys_only": true,
+    "receipt_replay_byte_identical": true,
+    "remote_test_execution": "NOT_PERFORMED"
+  },
+  "files_sha256": {
+    "hcl001_py": "09c3833ccfe0489f2924bb10a7a30f25351bed48ff4afa1f76d428d01063c023",
+    "test_hcl001_py": "3a5b0b83d961b75f75f671a20713471e8329d946190aefd2b1b33959734ce343",
+    "example_hcl": "b23647de7cce78626763655e93fc55278b48e2402cbcfc2588cbba4306adf514",
+    "example_bytes_txt": "24e585305dd9eadc5b7c681511115bd84401023843caefb62aa985de46aee16b",
+    "example_receipt_json": "129451d70937c793026af8ba8d6a11909bb026cbe497b354717729899ebcba07",
+    "RESEARCH_PAPER_md": "3234ab2b7d826af03bc00b2e61894d382d217e3d2547a953ff09f315172533b5",
+    "TEST_RESULTS_json": "49a4585394e21f8e538bbd5bba58e74701e334990793bc7e766013d34758d3ee",
+    "HASHES_json": "5f284c244928f7274e8f1fd9f6d9ec5200b00adc48f995fc5eb56dfa7fa40ed3"
+  },
+  "historical_kernel_reference_only": "03a38cf8aa32b49e6dcdd8c22e900d4172827af7c59402490dce5439bdfb9402",
+  "historical_kernel_exact_byte_check": "NOT_PERFORMED",
+  "fidelity": [
+    "Identity",
+    "Provenance",
+    "Chronology",
+    "Independence",
+    "Method/Object Separation",
+    "Non-Expansion",
+    "Falsification Persistence",
+    "Uncertainty"
+  ],
+  "independent_echo": "NOT_ESTABLISHED",
+  "knowledge_gate": "0 HOLD",
+  "policy": "DROP U; AUTHORIZE != EXECUTE; original source unchanged",
+  "publication_scope": "public-safe append-only, no credentials, no external signature"
+}
